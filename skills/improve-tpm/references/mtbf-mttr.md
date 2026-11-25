@@ -10,8 +10,8 @@ Exact definitions, a worked example, how to combine machines, and how to read th
 | Failure | An unplanned stop longer than the breakdown threshold | Threshold set by local policy, for example 2 minutes (Vorne). Planned maintenance is not a failure (Wikipedia, MTBF) |
 | MTBF (mean time between failures) | Operating time ÷ number of failures | Sum of up periods ÷ failures (Wikipedia, MTBF) |
 | MTTR (mean time to repair) | Breakdown downtime ÷ number of failures | This skill uses stop to restart. Some sites count hands-on repair only (Wikipedia, MTTR); ask which, and state it |
-| Inherent availability | MTBF ÷ (MTBF + MTTR) | Excludes planned maintenance and logistic delays (Wikipedia, Availability) |
-| Operational availability | MTBF ÷ (MTBF + mean downtime) | Includes waiting for parts and people |
+| Availability from MTBF and MTTR | MTBF ÷ (MTBF + MTTR) | Operational, since MTTR from stop to restart includes waiting for parts and people; inherent only when MTTR is hands-on repair |
+| Inherent availability | MTBF ÷ (MTBF + mean hands-on repair time) | Excludes planned maintenance and logistic delays (Wikipedia, Availability) |
 
 Use the same period, the same machine and the same failure threshold in every comparison. MTTR is most meaningful between machines of the same type (SMRP).
 
@@ -23,8 +23,9 @@ A press, one month.
 - Operating time = 432 − 24 − 8 = 400 h.
 - MTBF = 400 ÷ 8 = 50 h.
 - MTTR = 24 ÷ 8 = 3 h.
-- Inherent availability ≈ 50 ÷ (50 + 3) = 94.3%.
+- Availability from MTBF and MTTR ≈ 50 ÷ (50 + 3) = 94.3% (operational, since MTTR includes waiting).
 - Breakdown loss in the OEE loss tree = 24 h = 1,440 min; on 432 h planned it costs 24 ÷ 432 = 5.6 availability points.
+- The two bases differ: operating time ÷ planned production time = 400 ÷ 432 = 92.6%, because the planned stops count against it, while MTBF ÷ (MTBF + MTTR) = 94.3% leaves them out. State which basis is used.
 
 Wrong: counting the 2 planned stops as failures gives 400 ÷ 10 = 40 h; using planned production time gives 432 ÷ 8 = 54 h. Both mislead.
 

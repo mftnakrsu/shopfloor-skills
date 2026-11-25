@@ -1,4 +1,4 @@
 ---
 type: llm
 ---
-The response recommends capping WIP between release and the rack (for example CONWIP or releasing a job only when one finishes) at a stated number of jobs well below 60.
+The response states a numeric WIP cap, in jobs, that is below the current WIP of about 60 jobs.

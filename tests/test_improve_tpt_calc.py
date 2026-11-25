@@ -67,13 +67,18 @@ class CliTest(unittest.TestCase):
         return out.getvalue()
 
     def test_line_report(self):
-        text = self.run_cli("line", "--wip", "60", "--throughput", "1.25", "--process-times", "30,40,20,30",
-                            "--unit", "min", "--hours-per-day", "16", "--caps", "12")
-        self.assertIn("48.00 h = 3.00 working days", text)
-        self.assertIn("W0 = 3.00", text)
+        text = self.run_cli("line", "--wip", "50", "--throughput", "1.0", "--process-times", "20,30,40,10",
+                            "--unit", "min", "--hours-per-day", "10", "--caps", "10")
+        self.assertIn("50.00 h = 5.00 working days", text)
+        self.assertIn("W0 = 2.50", text)
         self.assertIn("worse than PWC", text)
-        self.assertIn("WIP the PWC needs for 1.25 per h = 10.0", text)
-        self.assertIn("Cap 12: PWC TH 1.286 per h (meets 1.25)", text)
+        self.assertIn("WIP the PWC needs for 1 per h = 3.0", text)
+        self.assertIn("Cap 10: PWC TH 1.304 per h (meets 1)", text)
+
+    def test_line_report_below_best_case(self):
+        text = self.run_cli("line", "--wip", "2", "--throughput", "1.4", "--process-times", "20,30,40,10",
+                            "--unit", "min")
+        self.assertIn("at or better than PWC, and below the best case", text)
 
     def test_kingman_cli(self):
         self.assertIn("Queue time = 9.00", self.run_cli("kingman", "--u", "0.9", "--ca", "1", "--ce", "1", "--te", "1"))

@@ -63,7 +63,7 @@ Invented round numbers. A press changeover, one setter, machine stopped througho
 | | **Total** | **60** | | **17** |
 
 - After separation (rows 1 and 2): 60 − 15 = 45 min, at no cost.
-- After streamlining: 17 min. Saving = 60 − 17 = 43 min = 43 / 60 = 72%.
+- After streamlining: 17 min. Saving = 60 − 17 = 43 min = 43 / 60 = 72%. This is a deliberately large example; a typical first-pass saving is about 45%.
 - The approval is shortened, not removed.
 
 ## Sources

@@ -6,15 +6,15 @@ Usage: python3 balance.py line.json
 line.json:
 {
   "shift_seconds": 28800,
-  "scheduled_stops_seconds": 1800,
+  "scheduled_stops_seconds": 2400,
   "shifts_per_day": 2,
-  "demand_per_day": 1800,
-  "planned_cycle_seconds": 28,
-  "mix": {"A": 0.8, "B": 0.2},
-  "current_operators": 5,
+  "demand_per_day": 1650,
+  "planned_cycle_seconds": 30,
+  "mix": {"A": 0.75, "B": 0.25},
+  "current_operators": 4,
   "elements": [
-    {"name": "Insert bearing", "seconds": 10},
-    {"name": "Fit heat shield", "seconds": 10, "variants": ["B"]}
+    {"name": "Insert valve", "seconds": 12},
+    {"name": "Fit cover plate", "seconds": 12, "variants": ["B"]}
   ]
 }
 

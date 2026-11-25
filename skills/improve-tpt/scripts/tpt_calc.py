@@ -106,7 +106,12 @@ def line_report(args):
     worst = worst_case(args.wip, t0)
     lines.append(f"At WIP {args.wip:g}: best TPT {best[0]:.2f} h, TH {best[1]:.3f}; "
                  f"PWC TPT {pwc[0]:.2f} h, TH {pwc[1]:.3f}; worst TPT {worst[0]:.2f} h, TH {worst[1]:.3f}")
-    verdict = "worse than PWC" if tpt > pwc[0] else "between best case and PWC"
+    if tpt > pwc[0]:
+        verdict = "worse than PWC"
+    elif tpt < best[0]:
+        verdict = "at or better than PWC, and below the best case: check the WIP and output data"
+    else:
+        verdict = "at or better than PWC (between best case and PWC)"
     lines.append(f"Measured TPT is {verdict}")
     if args.throughput < rb:
         lines.append(f"WIP the PWC needs for {args.throughput:g} per h = {pwc_wip_needed(args.throughput, t0, rb):.1f}")

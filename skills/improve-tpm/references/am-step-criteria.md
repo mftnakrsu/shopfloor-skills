@@ -47,7 +47,7 @@ No public source gives numeric exit criteria for each step. The criteria below a
 
 | Step | Exit criteria |
 |---|---|
-| 0 | Lock-out and safety rules for the machine are known and applied by every team member; the main functions and units of the machine are explained on a sketch |
+| 0 | Criteria set by local policy, for example: lock-out and safety rules for the machine are known and applied by every team member; the main functions and units of the machine are explained on a sketch |
 | 1 | The machine is cleaned to the base material; abnormalities are tagged by type; every open tag has an owner and a due date; tags are closed within about eight weeks (rule of thumb, Industry Forum); contamination sources and hard-to-access areas are listed; a first cleaning standard exists |
 | 2 | Every contamination source has a countermeasure at the source, or a dated plan; every hard-to-access area is improved; the same dirt no longer returns between cleanings; cleaning time per shift is measured before and after and meets the target |
 | 3 | A posted standard for each item to clean, lubricate and check: method, tool, frequency, time, who (operator or maintenance); visual controls (gauge ranges, lubrication points and oil types marked, numbered route); the team completes it within the time budget; adherence records exist |

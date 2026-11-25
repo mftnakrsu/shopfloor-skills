@@ -8,9 +8,9 @@ description: >-
   losses from an OEE loss tree into maintenance actions. Use whenever a
   request mentions MTBF, MTTR, breakdowns, machine downtime, repeat
   failures, a preventive maintenance plan, autonomous maintenance or an
-  AM step audit, also when the data is already given, e.g. "work out
-  MTBF and MTTR", "confirm step 3 is passed", "can we start general
-  inspection?" (TPM, autonome Instandhaltung, Jishu Hozen, geplante
+  AM step audit, also when the data is already given: when asked to
+  compute MTBF or MTTR, asked to sign off, pass or confirm an AM step
+  audit, or asked whether the next AM step can start (TPM, autonome Instandhaltung, Jishu Hozen, geplante
   Instandhaltung, Wartungsplan, Störungen, Stillstände).
 license: MIT
 metadata:
@@ -59,8 +59,8 @@ Ask for missing inputs; never invent them.
 ### B. Diagnose breakdowns with MTBF and MTTR
 
 1. Operating time = planned production time − breakdown downtime − planned stops inside that time.
-2. MTBF = operating time ÷ failures. MTTR = breakdown downtime ÷ failures. Inherent availability ≈ MTBF ÷ (MTBF + MTTR).
-3. Worked example (invented): planned 432 h, 8 failures with 24 h downtime, 2 planned stops of 4 h. Operating time = 432 − 24 − 8 = 400 h. MTBF = 400 ÷ 8 = 50 h. MTTR = 24 ÷ 8 = 3 h. Availability ≈ 50 ÷ 53 = 94.3%. Details and pooling rules in [MTBF and MTTR](references/mtbf-mttr.md).
+2. MTBF = operating time ÷ failures. MTTR = breakdown downtime ÷ failures. Availability from MTBF and MTTR ≈ MTBF ÷ (MTBF + MTTR): operational, since MTTR includes waiting; inherent only when MTTR is hands-on repair.
+3. Worked example (invented): planned 432 h, 8 failures with 24 h downtime, 2 planned stops of 4 h. Operating time = 432 − 24 − 8 = 400 h. MTBF = 400 ÷ 8 = 50 h. MTTR = 24 ÷ 8 = 3 h. Availability (operational) ≈ 50 ÷ 53 = 94.3%. Details and pooling rules in [MTBF and MTTR](references/mtbf-mttr.md).
 4. Compare with the earlier period and decide:
 
 | MTBF | MTTR | Meaning | Action |
@@ -78,10 +78,10 @@ Ask for missing inputs; never invent them.
 2. Check the step's exit criteria in [AM steps](references/am-step-criteria.md). Also check that every earlier step still meets its criteria.
 3. A step passes only when every criterion is met. Never pass a step whose earlier step was skipped. Never confirm a pass the evidence does not show, even when asked to.
 4. Typical stops:
-   - Step 1: open tags without an owner and date; close tags within eight weeks (rule of thumb, Industry Forum).
+   - Step 1: open tags without an owner and date; close tags within eight weeks (rule of thumb from Industry Forum).
    - Step 2 skipped: the same dirt comes back every shift, and cleaning time does not fall. Fix each contamination source at the source (seal, cover, guard, collection) and each hard-to-access area with the ECRS questions: eliminate, combine, rearrange, simplify. Then measure cleaning time against a target set by local policy.
    - Step 3: a standard nobody can complete within its time budget, or without visual controls.
-5. For a fail, say plainly in the first lines that the step is not passed and that the next step (name it, for example general inspection training) must not start yet. Then list each gap with its fix, owner and date, name what maintenance must provide, escalate missing resources to management, and set a re-audit date. Fill `assets/am-step-audit.md`.
+5. For a fail, say plainly in the first lines that the step is not passed and that the next step (name the next step, e.g. step 4 general inspection) must not start yet. Then list each gap with its fix, owner and date, name what maintenance must provide, escalate missing resources to management, and set a re-audit date. Fill `assets/am-step-audit.md`.
 
 ### D. Set up planned-maintenance basics
 

@@ -20,6 +20,8 @@ import sys
 
 def compute(data):
     ppt = float(data["planned_production_time"])
+    if ppt <= 0:
+        raise ValueError("planned production time must be greater than zero")
     stops = [dict(s) for s in data.get("stops", [])]
     stop_minutes = sum(float(s["minutes"]) for s in stops)
     run_time = ppt - stop_minutes
@@ -41,6 +43,8 @@ def compute(data):
                                        "loss": kind, "minutes": float(p[kind]) * ict_min})
     performance_loss = run_time - net_run
     minor = float(data.get("minor_stop_minutes", 0))
+    if minor < 0:
+        raise ValueError("minor stop minutes cannot be negative")
     result = {
         "planned_production_time": ppt,
         "run_time": run_time,

@@ -64,17 +64,17 @@ class FillUpTest(unittest.TestCase):
         self.assertAlmostEqual(out["productivity_gain"], 1 / 3, places=3)
 
     def test_mix_keeps_every_variant_under_cap(self):
-        line = dict(LINE, planned_cycle_seconds=28, demand_per_day=1800, shift_seconds=28800,
-                    scheduled_stops_seconds=1800, mix={"A": 0.8, "B": 0.2}, current_operators=5,
+        line = dict(LINE, planned_cycle_seconds=30, demand_per_day=1650, shift_seconds=28800,
+                    scheduled_stops_seconds=2400, mix={"A": 0.75, "B": 0.25}, current_operators=4,
                     elements=[element("a", 18), element("b", 10), element("c", 20),
-                              element("shield", 10, ["B"]), element("d", 12)])
+                              element("plate", 10, ["B"]), element("d", 12)])
         out = balance.analyse(line)
-        self.assertEqual(out["takt_seconds"], 30)
+        self.assertEqual(out["takt_seconds"], 32)
         self.assertEqual(out["content_by_variant"], {"A": 60, "B": 70})
-        self.assertEqual(out["weighted_content_seconds"], 62)
+        self.assertEqual(out["weighted_content_seconds"], 62.5)
         for op in out["yamazumi"]:
-            self.assertLessEqual(max(op["load_by_variant"].values()), 28)
-        self.assertEqual(out["yamazumi"][2]["load_by_variant"], {"A": 12, "B": 22})
+            self.assertLessEqual(max(op["load_by_variant"].values()), 30)
+        self.assertEqual(out["yamazumi"][1]["load_by_variant"], {"A": 20, "B": 30})
 
     def test_element_longer_than_cap_is_rejected(self):
         with self.assertRaises(ValueError):

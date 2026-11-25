@@ -3,10 +3,9 @@ name: improve-tpt
 description: >-
   Calculates, checks and reduces the throughput time (lead time) of
   production lines and shops. Use when throughput time, lead time or WIP
-  is too high, when a throughput-time figure must be calculated, checked
-  or confirmed (for example one built from summed station cycle times),
-  when choosing between faster machines, WIP caps or CONWIP to cut it, or
-  when sizing a WIP cap. Maps the user's terms to one definition, measures
+  is too high, when a throughput-time or lead-time figure must be
+  calculated or checked, when choosing between capacity, WIP caps or
+  CONWIP to cut it, or when sizing a WIP cap. Maps the user's terms to one definition, measures
   throughput time with a Little's Law cross-check, computes raw process
   time, bottleneck rate and critical WIP, compares the line with the
   practical worst case, and applies WIP-cap and variability rules
@@ -38,7 +37,8 @@ metadata:
 
 Ask for every missing input; never invent one. Copy the user's numbers exactly.
 
-- TPT needs WIP and TH for the same boundary and window. If either is missing, ask for it in one short list (boundary, flow unit, WIP counts, good output over the same days, working time) and stop. At most give the formulas and the blank `assets/tpt-study.md`. Never present a TPT for the user's line from an assumed output rate. A WIP target holds only at unchanged output; say so, and leave the cap until output is known.
+- TPT needs WIP and TH for the same boundary and window. If either is missing, ask for it in one short list (boundary, flow unit, WIP counts, good output over the same days, working time) and stop. At most give the formulas and the blank `assets/tpt-study.md`. Never present a TPT for the user's line from an assumed output rate.
+- A WIP target holds only at unchanged output; say so, and leave the cap until output is known.
 - Missing process times block only the reference points, the PWC comparison and the cap check. Measure TPT first, then ask for them.
 
 ## Procedure

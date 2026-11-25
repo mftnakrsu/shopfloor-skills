@@ -3,11 +3,12 @@ name: measure-oee
 description: >-
   Calculates and checks OEE (overall equipment effectiveness) and TEEP for
   a machine, line or plant. Use when anyone asks what an OEE, TEEP,
-  availability, performance or quality rate was, even with partial data;
-  when an OEE figure or report must be checked before it is shared, for
-  example a plant OEE averaged across machines; or when OEE losses must
-  be ranked and fixed. Builds an agreed time model, a loss tree in minutes
-  (six big losses, Pareto), catches gaming such as excluded changeovers,
+  availability, performance or quality rate was, when only some inputs
+  are known; when an OEE figure or report must be checked before it is
+  shared, or when a combined OEE across machines, shifts or periods must
+  be checked; or when OEE losses must be ranked and fixed. Builds an
+  agreed time model, a loss tree in minutes (six big losses, Pareto
+  ranking), catches gaming such as excluded changeovers,
   slow ideal cycle times or rework counted as good, and routes the top
   losses to changeover reduction, maintenance or problem solving
   (Gesamtanlageneffektivität, GAE, OEE-Kennzahl, Verfügbarkeit,
@@ -16,7 +17,7 @@ license: MIT
 metadata:
   version: "1.0.0"
   category: measure
-  standards: "ISO 22400-2 (availability, effectiveness, quality ratio, OEE index)"
+  standards: ""
 ---
 # OEE and TEEP
 
@@ -60,15 +61,15 @@ Ask for every missing input; never invent one.
    - Level 1: availability loss = PPT − RT; performance loss = RT − NRT; quality loss = NRT − FPT; for TEEP, schedule loss = all time − PPT.
    - Level 2, the six big losses: breakdowns; setup and adjustment; minor stops; reduced speed; process defects; start-up rejects (reduced yield). Performance loss splits into minor stops (logged short-stop minutes) and speed loss (the remainder). Quality loss per product = (scrap_i + rework_i) × ideal cycle time_i; keep start-up rejects after a changeover separate where known.
    - Level 3: reason codes, for example "changeover A to B" or "hydraulic pump".
-   - Rank all level-3 items by minutes (Pareto) and name the top three. Rank by minutes, never by factor percentages, because a factor's percentage hides how many minutes it costs. Fill in `assets/oee-worksheet.md`.
+   - Rank all level-3 items by minutes (a Pareto ranking, largest first) and name the top three. Rank by minutes, never by factor percentages, because a factor's percentage hides how many minutes it costs. Fill in `assets/oee-worksheet.md`.
 7. **Aggregate correctly.** Across machines, shifts or days, sum PPT, RT, NRT and FPT first, then compute the factors. Never average OEE percentages, and never multiply averaged factors. Example (invented round numbers): machine 1 has PPT 400 and FPT 360 (90%); machine 2 has PPT 100 and FPT 30 (30%). The mean of 60% is wrong; the plant OEE is (360 + 30) / (400 + 100) = 78.0%. For a line, report the bottleneck's OEE and the line output; a non-bottleneck's OEE gain adds stock, not output.
 8. **Check for gaming.** Name each distortion found and recompute without it: changeovers or planned maintenance moved outside PPT; an ideal cycle time slower than the best demonstrated rate; rework or sorted parts counted as good; the stop threshold raised so breakdowns become minor stops; percentages averaged; a headline OEE that hides a falling factor. Effect sizes in [loss tree](references/loss-tree.md).
 9. **Route the top losses.**
 
    | Loss | Route |
    |---|---|
-   | Setup, changeover, start-up rejects | Changeover reduction study (SMED) |
-   | Breakdowns | Planned maintenance and TPM (MTBF and MTTR review) |
+   | Setup, changeover, start-up rejects | Changeover reduction study (single-minute exchange of die, SMED) |
+   | Breakdowns | Planned maintenance and total productive maintenance, TPM (review of mean time between failures, MTBF, and mean time to repair, MTTR) |
    | Minor stops, reduced speed | Autonomous maintenance (restore basic conditions) and focused improvement |
    | Process defects, rework | Structured root-cause work; an 8D for complaints or repeat defects |
    | Material, staffing, starved or blocked | The owning area, through the daily tier meeting |
@@ -76,7 +77,7 @@ Ask for every missing input; never invent one.
    Work on the bottleneck first.
 10. **Benchmark with care.** Compare first with the asset's own baseline, then with similar assets and product mix. The often-quoted 85% "world class" is an aspirational reference, not a standard (source in [loss tree](references/loss-tree.md)).
 
-The optional calculator `scripts/oee.py` (standard library) computes steps 3, 6 and 7 from a JSON file. Everything above works by hand without it.
+The optional calculator `scripts/oee.py` (standard library) reads a JSON file. For one machine it computes the buckets, factors, OEE and TEEP (step 3) and a minute-ranked list of stops, minor stops, speed loss, scrap and rework (step 6). For several machines it sums the buckets and computes the factors and OEE (step 7); it does not merge their loss lists or compute an aggregate TEEP. Everything above works by hand without it.
 
 ## Validation
 
@@ -89,6 +90,7 @@ Check before answering:
 5. Loss minutes add up to PPT − FPT.
 6. Any aggregate is built from summed minutes, not averaged percentages.
 7. Each top loss has a route and an owner to be named.
+8. When per-machine figures are given, the bottleneck is named and its own OEE is shown.
 
 ## Output
 

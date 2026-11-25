@@ -27,7 +27,7 @@ Planned maintenance stops are not failures; list them below.
 | Number of failures | |
 | MTBF = operating time ÷ failures (h) | |
 | MTTR = breakdown downtime ÷ failures (h) | |
-| Inherent availability = MTBF ÷ (MTBF + MTTR) | |
+| Availability from MTBF and MTTR = MTBF ÷ (MTBF + MTTR) (operational, since MTTR includes waiting; inherent only when MTTR is hands-on repair) | |
 | Earlier period MTBF / MTTR | |
 | Trend decision | |
 

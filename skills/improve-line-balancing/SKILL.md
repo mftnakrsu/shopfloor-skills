@@ -3,12 +3,12 @@ name: improve-line-balancing
 description: >-
   Balances manual assembly lines and cells in a fixed order: volume, mix,
   takt, ergonomics, then a fill-up yamazumi. Merges or splits stations,
-  quantifies operator, station and test-rig or machine savings, and
-  outputs the standard work for the new balance. Use when asked to
-  balance or rebalance a line, build a yamazumi or operator balance
-  chart, calculate or confirm a takt time, operator count or headcount,
-  or check someone's takt or staffing calculation; also when operators
-  wait or fall behind, or demand or mix changes (Taktzeit, Austaktung,
+  quantifies operator, station and machine savings, and outputs the
+  standard work for the new balance. Use when asked to balance or
+  rebalance a line, build a yamazumi or operator balance chart, calculate
+  a takt time or operator count, or review or audit a takt or headcount
+  calculation; also for uneven operator loads, or when demand or mix
+  changes (Taktzeit, Austaktung,
   Linienabstimmung, Bandabgleich, Yamazumi, Personalbedarf,
   Mitarbeiterbedarf, Arbeitsverteilung, Standardarbeit).
 license: MIT
@@ -33,7 +33,7 @@ metadata:
 - Working time: shifts per day, shift length, scheduled breaks, meetings and cleanup.
 - Mix: the variants and their share of demand, and which elements differ by variant.
 - Work elements in their possible order (precedence), each with an observed time: the lowest repeatable time of 10 or more timed cycles (rule of thumb), plus out-of-cycle work such as fetching material.
-- Machines: automatic cycle time and load/unload time of each machine or test rig, and how many there are.
+- Machines: automatic cycle time and load/unload time of each machine, and how many there are.
 - Ergonomics: weights lifted, lift heights and frequency, awkward postures, and any NIOSH, RULA or REBA results.
 - The current line: stations, operators per shift, planned cycle time policy.
 
@@ -54,7 +54,7 @@ Ask for every missing fact; never invent one.
    - Below about 10 s or above about 120 s takt, consider a second cell or more end items in the cell (Rother & Harris).
    - Example (invented): 2 shifts of 480 min, 2 × 10 min breaks per shift: 460 min = 27,600 s per shift. Demand 1,380 per day = 690 per shift. Takt = 27,600 ÷ 690 = 40 s. Work content 150 s ÷ 40 s = 3.75 → 4 operators.
 4. **Ergonomics, before loading.** Screen each element with a public method: lifts with the revised NIOSH lifting equation (lifting index LI = load ÷ recommended weight limit), repetitive upper-limb work with RULA, whole-body postures with REBA. Details and thresholds in [ergonomics screening](references/ergonomics-screening.md).
-   - LI above 1.0 or REBA 8 or more: the element must be redesigned (raise the pallet to working height, a lift aid). RULA 5–6: investigate and change soon; RULA 7: change now (for example a tool support or a new work height). Each fix is an action with an owner and date; until it is in, plan job rotation (rule of thumb).
+   - LI above 1.0, RULA 5 or more, or REBA 8 or more: a high-risk element that must be redesigned (bring the load to waist height, a lift aid, a lift-assist table; for a posture, a tool support or a new work height). RULA 7 means change now. Each fix is an action with an owner and date; until it is in, plan job rotation (rule of thumb).
    - Never put two high-risk elements on one operator, and never fill an operator up with extra lifts or the same posture (rule of thumb).
 5. **Fill-up yamazumi.**
    - Take the elements in their precedence order. Load operator 1 up to the planned cycle time, then operator 2, and so on. The last operator holds the remainder: that gap is the visible kaizen target. Do not share the work out equally; equal shares hide the waste (LEI; rationale in [fill-up yamazumi](references/fill-up-yamazumi.md)).
@@ -89,7 +89,7 @@ Check before answering:
 ## Output
 
 - `assets/balance-worksheet.md`, filled in: volume, mix, takt, operator count, ergonomic screen, current and new yamazumi as a table (operator, elements, load per variant, gap to takt), machine check and savings.
-- `assets/standard-work-sheet.md` filled in for each operator: the element sequence, the operator's cycle time against takt, and the standard WIP as a number of parts and where they sit (for example one unit in the test rig). In a chat answer, one compact table per operator is enough; a description of what the sheet should contain is not.
+- `assets/standard-work-sheet.md` filled in for each operator: the element sequence, the operator's cycle time against takt, and the standard WIP as a number of parts and where they sit (e.g. one unit in a machine or buffer). In a chat answer, one compact table per operator is enough; a description of what the sheet should contain is not.
 - Then the open actions: ergonomic fixes, kaizen on the last operator's gap, pilot and re-timing.
 - Write for the user in plain words; never cite this skill's step numbers or file names.
 

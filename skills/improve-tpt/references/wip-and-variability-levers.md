@@ -32,7 +32,7 @@ Variability is buffered by inventory, capacity or time. If WIP is capped and var
 | Long unplanned stops at the bottleneck | ce, t_e | Shorter repairs, spare parts, prevention; at equal availability, many short stops hurt less than few long ones (rule of thumb) | Hopp & Spearman, ch. 8 |
 | Long set-ups and large lots | t_e, ce, ca downstream | Set-up reduction, then smaller lots | FabTime; LEI VSM lexicon |
 | Batch release and transfer batches | ca | Release single units or small batches; move small transfer batches | FabTime |
-| Waiting for a full batch at a lightly loaded batch process | Queue time | Start with what is there up to about 80% loading (FabTime simulation) | FabTime |
+| Waiting for a full batch at a lightly loaded batch process | Queue time | Start with what is there up to about 80% loading (rule of thumb from a FabTime simulation) | FabTime |
 | Expediting and priority classes | TPT of normal orders | One release point, FIFO; priorities raise the TPT of the rest sharply | FabTime |
 | Rework loops | Load and ca | Fix the defect cause; load into the loop is TH ÷ (1 − p) | FabTime |
 | Bottleneck loading above about 85% | U term | Add capacity, offload work, cut effective process time; keep about 15% catch-up capacity | FabTime |

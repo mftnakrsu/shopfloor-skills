@@ -7,10 +7,9 @@ description: >-
   time saved becomes more capacity or smaller lots, and keeps set-up
   verification and first-piece approval in place. Use when a changeover,
   set-up, die change, mould change or tool change is too long, when
-  changeover time must be cut to a target, when a plan to hit that target
-  skips or shortens a check such as first-piece approval, or when asked
-  how to use the time saved, e.g. "capacity or smaller lots?"
-  (Rüstzeitreduzierung, Rüstzeit,
+  changeover time must be cut to a target, when a changeover-reduction
+  plan or target risks cutting set-up verification, or when deciding how
+  to use freed changeover time (Rüstzeitreduzierung, Rüstzeit,
   Rüstwechsel, inneres und äußeres Rüsten, Losgröße, Erstteilfreigabe).
 license: MIT
 metadata:
@@ -59,7 +58,7 @@ Ask for every missing input; never invent one. Copy the user's times and quantit
    - Mechanise last.
    Then shorten the external work so it fits inside the previous run.
 7. **Cheap before costly.** Take the procedural gains first (steps 4 and 5, checklists, staging); buy hardware only for what remains.
-8. **Calculate.** Internal time before and after; saving = before − after in minutes, and saving % = (before − after) / before × 100. A pass typically saves about 45–50% (rule of thumb from practitioner sources); repeat passes toward the target. Worked example in [changeover study](references/changeover-study.md).
+8. **Calculate.** Internal time before and after; saving = before − after in minutes, and saving % = (before − after) / before × 100. A pass typically saves about 45–50% (rule of thumb from practitioner sources); repeat passes toward the target. Worked example in [changeover study](references/changeover-study.md) (a deliberately large example; typical first-pass saving is about 45%).
 9. **Standardise.** Write the new method as a changeover standard with its checklist (`assets/changeover-standard.md`), train the setters, and re-time the next changeovers against it (number set by local policy). Update the set-up instruction.
 
 ### B. Use the time saved (EPEI)

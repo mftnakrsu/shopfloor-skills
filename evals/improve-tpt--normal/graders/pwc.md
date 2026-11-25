@@ -1,4 +1,4 @@
 ---
 type: llm
 ---
-The response compares the line with the practical worst case, for example that it needs only about 10 jobs of WIP for 1.25 jobs per hour or gives about 41 hours of throughput time at 60 jobs, and concludes that the line holds far more WIP than it needs.
+The response concludes that the line holds far more WIP than the practical worst case needs for its output (for example about 10 jobs needed for 1.25 jobs per hour, against about 60 held).

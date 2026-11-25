@@ -62,6 +62,10 @@ class ComputeTest(unittest.TestCase):
             oee.compute(dict(SHIFT, stops=[{"reason": "x", "loss": "x", "minutes": 450}]))
         with self.assertRaises(ValueError):
             oee.compute(dict(SHIFT, products=[{"name": "X", "ideal_cycle_s": 60, "total": 5, "scrap": 6}]))
+        with self.assertRaises(ValueError):
+            oee.compute(dict(SHIFT, planned_production_time=0))
+        with self.assertRaises(ValueError):
+            oee.compute(dict(SHIFT, minor_stop_minutes=-5))
 
 
 class AggregateTest(unittest.TestCase):
