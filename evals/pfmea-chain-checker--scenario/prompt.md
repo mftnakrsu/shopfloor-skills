@@ -1,6 +1,7 @@
 ---
 description: The pfmea-chain-checker agent checks the chain station by station, asks for missing documents and reports without editing.
 tags: [agent, pfmea-chain-checker]
+timeout_seconds: 600
 max_turns: 15
 allowed_tools: [Read, Glob, Grep, Skill, Agent]
 ---

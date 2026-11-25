@@ -21,5 +21,7 @@ First release: 20 Agent Skills and 6 subagents for production lines, as a Claude
 
 ### Notes
 - Smaller models such as Haiku may not load a skill on their own; name it in the prompt.
+- Release eval run (66 cases, one run each, judged by Sonnet): mean 0.97 on Sonnet and 0.96 on Opus.
+- Known issue: on very short "please confirm" requests, `plan-workstation-instructions` and `solve-fishbone` sometimes do not load on their own. Name the skill in the prompt.
 
 [1.0.0]: https://github.com/mftnakrsu/shopfloor-skills/releases/tag/v1.0.0

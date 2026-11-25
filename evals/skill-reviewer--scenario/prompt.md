@@ -1,6 +1,7 @@
 ---
 description: The skill-reviewer agent finds the planted problems in a weak draft skill without editing anything.
 tags: [agent, skill-reviewer]
+timeout_seconds: 600
 max_turns: 15
 allowed_tools: [Read, Glob, Grep, Skill, Agent]
 ---

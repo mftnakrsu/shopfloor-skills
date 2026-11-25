@@ -1,6 +1,7 @@
 ---
 description: The process-auditor agent checks auditor independence, asks for missing criteria and shifts, and stops at the plan gate instead of inventing findings.
 tags: [agent, process-auditor]
+timeout_seconds: 600
 max_turns: 15
 allowed_tools: [Read, Glob, Grep, Skill, Agent]
 ---
