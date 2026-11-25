@@ -1,6 +1,6 @@
 # Contributing
 
-This file is the short version of the rules. The full design is in [the design spec](docs/superpowers/specs/2026-11-25-shopfloor-skills-design.md).
+This file holds the project rules for skills, agents and evals.
 
 ## Ground rules
 

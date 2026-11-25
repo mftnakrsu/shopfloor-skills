@@ -19,3 +19,6 @@ __pycache__/
 *.pyc
 .DS_Store
 Thumbs.db
+
+# Internal design docs (spec, plans): kept local, never published
+/docs/superpowers/
