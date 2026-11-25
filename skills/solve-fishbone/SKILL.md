@@ -5,13 +5,13 @@ description: >-
   hypotheses that can be tested. Use when a team has a 6M brainstorm or
   fishbone diagram and needs to know which causes to test first and how,
   when a fishbone must be built for a production problem, or when a cause
-  picked from a fishbone or by voting is claimed as the root cause. Writes
+  from a fishbone or a vote is called the root cause without a test. Writes
   a measurable effect, sorts causes by man, machine, method, material,
   measurement and environment, rewrites them as checkable conditions,
   screens them against Is/Is-Not facts and recent changes, and gives each
   hypothesis a test with its expected result (Ishikawa-Diagramm,
   Fischgrätendiagramm, Ursache-Wirkungs-Diagramm, 6M, Mensch, Maschine,
-  Methode, Material, Messung, Mitwelt, Ursachen nach 6M).
+  Methode, Material, Messung, Mitwelt, Ursachenanalyse).
 license: MIT
 metadata:
   version: "1.0.0"
@@ -87,7 +87,7 @@ Check before answering:
 1. The effect is measurable and contains no cause and no solution.
 2. Every entry is a condition, a parked solution, or rejected with a reason.
 3. Every cause is screened against the Is/Is-Not facts and changes, or the screening is marked open.
-4. Every hypothesis to be tested, including quick parallel readings, has a test, the expected result if true and if false, an owner and a date.
+4. Every hypothesis to be tested, including quick parallel readings, has a test, the expected result if true and if false, and an owner and a date or is marked "to be assigned".
 5. No cause is called confirmed without test evidence; votes only set test order.
 6. Every number is the user's, computed from it, or labelled as invented, a rule of thumb or set by local policy.
 

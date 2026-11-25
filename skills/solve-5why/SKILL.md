@@ -36,12 +36,12 @@ metadata:
 Ask for every missing fact; never invent one. Copy the user's numbers, dates and lots exactly.
 
 - Without the problem facts, ask for them in one short list and stop: what the defect is, how many out of how many, where it is found (station or check), when it is found and since when, how it is found, what has been checked and what data exists. At most add the blank `assets/5why-worksheet.md`. Never write a chain or name a root cause from assumed facts.
-- A broad problem (a KPI that went up, "quality is bad") is not a 5-Why problem yet. Ask for the breakdown (by defect type, location, shift, machine) and run the chain on the largest single item.
+- A broad problem (a trend or general complaint with no defect type) is not a 5-Why problem yet. Ask for the breakdown (by defect type, location, shift, machine) and run the chain on the largest single item.
 - With facts but no evidence, give the first whys only as hypotheses, each with the check that would confirm it. Never call a hypothesis a root cause.
 
 ## Procedure
 
-1. **State the problem.** One factual sentence with what, where, when and how many, as found. No cause, no suspected cause and no solution in it; keep changes and findings in a separate list of facts. If the user's statement contains a cause ("the operator forgot …"), move that into the occurrence leg as a hypothesis.
+1. **State the problem.** One factual sentence with what, where, when and how many, as found. No cause, no suspected cause and no solution in it; keep changes and findings in a separate list of facts. If the user's statement contains a cause ("because the gauge was not used …"), move that into the occurrence leg as a hypothesis.
 2. **Go and see.** Base each answer on parts, the station, records and the people who do the work, not on desk opinions. List what changed before the problem started.
 3. **Build the occurrence leg.** Ask "why was it made?" Each answer is a physical or process condition that directly causes the answer above it. One cause per link; if two causes each contribute, branch and follow each branch to its own root. Start points per leg in [three legs](references/three-legs.md).
 4. **Build the detection leg.** List the controls after the cause in flow order. Start at the escape point: should it have detected the problem? If yes, ask why it did not; if no control could, that absence is the first answer. Continue to the condition that let the control fail (device, setting, method, frequency).
@@ -63,8 +63,16 @@ Ask for every missing fact; never invent one. Copy the user's numbers, dates and
    2. Counterfactual test: if this condition were corrected, the problem would not be likely to recur.
    3. Therefore test: reading from the root back to the problem, each step follows with "therefore".
 
-   Never stop at a person ("operator error", "not paying attention", "careless"), at "no time" or "bad luck", at a restated symptom, or at a supplier without its own chain; ask what in the process allowed the error, using the human-error questions in [evidence and stop rules](references/evidence-and-stop-rules.md). The number of whys is not fixed.
-8. **Set one action per root cause.** Each verified root in each leg gets its own action, chosen from the strongest feasible level: make the error impossible; detect at the source and stop (error-proofing, IATF 16949 10.2.4 asks for a documented choice of error-proofing methods with test frequencies); detect later automatically; standardise (instruction, checklist, visual aid); train, remind or inspect by hand. Training, a reminder or a manual check alone is the weakest level; it can support a stronger action but is never the action on its own. Give each action an owner, a date and how its effect will be verified; the check period is set by local policy.
+   Never stop at a person ("operator error", or a person's attention, care or memory), at "no time" or "bad luck", at a restated symptom, or at a supplier without its own chain; ask what in the process allowed the error, using the human-error questions in [evidence and stop rules](references/evidence-and-stop-rules.md). The number of whys is not fixed.
+8. **Set one action per root cause.** Each verified root in each leg gets its own action, chosen from the strongest feasible level:
+   1. Make the error impossible.
+   2. Detect at the source and stop (error-proofing; IATF 16949 10.2.4 asks for a documented choice of error-proofing methods with test frequencies).
+   3. Detect later, automatically.
+   4. Standardise (instruction, checklist, visual aid).
+   5. Train, remind or inspect by hand.
+
+   - Training, a reminder or a manual check alone is the weakest level. It can support a stronger action but is never the action on its own.
+   - Give each action an owner, a date and how its effect will be verified. The check period is set by local policy.
 9. **Close the loop.** Name the PFMEA, control plan, instruction or maintenance-plan rows to update and the similar parts or lines to check for the same cause (IATF 16949 10.2.3 asks for systemic corrective action that considers similar processes and products, and for updated documents). Then run the Validation checks.
 
 Example (invented): on the early shift, 14 of 600 brackets had a drilled hole 0.8 mm off position, found at the welding station when the bolt would not fit.
@@ -77,6 +85,8 @@ Example (invented): on the early shift, 14 of 600 brackets had a drilled hole 0.
 | Detection | Not caught at the hole-position check | Check is 1 part per 200 | Control plan row | Verified |
 | Detection | Frequency of 1 per 200 | Frequency set without a known cause that shifts position | Control-plan review record | Hypothesis: ask the planner, owner and date set |
 | System | Chips not foreseen | PFMEA has no chip-on-locator cause for this fixture | PFMEA row | Verified (root) |
+
+The system row for the detection leg (why the frequency was set that way) waits until the detection hypothesis is checked.
 
 Therefore test: no blow-off, therefore chips build up, therefore the bracket does not seat, therefore the hole is off.
 
@@ -116,7 +126,7 @@ Check before answering:
 2. Only the occurrence leg, so the gap in detection and the system stays open (fix: steps 4, 5).
 3. Links built on opinion with no evidence, presented as facts (fix: step 6).
 4. A jump of several steps in one link, which fails the therefore test (fix: steps 3, 7).
-5. A chain that ends at "operator error" or carelessness (fix: step 7).
+5. A chain that ends at "operator error" or at a person's care or attention (fix: step 7).
 6. Forcing exactly five whys, or stopping at a symptom (fix: step 7).
 7. Retraining or a reminder as the only action (fix: step 8).
 

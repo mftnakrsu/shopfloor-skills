@@ -1,4 +1,4 @@
 ---
 type: llm
 ---
-The response gives the control plan as rows per operation and characteristic, and each row states the specification, the measurement technique or gauge, the sample size and frequency, the control method and a reaction plan.
+Each control-plan row states the specification, the gauge or measurement technique, the sample size, and the frequency of the check.

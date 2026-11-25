@@ -27,6 +27,7 @@ metadata:
 - Is: where, when and how much the defect is seen. Is-Not (Ist-nicht): the closest comparable object, place, time or amount where the defect could be but is not. It is a real comparison, not the negation of the Is.
 - Distinction (Unterschied): what is true only of the Is side compared with its Is-Not. Change (Änderung): something new or different in, on or around a distinction, with its date.
 - Possible cause: a statement "change or distinction X causes the defect by mechanism Y". Most probable cause: the possible cause that explains every Is and Is-Not with the fewest and most reasonable assumptions. True cause: a most probable cause that a test has verified.
+- This skill narrows: it tests a known list of causes against the full specification. Building a broad list of causes is `solve-fishbone`.
 - Cause status: **eliminated** (contradicts a fact), **fits only if** (needs an assumption), **fits** (explains every pair), **verified** (proved by a test).
 
 ## Inputs
@@ -73,7 +74,7 @@ Example (invented): powder-coated panels show scratches on the front face, found
 
 | Possible cause | Line B, not A | Front, not back | From Monday | Result |
 |---|---|---|---|---|
-| New powder lot | Does not explain: same lot on line A | Does not explain: the lot coats both faces | Does not explain: started Friday | Eliminated |
+| New powder lot | Does not explain: same lot on line A | Does not explain: the lot coats both faces | Only if the lot sat unused over the weekend | Eliminated |
 | New racks on line B | Explains | Only if the rack hooks touch the front face | Explains | Most probable; verify |
 
 Verification: hang 50 panels on old racks and 50 on new racks on line B. Confirms if scratches appear only on the new racks; refutes if both sets scratch alike.

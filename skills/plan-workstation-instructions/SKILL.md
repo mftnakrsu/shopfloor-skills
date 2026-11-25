@@ -15,8 +15,7 @@ description: >-
   error-proofing, revision) and asks what the user means by a method
   sheet, as that term has no public definition (Prüfanweisung,
   Prüfmethodenblatt, Messanweisung, Arbeitsanweisung,
-  Werkerselbstprüfung, WSP, Prüfplan, Produktionslenkungsplan, PLP,
-  Grenzmuster).
+  Werkerselbstprüfung, WSP, Produktionslenkungsplan, PLP).
 license: MIT
 metadata:
   version: "1.0.0"
@@ -111,6 +110,7 @@ Check before answering:
 
 ## Hand-offs
 
+- A control-plan change request (for example a lower check frequency) and gaps found by the coverage, sample-and-reaction and PFMEA-trace checks go to `plan-control-plan`; a new or revised control plan arrives from there to be carried into the station documents.
 - A control chart named as the control method is set up and read with `measure-spc`; its reaction plan feeds the reaction box.
 - A D7 update to station instructions after a complaint arrives from `solve-8d`; report the new revision back to that 8D.
 - New set-up and first-off steps after a changeover study arrive from `improve-smed`; operator cleaning and inspection standards arrive from `improve-tpm`.

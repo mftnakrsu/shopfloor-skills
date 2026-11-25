@@ -32,7 +32,7 @@ Stop a chain only when all three hold:
 
 Do not stop at:
 
-- a person ("operator error", "did not pay attention", "careless", "forgot");
+- a person ("operator error", or a person's attention, care or memory);
 - "no time", "bad luck", "it just happened";
 - a restated symptom ("the part was wrong");
 - a supplier, another department or the customer, without asking for that party's own chain;
@@ -60,7 +60,7 @@ Rule of thumb, adapted from the action hierarchy used in patient safety (IHI RCA
 
 | Strength | Action type | Example (invented) |
 |---|---|---|
-| Strongest | Make the error impossible | A design or fixture that accepts the part only the right way |
+| Strongest | Make the error impossible | A fixture that cannot close with a part missing |
 | Strong | Detect at the source and stop | A sensor that stops the cycle when the condition is present |
 | Medium | Detect later, automatically | An automatic check with a challenge part tested every shift |
 | Weak | Standardise | A revised instruction, a checklist, a visual aid |
@@ -68,7 +68,7 @@ Rule of thumb, adapted from the action hierarchy used in patient safety (IHI RCA
 
 - Supplier worked examples rate retraining and alerts to the operator as almost no benefit and mistake-proofing as highly effective (Keysight). Training and new procedures are weaker actions in RCA2.
 - Training is part of rolling out a stronger action, never the action on its own.
-- An error-proofing device needs a test frequency in the control plan, a challenge part and a reaction plan for its failure (IATF 16949 10.2.4).
+- An error-proofing device needs a test frequency (IATF 16949 10.2.4), a challenge part and a reaction plan for its failure (IATF 16949 8.5.1.1 or local practice).
 - Verify the effect of each action with evidence (data, records, observation) over a period set by local policy.
 
 ## Sources

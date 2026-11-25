@@ -74,8 +74,8 @@ Ask for every missing input; never invent one. Copy the user's numbers exactly.
    - approved alternate controls, marked as alternates (8.5.6.1.1).
 5. **Fill the columns.** Specification from the drawing; gauge by ID or type; sample size and frequency; control method (SPC chart, check sheet, 100 % test, error-proofing); record type (values for variable data, never only OK/NOK, 9.1.1.1). Column rules in [columns and rows](references/columns-and-rows.md).
 6. **Check the exposure of each frequency.** Parts at risk = output rate × interval between checks. That quantity is what the reaction must contain.
-   - Example (invented): 90 parts an hour, one check every 4 hours → up to 360 parts back to the last good check. If the customer cannot accept that exposure, shorten the interval or add a detection step.
-7. **Write the reaction plan for every row**, 100 % tests and error-proofed rows included: a reject there is still a deviation that gets the local rule. In order: stop or hold; contain suspect product back to the last good check; restore control and verify with a passing check; notify and escalate by the local rule; record. Name the owner by role. For an error-proofing device that fails its check: everything made since its last successful check is suspect, and production continues only on an approved alternate. Wording and gaps in [reaction plans](references/reaction-plans.md).
+   - Example (invented): 60 parts an hour, one check every 3 hours → up to 180 parts back to the last good check. If the customer cannot accept that exposure, shorten the interval or add a detection step.
+7. **Write the reaction plan for every row**: every row needs a reaction. In order: stop or hold; contain suspect product back to the last good check; restore control and verify with a passing check; notify and escalate by the local rule; record. Name the owner by role. A failed error-proofing device makes its output since the last good check suspect; running on an alternate control needs approval (8.5.6.1.1). Wording and gaps in [reaction plans](references/reaction-plans.md).
 8. **Check the measurement systems.** Every gauge or method on the plan, attribute and visual checks included, needs a passed study (7.1.5.1.1). A missing study on a special characteristic blocks release of that row; list it with an owner.
 9. **Add the Safe Launch layer when it applies.** For each extra control: what it catches, the containment it gives, and its exit criteria as agreed with the customer.
    - A defect found by the extra layer escaped the regular controls. It gets the reaction plan, structured problem solving, and a review of the regular detection control for that defect.
@@ -107,7 +107,7 @@ Check before answering:
 
 - Say first what the plan is ready for (release, review, Safe Launch exit) or what blocks it.
 - Then the header, the rows in `assets/control-plan-template.md`, the open gaps with owners, and the review triggers.
-- Every row carries every column: specification, gauge, sample size, frequency, control method, record and its own reaction plan with the owner. A shared rule may be defined once and cited by name, but the reaction cell is never left out or moved below the table.
+- Every row carries every column: specification, gauge, sample size, frequency, control method, record and its own reaction plan with the owner. A shared rule may be defined once and cited by name, but the reaction cell is never left out.
 - For a Safe Launch, also fill `assets/safe-launch-plan.md`.
 - Write for the user in plain words; never cite this skill's step numbers or file names.
 

@@ -54,7 +54,7 @@ Rule of thumb: 20–40 questions for a full process audit, so that each can be c
 
 As checked in November 2026: VDA 6.3 4th revised edition, January 2023. The volume is a paid document; the points below come from VDA QMC's public interpretation sheet and secondary summaries, so check the current text and the customer requirements before you rate.
 
-- **Questions.** 59 questions in the 2023 edition, 17 of them starred (*) as higher-risk questions (en-standard.eu). Series production is element P6; the whole set runs P1 to P7 (certivo).
+- **Questions.** 59 questions in the 2023 edition, 17 of them starred (*) as higher-risk questions (per one public listing, en-standard.eu). Series production is element P6; the whole set runs P1 to P7 (certivo).
 - **Points.** Each rated question gets 10, 8, 6, 4 or 0 points; no other values (DQS, mobile2b).
 - **2/3 rule.** An element, sub-element or process step in which fewer than 2/3 of the questions are rated is left out of the overall result; its rated questions become "not rated", no percentage is shown for it, and the downgrading rules are not applied to it. With several process steps, count all questions of all steps per sub-element (VDA QMC SI).
 - **Fulfilment percentage.** The usual reading: points achieved ÷ (questions rated × 10) × 100 (mobile2b). For P6 with several process steps, apply the edition's own rule for combining steps.

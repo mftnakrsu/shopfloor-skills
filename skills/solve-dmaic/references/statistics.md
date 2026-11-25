@@ -14,7 +14,7 @@ All examples use invented round numbers. α (the risk of calling a difference re
 
 Run it on the gauge, method and people that will collect the project data, before the baseline.
 
-- %GRR (study variation) = 100 × sigma of the measurement system ÷ total sigma of the study. %GRR of tolerance uses 6 × sigma of the measurement system ÷ (USL − LSL).
+- %GRR (study variation) = 100 × sigma of the measurement system ÷ total sigma of the study. %GRR of tolerance uses 6 × sigma of the measurement system ÷ (USL − LSL); 6 sigma is the current convention, and older studies use 5.15 sigma.
 - Number of distinct categories (ndc) = 1.41 × sigma of the parts ÷ sigma of the measurement system, rounded down (Minitab).
 - Acceptance (AIAG guideline, via Minitab): %GRR under 10% acceptable; 10–30% marginal, accepted or not by local policy according to the use and the cost of a better gauge; over 30% not acceptable. ndc at least 5.
 - Example: sigma of the measurement system 0.02 mm, total sigma 0.10 mm. %GRR = 20%, marginal. Sigma of the parts = √(0.10² − 0.02²) = 0.098 mm; ndc = 1.41 × 0.098 ÷ 0.02 = 6.9, so 6.
@@ -26,7 +26,7 @@ Run it on the gauge, method and people that will collect the project data, befor
 - Rate for counted Y: defects ÷ units checked over the baseline period, with both counts stated.
 - Within sigma from subgroups: R-bar ÷ d2 (d2 = 2.326 for n = 5) or MR-bar ÷ 1.128 for individual values. Overall sigma: the standard deviation of all values.
 - Cp = (USL − LSL) ÷ 6σ within. Cpk = min(USL − mean, mean − LSL) ÷ 3σ within. Pp and Ppk use the overall sigma (NIST; JMP).
-- On a stable process Cpk and Ppk are close. Ppk well below Cpk means the mean moves between subgroups: look at the control chart again.
+- On a stable process Cpk and Ppk are close. Ppk well below Cpk suggests the mean moves between subgroups: look at the control chart again.
 - Example: tolerance 50 ± 3, mean 50.5, within sigma 0.5, overall sigma 0.8. Cpk = min(2.5, 3.5) ÷ 1.5 = 1.67; Ppk = 2.5 ÷ 2.4 = 1.04. The gap points to drift between subgroups.
 - Capability needs a stable process, roughly normal data, and enough values: about 50 or more (NIST). On non-normal data, transform or use a non-normal method before quoting an index.
 - Required Cpk levels are set by the customer or by local policy.
@@ -35,14 +35,14 @@ Run it on the gauge, method and people that will collect the project data, befor
 
 | Y | X | Question | Test |
 |---|---|---|---|
-| Pass/fail | Two groups | Do the defect rates differ? | Two-proportion z test; Fisher's exact test when counts are small |
+| Pass/fail | Two groups | Do the defect rates differ? | Two-proportion z test; Fisher's exact test when any expected count is under about 5 (rule of thumb) |
 | Pass/fail or category counts | Three or more groups | Does the rate or the mix depend on the group? | Chi-square test of independence |
 | Measured | Two independent groups | Do the means differ? | Two-sample t test, Welch form |
 | Measured | Same units before and after | Did each unit change? | Paired t test on the differences |
 | Measured | Three or more groups | Do the means differ? | One-way ANOVA, then compare pairs |
 | Measured | Continuous X | Does Y move with X? | Scatter plot and regression |
 
-Small counts: the z test needs reasonably large samples (NIST). If a group has fewer than about 5 defects, use Fisher's exact test (rule of thumb).
+Small counts: the z test needs reasonably large samples (NIST). If any expected count is under about 5, use Fisher's exact test (rule of thumb).
 
 ## Test formulas with examples
 
@@ -58,7 +58,7 @@ Example: before n = 20, mean 12.0, s = 1.0; after n = 20, mean 11.0, s = 1.0. t 
 
 Example: 10 units, mean difference 0.5, s of d 0.5. t = 0.5 ÷ (0.5 ÷ 3.162) = 3.16; critical value for 9 degrees of freedom 2.262. Significant.
 
-**Chi-square of independence.** Expected count of a cell = row total × column total ÷ grand total. χ² = Σ (observed − expected)² ÷ expected over all cells, with (rows − 1) × (columns − 1) degrees of freedom (NIST).
+**Chi-square of independence.** Expected count of a cell = row total × column total ÷ grand total. χ² = Σ (observed − expected)² ÷ expected over all cells, with (rows − 1) × (columns − 1) degrees of freedom (NIST). The test needs expected counts of about 5 or more in each cell (rule of thumb); with smaller counts, merge groups or use an exact test.
 
 Example: three lines with 1,000 units each and 30, 30 and 60 defective. Expected defective 40 per line, expected good 960. χ² = (100 + 100 + 400) ÷ 40 + (100 + 100 + 400) ÷ 960 = 15.0 + 0.63 = 15.6; 2 degrees of freedom, critical value 5.991. The rate depends on the line.
 
@@ -70,7 +70,9 @@ Example: three lines with 1,000 units each and 30, 30 and 60 defective. Expected
 2. Not significant: no difference was shown. That is not proof of no difference; the sample may be too small to see it (NIST).
 3. Practical size: state the difference in the unit of Y and in money. A significant difference that is small against the gap is not a vital X.
 4. Cause: data collected without control show association. Before calling an X a root cause, check what else changed with it and confirm it with an on/off trial or a designed experiment in which X is set deliberately and other factors are held or randomised.
-5. Gain: if a vital X were removed, expect Y to move to the level of the group without it (rule of thumb). Compare that with the goal; if it still misses, look for further Xs.
+5. Many Xs: the more Xs are tested, the more likely one passes by chance. Confirm a vital X with a trial before acting on it.
+6. Assumptions: the t tests need roughly normal values or enough values in each group for the mean to behave normally.
+7. Gain: if a vital X were removed, expect Y to move to the level of the group without it (rule of thumb). Compare that with the goal; if it still misses, look for further Xs.
 
 ## Sources
 

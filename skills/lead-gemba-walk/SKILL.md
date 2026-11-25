@@ -9,9 +9,9 @@ description: >-
   adds an optional layered process audit (LPA) segment, and closes the
   loop with the team. Use when planning, doing, writing up or following up
   a gemba walk, go-and-see, leader or management walk, shopfloor round or
-  layered process audit, or turning walk notes into findings and actions
-  (Gemba Walk, Gemba-Rundgang, Shopfloor-Rundgang, Prozessbegehung,
-  Vor-Ort-Begehung, Layered Process Audit).
+  a layered audit segment during a walk, or turning walk notes into
+  findings and actions (Gemba Walk, Gemba-Rundgang, Shopfloor-Rundgang,
+  Prozessbegehung, Vor-Ort-Begehung).
 license: MIT
 metadata:
   version: "1.0.0"
@@ -87,7 +87,7 @@ Ask only for what is missing:
 2. Close the loop: tell the people at the gemba what was learned and what happens next, even when nothing happens at once. When is set by local policy; rule of thumb: before the next walk in that area.
 3. Close a finding only when someone has seen at the gemba that the action works. "Action assigned" or "reported done" is not closed.
 4. Start every walk with the open findings of the previous walk in that area.
-5. Track the walk system with the metrics in [follow-up](references/follow-up.md): walks held, findings closed and verified on time, average open age; for the LPA, schedule adherence, first-time conformance and repeat Nos.
+5. Track the walk system with the metrics in [follow-up](references/follow-up.md): walks held, findings closed and verified on time, average open age. LPA programme metrics are kept with `audit-process`.
 
 ## Validation
 
@@ -117,7 +117,7 @@ Check before answering:
 4. The walker talks only to supervisors, or reads screens instead of watching the work (fix: steps A5, B1).
 5. The walk shrinks to a checklist; nobody asks whether the standard is adequate (fix: step A7).
 6. Findings are closed when assigned, and the team never hears back (fix: steps C2, C3).
-7. LPAs are delegated, or Nos corrected during the audit are booked as Yes (fix: step B6, [layered audit](references/layered-audit.md)).
+7. The walker hands the LPA segment to someone else, or records a No fixed on the spot as a Yes (fix: step B6, [layered audit](references/layered-audit.md)).
 
 ## Hand-offs
 

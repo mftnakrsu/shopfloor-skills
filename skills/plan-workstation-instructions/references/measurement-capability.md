@@ -13,6 +13,8 @@ What evidence a gauge named in a station document needs, and the default limits.
 
 ## VDA 5 ratios
 
+The Q_MS and Q_MP default limits below come from public secondary sources and are not confirmed against the 2021 text.
+
 - Resolution first: %RE = resolution ÷ tolerance × 100 %. Default limit 5 % (VDA 5, 2010 revision; check the current customer requirement).
 - Measurement system: Q_MS = 2 × U_MS ÷ T × 100 %, with U_MS the expanded uncertainty of the measuring system and T the tolerance width. Default limit 15 % (VDA recommendation, 2010 revision); company limits between 15 % and 20 % are seen (Dietrich).
 - Measurement process: Q_MP = 2 × U_MP ÷ T × 100 %, with U_MP the expanded uncertainty of the whole process at the station (operators, part, temperature, stability). Default limit 30 %; 20 % for high requirements (VDA 5, 2021, as shown in the VDA QMC article).

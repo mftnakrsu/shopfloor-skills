@@ -42,8 +42,8 @@ metadata:
 
 Ask for every missing input; never invent one. Copy the user's numbers exactly.
 
-- Without baseline data (Y over a defined period and the volume), ask for it and stop. A charter may be offered from `assets/project-charter.md` with the problem statement, goal and savings left blank; never fill them with assumed figures.
-- Without specification limits, compute no capability; report the mean and sigma and ask for the limits.
+- Without baseline data (Y over a defined period and the volume), ask for it and stop. A project charter (Projektcharta) may be offered from `assets/project-charter.md` with the problem statement, goal and savings left blank; never fill them with assumed figures.
+- Without specification limits, compute no capability (Prozessfähigkeit); report the mean and sigma and ask for the limits.
 - Without a measurement system result, the Measure tollgate cannot pass; ask for the study or plan one.
 - The significance level α and the acceptance limits for measurement studies are set by local policy; if none is given, use α = 0.05 and say so (rule of thumb).
 
@@ -84,7 +84,7 @@ Ask for every missing input; never invent one. Copy the user's numbers exactly.
    - Update the problem and goal statements with what was learned.
 5. **Improve.**
    - One solution per verified vital X. Prefer removing the cause or error-proofing over inspection or training.
-   - Assess the risk of each change (PFMEA) and pilot it at a limited scope.
+   - Assess the risk of each change (process FMEA, PFMEA) and pilot it at a limited scope.
    - Verify with data from the same measurement system: before/after with the same test as in Analyze, and new capability if Y is measured.
    - Confirm that the pilot moved Y toward the goal, and that the X really changed.
 6. **Control.** Use `plan-control-plan` and `plan-workstation-instructions`.

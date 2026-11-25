@@ -1,4 +1,4 @@
 ---
 type: llm
 ---
-The coolant concentration (op 20) and the wash bath temperature (op 40) appear as process-characteristic rows with their own frequency and reaction.
+Coolant concentration (op 20) and wash-bath temperature (op 40) each appear as a process-characteristic row with their stated frequency.

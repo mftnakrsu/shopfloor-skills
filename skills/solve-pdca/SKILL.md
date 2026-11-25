@@ -27,6 +27,7 @@ metadata:
 - Act has three outcomes: **adopt** (goal met: standardise), **adapt** (partly met: change the countermeasure and run the next cycle), **abandon** (no effect or harm: back to the analysis) (Deming 1993, via Moen and Norman).
 - SDCA (standardise, do, check, act) holds a standard; PDCA raises it (Imai, via secondary sources). A cycle starts from a standard that is followed and ends in a new one.
 - The A3 (A3-Bericht) is one sheet, owner and date at the top, read left to right: background, current condition, goal, analysis on the left; countermeasures, plan, check, follow-up on the right (Shook). The layout is flexible; the logic is fixed.
+- Choosing between point fix, event and kata is `improve-kaizen`; the 30/60/90 sustain plan stays there.
 - ISO 9001 0.3.2 describes processes and the management system run as a PDCA cycle; 10.2.1 asks that the effect of a corrective action is reviewed; 10.3 and IATF 16949 10.3.1 ask for continual improvement with a method and an effectiveness check. This skill gives one cycle its working steps.
 
 ## Inputs
@@ -67,14 +68,15 @@ Ask for every missing input; never invent one. Copy the user's numbers exactly.
    |---|---|
    | Goal met, result close to the prediction, no harmful side effect | Adopt (einführen): write the new standard, train every shift, set the check that it is used, then roll out to similar areas |
    | Goal met, but far better than predicted | Confirm first: look for another change in the area, then repeat or extend the test before adopting; the theory is incomplete |
-   | Better than baseline, goal not met (whether or not the prediction was met), no harmful side effect | Adapt (anpassen): keep the countermeasure running as an interim measure under the test controls; aim the next cycle at the remaining cause, with a new prediction and test plan as in step 5, counted the same way as the baseline |
+   | Better than baseline, goal not met (whether or not the prediction was met), no harmful side effect | Adapt (anpassen): keep the countermeasure running as an interim measure under the test controls; aim the next cycle at the remaining cause, with a new prediction and test plan (step 5) |
    | No effect, or a harmful side effect | Abandon (verwerfen): undo the change; go back to the analysis, because the cause was probably wrong |
 
+   - Goal met but the result fell short of the prediction: adopt, and record that the theory is incomplete.
    - Never standardise, roll out or close on a result that was not measured.
    - Roll-out is its own small check: confirm the result on the first similar area before the rest.
 9. **Hold the gain and close.** The new standard names the document, its owner and its release date; the old version is withdrawn. The check that it is used names the role, the method (leader standard work, a layered process audit (Prozessaudit) item or a gemba-walk item) and a frequency to confirm against local policy. Close the A3 only when the goal is met in a measured check and the standard is released and checked. Record the learning in the follow-up box and share it.
 
-Example (invented): mispicks at a kitting rack. Baseline 40 per 10,000 picks over 4 weeks, both shifts; goal 10 per 10,000. Cause proven by data: 70% of mispicks are between two look-alike bins. Countermeasure: a light that shows the bin to pick. Prediction: at most 10 per 10,000. Trial: 5,000 picks, 15 mispicks.
+Example (invented): mispicks at a kitting rack. Baseline 40 per 10,000 picks over 4 weeks, both shifts; goal 10 per 10,000. Cause: two look-alike bins (hypothesis, backed by 70% of mispicks between two look-alike bins). Countermeasure: a light that shows the bin to pick. Prediction: at most 10 per 10,000. Trial: 5,000 picks, 15 mispicks.
 
 | Check | Value |
 |---|---|
@@ -83,12 +85,12 @@ Example (invented): mispicks at a kitting rack. Baseline 40 per 10,000 picks ove
 | Gap closed | (40 − 30) ÷ (40 − 10) = 33% |
 | Against prediction and goal | Missed both |
 | What is left | 12 of 15 on the late shift, where the record shows the light was off for part of the test |
-| Act | Adapt: keep the light; find out why it was off, fix that, rerun the test with the same prediction |
+| Act | Adapt: keep the light running as an interim measure under the test controls; aim the next cycle at why it was off on the late shift, with a new prediction and test plan |
 
 ### Review an A3, or a request to close, standardise or roll out
 
 1. Run the Validation checks against the A3 as given.
-2. Say plainly whether each request (close, standardise, roll out, mark the check as passed) can be done now. If not, say what must come first and in what order: measure, compare with the prediction and the goal, decide, then standardise, then roll out area by area.
+2. Say plainly whether each thing the user asks to do (close, standardise, roll out) can be done now. If not, say what must come first and in what order: measure, compare with the prediction and the goal, decide, then standardise, then roll out area by area.
 3. List each failed item with the fix. Never write a check result or an act decision the data does not support.
 
 ## Validation

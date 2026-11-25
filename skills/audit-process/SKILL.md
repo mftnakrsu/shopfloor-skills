@@ -5,11 +5,10 @@ description: >-
   scored VDA 6.3 process audits and self-assessments, whole layered
   process audit programmes (not a single walk segment) and
   shopfloor-management self-audits. Use when planning or doing an
-  internal or customer-style process audit, scoring a VDA 6.3 element or
-  checking its A/B/C class against the 2/3 and downgrading rules, writing
-  audit notes up as findings, grading
-  nonconformities (major, minor, observation) and mapping them to ISO
-  9001 and IATF 16949 clauses, designing or reviewing an LPA programme
+  internal or customer-style process audit, scoring a VDA 6.3 element,
+  writing audit notes up as findings, grading nonconformities (major,
+  minor, observation) and mapping them to ISO 9001 and IATF 16949
+  clauses, designing or reviewing an LPA programme
   and its metrics, or auditing tier meetings. Builds the checklist from
   the control plan and PFMEA, covers every shift and the handover,
   writes each finding as requirement, evidence and gap, and follows up
@@ -27,8 +26,8 @@ metadata:
 
 ## Conventions
 
-- Three audit types: the manufacturing process audit (Prozessaudit), which checks one process on every shift against its control plan, PFMEA and instructions; the layered process audit (LPA, geschichtetes Prozessaudit) programme, short yes/no checks by several management layers; and the shopfloor-management self-audit (Selbstaudit) of tier meetings and boards.
-- Scope split: a single LPA segment inside one walk is planned in `lead-gemba-walk`; this skill designs and reviews the whole LPA programme and its results. Fixing a weak tier routine is `lead-daily-routine`; this skill audits and scores it.
+- Three audit types: the manufacturing process audit (Prozessaudit), which checks one process on every shift against its control plan (Produktionslenkungsplan), PFMEA (Prozess-FMEA) and instructions; the layered process audit (LPA, geschichtetes Prozessaudit) programme, short yes/no checks by several management layers; and the shopfloor-management self-audit (Selbstaudit) of tier meetings and boards.
+- Scope split: this skill owns the LPA programme: its design, layers, checklists, schedule, metrics and review. `lead-gemba-walk` owns only the optional LPA segment done inside one walk. Fixing a weak tier routine is `lead-daily-routine`; this skill audits and scores it.
 - A finding (Feststellung) compares objective evidence with the audit criteria; a nonconformity (Abweichung) is a finding that breaks a requirement. ISO 19011 terms and principles in [clause map](references/clause-map.md).
 - Clause numbers are ISO 9001:2015 and IATF 16949:2016, summarised in our own words. Edition status in [clause map](references/clause-map.md).
 
@@ -74,15 +73,15 @@ Ask for every missing input; never invent one. Copy every number, ID and revisio
    - Observation or opportunity for improvement (Verbesserungspotenzial): no requirement is broken.
    - Rules of thumb: grade up when product may reach the customer, when a special characteristic is involved, and for a repeat finding.
 3. Map each finding to the most specific IATF 16949 clause and its ISO 9001 base clause with the table in [clause map](references/clause-map.md). If no clause fits, cite the local document as the criterion; never stretch a clause.
-4. For every nonconformity, state which product is affected (since the last known-good check) and what must happen to it: hold, re-check or a risk assessment. An overdue gauge needs a review of the results and product it measured since it ran out (7.1.5.2.1).
+4. For every nonconformity, state which product is affected (since the last known-good check) and what must happen to it: hold, re-check or a risk assessment. Any measuring result found invalid needs a review of the results and product since it became invalid, for example an overdue gauge (7.1.5.2.1).
 5. Record conforming points of good practice as well (fair presentation).
 6. Closing meeting: present the findings, note any the area does not accept, and agree the response deadlines (set by local policy or the customer).
 
 ### D. Score a rated questionnaire (VDA 6.3 style)
 
 1. Each rated question has 10, 8, 6, 4 or 0 points. Apply the 2/3 rule: an element, sub-element or process step with fewer than 2/3 of its questions rated is left out of the result.
-2. Fulfilment % = points achieved ÷ (questions rated × 10) × 100. Worked example (invented round numbers): 20 questions, 18 at 10, 1 at 6, 1 at 0 → 186 ÷ 200 × 100 = 93%.
-3. Classify by the percentage, then apply the downgrading rules. A question at 0, or a starred (*) question with low points, lowers the class whatever the percentage; in the example the 0 rules out an A. The exact triggers and bands depend on the edition and the customer: confirm them ([process audit](references/process-audit.md)).
+2. Fulfilment % = points achieved ÷ (questions rated × 10) × 100. Worked example (invented round numbers): 20 questions, 18 at 10, 1 at 8, 1 starred question at 4 → 192 ÷ 200 × 100 = 96%.
+3. Classify by the percentage, then apply the downgrading rules. A question at 0, or a starred (*) question with low points, lowers the class whatever the percentage; in the example a starred question scored 4 or less rules out an A under one OEM supplement. The exact triggers and bands depend on the edition and the customer: confirm them ([process audit](references/process-audit.md)).
 4. Every question below 10 points becomes a finding with an action, zeros and starred questions first (rule of thumb).
 
 ### E. LPA programme and SFM self-audit
@@ -97,7 +96,7 @@ Ask for every missing input; never invent one. Copy every number, ID and revisio
    - Give each a due date: the user's, one tied to a known deadline, or a proposed date marked as a proposal.
    - Leave no action blank. While the root cause is open, name a candidate corrective action on the process, marked "to be confirmed by the root cause".
    - The area confirms or replaces them.
-2. The root-cause step asks why the process allowed the gap (no approval route, no reminder, no error-proofing, an unclear standard); a person or a shift is never the final cause.
+2. The root-cause step asks why the process allowed the gap (no approval route, no reminder, no error-proofing, an unclear standard); a person is never the final cause.
 3. Route the root cause: repeat, customer or safety-related findings to `solve-8d`; a single-cause gap to `solve-5why`; many possible causes to `solve-fishbone`.
 4. Close a finding only after its effectiveness is verified on evidence: records of the next shifts, a follow-up audit, or a re-check at the station. "Action done" is not closed.
 5. Raise the audit frequency for the area after major findings or complaints (9.2.2.1) and feed the results to management review.
@@ -129,7 +128,7 @@ Check before answering:
 3. A gap is written up, but the product it may have affected is left alone (fix: step C4).
 4. A clause is stretched to fit, or cited from memory with invented wording (fix: step C3).
 5. A VDA 6.3 class read from the percentage alone, ignoring the downgrading rules (fix: step D3).
-6. LPA Nos corrected during the audit booked as Yes, so conformance reads 100% (fix: step E1).
+6. A programme whose first-time conformance counts corrected Nos as conforming, so the result reads 100% (fix: step E1).
 7. Findings closed when the action is reported done, not verified (fix: step F4).
 
 ## Hand-offs

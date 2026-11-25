@@ -23,7 +23,7 @@ Rows are the possible causes; columns are the Is/Is-Not pairs. In each cell ask:
 
 A single "does not explain" cell eliminates the cause. Common patterns:
 
-1. **Present on both sides.** The condition applies to the Is-Not side as well (same lot, same gauge, same programme), yet the Is-Not has no defect.
+1. **Present on both sides.** The condition applies to the Is-Not side as well (same fixture, same supplier), yet the Is-Not has no defect.
 2. **Wrong time.** The change happened after the first defect, or long before it with no reason for the delay.
 3. **Wrong place on the part.** The mechanism would act on the whole part, but the defect sits in one spot only.
 4. **Wrong extent.** The mechanism would affect every unit, but only some are affected, or the trend does not match.
