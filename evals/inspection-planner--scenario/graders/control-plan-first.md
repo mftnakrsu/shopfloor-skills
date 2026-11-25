@@ -1,4 +1,4 @@
 ---
 type: llm
 ---
-The response does not draft operation-20 station instruction content before the control-plan rows for operation 20 exist; it plans or asks for the control-plan inputs first.
+Any operation-20 station instruction content in the response is derived from control-plan rows given earlier in the same response; it contains no station check that has no control-plan row.
