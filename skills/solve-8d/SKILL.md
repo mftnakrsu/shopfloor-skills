@@ -106,3 +106,6 @@ Before answering, also check: D2 has no cause, D3 names every suspect location, 
 
 - Escalations arrive from `lead-daily-routine`; report the 8D status back to that tier meeting.
 - A D7 maintenance-plan update goes to `improve-tpm`.
+- Containment (D3) and the verification of permanent actions use a control chart: check stability with `measure-spc`; a repeated SPC signal with an unknown cause arrives from there.
+- A low %C/A from a value stream map arrives from `improve-vsm`; a defect whose cause must be proven arrives from `improve-kaizen`.
+- Customer, safety or repeat problems found on a gemba walk arrive from `lead-gemba-walk`.

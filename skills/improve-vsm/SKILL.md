@@ -115,3 +115,6 @@ Check before answering:
 - A C/O kaizen burst (EPEI too long, supermarket too large) goes to `improve-smed`; an uptime burst goes to `improve-tpm`; a machine whose losses need a loss tree goes to `measure-oee`.
 - A low %C/A from a complaint or a repeat defect goes to `solve-8d`.
 - Loop targets are tracked on the board in `lead-daily-routine`; a red lead-time or delivery KPI there that spans several processes comes here.
+- Supermarket card counts, loop sizing and pitch design beyond the EPEI minimum check go to `improve-kanban-pull`; a re-map once the loops run comes back here.
+- A kaizen burst that needs a kaizen event or a choice of improvement format goes to `improve-kaizen`.
+- The current-state walk can be planned as a value-stream walk with `lead-gemba-walk`; its observations across the stream come here.

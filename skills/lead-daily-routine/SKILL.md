@@ -59,7 +59,7 @@ Ask only for what is missing. If there is no answer, state assumptions as assump
 
 ### B. Run today's meeting
 
-1. For every red KPI, give either a countermeasure with owner and date, or an escalation. A red OEE KPI gets its loss tree in `measure-oee`.
+1. For every red KPI, give either a countermeasure with owner and date, or an escalation. A red OEE KPI gets its loss tree in `measure-oee`; a quality red from an SPC signal gets its chart check in `measure-spc`.
 2. List the actions due today.
 3. List the escalations going up and the answers coming down.
 4. Output the agenda with clock times that fit the tier's start time and timebox (steps A2 and A3; worked example in [tier design](references/tier-design.md)).
@@ -104,3 +104,7 @@ Check before answering:
 
 - A complaint, safety issue or repeat problem with an unknown cause goes to `solve-8d`.
 - A red OEE KPI goes to `measure-oee` for the loss tree; a red breakdown KPI or overdue AM tags go to `improve-tpm`; a line that keeps missing the hour-by-hour plan goes to `improve-line-balancing`.
+- Leader standard work walks and a go-and-see for a red KPI are planned with `lead-gemba-walk`; actions from walks arrive on the board from there.
+- A quality red from an SPC signal goes to `measure-spc` for chart and limit checks; an unresolved or repeat signal arrives from there.
+- A red lead-time or delivery KPI that spans several processes goes to `improve-vsm`; loop targets are tracked on the board.
+- Improvement topics from the board go to `improve-kaizen`; supermarket stock-outs and pitch misses arrive from `improve-kanban-pull`.

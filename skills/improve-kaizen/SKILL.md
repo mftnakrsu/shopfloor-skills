@@ -116,3 +116,8 @@ Check before answering:
 - A defect whose cause must be proven goes to `solve-8d` when it is a customer complaint, a repeat problem or a serious internal problem; otherwise run the kata or A3 with the user.
 - Losses on a machine go to `measure-oee` for the loss tree; set-up losses go to `improve-smed`; breakdowns and minor stops to `improve-tpm`.
 - A topic about WIP or throughput time goes to `improve-tpt`; a manual line with uneven station loads goes to `improve-line-balancing`.
+- System kaizen across a stream starts from a current- and future-state map in `improve-vsm`; its loop plan and kaizen bursts arrive here.
+- A flow topic that needs a supermarket, a FIFO lane or CONWIP goes to `improve-kanban-pull`; card-reduction events arrive from there.
+- The check that the new standard is used can be a gemba-walk item planned with `lead-gemba-walk`; walk findings that need an improvement format arrive from there.
+- Improvement topics that need a workshop or a sustain plan arrive from `measure-oee`, `improve-tpt`, `improve-line-balancing`, `improve-smed` and `improve-tpm`.
+- Whether a gain on a measured characteristic is real or noise is checked on a control chart with `measure-spc`.

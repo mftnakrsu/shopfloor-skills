@@ -128,3 +128,7 @@ Check before answering:
 - The set-up loss arrives from the loss tree in `measure-oee`, from `improve-tpm` or from long set-ups at the bottleneck in `improve-tpt`; after the change, re-measure availability in `measure-oee`.
 - Breakdowns or machine-condition problems seen during changeovers go to `improve-tpm`.
 - New machine cycle times or freed capacity on a manual line go to `improve-line-balancing`.
+- A changeover kaizen burst (EPEI too long, supermarket too large) arrives from `improve-vsm`; long supplier change-overs that stretch a kanban loop's lead time arrive from `improve-kanban-pull`.
+- After the change, re-check the stability of the critical characteristics with `measure-spc`; signals that start after changeovers arrive from there.
+- Improvement topics that need a workshop or a sustain plan go to `improve-kaizen`.
+- Long set-ups seen on a gemba walk arrive from `lead-gemba-walk`.

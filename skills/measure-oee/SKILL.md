@@ -116,3 +116,7 @@ Check before answering:
 - Setup, changeover and start-up reject losses go to `improve-smed`; breakdowns, minor stops and speed loss go to `improve-tpm`. Both come back here to re-measure with the same time model.
 - When the bottleneck is known and the problem is throughput time rather than its losses, go to `improve-tpt`.
 - A changed available capacity or machine cycle time on a manual line goes to `improve-line-balancing`; `improve-line-balancing` and `improve-tpt` send their bottleneck here for its OEE.
+- A machine whose losses need a loss tree arrives from `improve-vsm` and `improve-kanban-pull`.
+- Chronic quality loss on one characteristic goes to `measure-spc`; scrap and rework from a characteristic out of control arrive from there.
+- Improvement topics that need a workshop or a sustain plan go to `improve-kaizen`.
+- Equipment losses seen on a gemba walk arrive from `lead-gemba-walk`.

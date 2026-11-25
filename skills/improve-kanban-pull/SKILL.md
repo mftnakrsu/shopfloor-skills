@@ -106,3 +106,8 @@ Check before answering:
 - A supplier or pacemaker that cannot meet takt on a manual line goes to `improve-line-balancing`.
 - Throughput time and WIP-cap checks for a CONWIP segment go to `improve-tpt`.
 - Supermarket stock-outs and pitch misses are reported at the tier meeting run with `lead-daily-routine`.
+- A future state that calls for supermarkets, FIFO lanes or a pacemaker arrives from `improve-vsm`; when the problem is the whole stream, not one loop, go there.
+- A CONWIP or kanban loop chosen as a WIP cap arrives from `improve-tpt`; a line balanced to takt that needs a pacemaker and pitch arrives from `improve-line-balancing`.
+- Card-reduction and loop-tightening events go to `improve-kaizen`.
+- Demand swing or lead-time variation for a statistical safety stock is analysed with `measure-spc`.
+- Card discipline at the kanban posts is checked on walks planned with `lead-gemba-walk`.

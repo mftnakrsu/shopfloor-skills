@@ -111,3 +111,7 @@ Check before answering:
 - The downtime, minor-stop and changeover losses kept out of takt go to `measure-oee` for the loss tree, to `improve-tpm` for breakdowns and to `improve-smed` for changeovers.
 - A changed available capacity or new machine cycle times arrive from `measure-oee` and `improve-smed`.
 - WIP and throughput time after the rebalance go to `improve-tpt`.
+- A process above takt with manual work arrives from `improve-vsm`.
+- Once the line is balanced to takt, its pacemaker and pitch are set with `improve-kanban-pull`.
+- Improvement topics that need a workshop or a sustain plan go to `improve-kaizen`.
+- An unbalanced manual line seen on a gemba walk arrives from `lead-gemba-walk`.

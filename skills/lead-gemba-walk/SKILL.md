@@ -125,3 +125,8 @@ Check before answering:
 - Customer, safety or repeat problems with an unknown cause go to `solve-8d`.
 - Equipment losses go to `measure-oee` for the loss tree, then `improve-tpm` (breakdowns, minor stops) or `improve-smed` (long set-ups).
 - Waiting, piles of work in process and long throughput times go to `improve-tpt`; an unbalanced manual line goes to `improve-line-balancing`.
+- Value-stream walk facts go to `improve-vsm`.
+- Findings that need an improvement format (point fix, kaizen event, kata or A3) go to `improve-kaizen`; a gemba-walk check of a new standard arrives from there.
+- Piles of work in process between two steps with no pull signal go to `improve-kanban-pull`; card-discipline checks at the posts arrive from there.
+- Walks as leader standard work, and a go-and-see for a red KPI, arrive from `lead-daily-routine`.
+- A reaction plan that is not followed at the station, or a chart that is not kept up to date, goes to `measure-spc`.

@@ -134,3 +134,8 @@ Check before answering:
 - A repeated signal with an unknown cause, or a signal linked to a customer complaint or shipped nonconforming product, goes to `solve-8d`.
 - Signals traced to tool wear, machine condition or after repairs go to `improve-tpm`; signals that start after changeovers or set-ups go to `improve-smed`.
 - Scrap and rework minutes from a characteristic out of control feed the quality loss in `measure-oee`.
+- A quality red caused by an SPC signal, or a reaction-plan result, arrives from `lead-daily-routine` for chart and limit checks.
+- Stability checks for containment and for verifying permanent actions arrive from `solve-8d`.
+- A re-check of a characteristic's stability after a repair or a set-up change arrives from `improve-tpm` and `improve-smed`; chronic quality loss on one characteristic arrives from `measure-oee`.
+- Demand or lead-time variation for a statistical kanban safety stock arrives from `improve-kanban-pull`; whether a kaizen gain is real or noise arrives from `improve-kaizen`.
+- A reaction plan that is not followed at the station is checked on walks planned with `lead-gemba-walk`.

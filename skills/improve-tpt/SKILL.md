@@ -115,3 +115,7 @@ Check before answering:
 - Long set-ups or large lots at the bottleneck go to `improve-smed`; unplanned stops or breakdowns there (high variability, low availability) go to `improve-tpm`; bottleneck losses that need a loss tree go to `measure-oee`.
 - Station imbalance on a manual line, or a near-bottleneck manual station, goes to `improve-line-balancing`.
 - A known bottleneck whose problem is the flow rather than its losses arrives from `measure-oee`; WIP and throughput time after a rebalance arrive from `improve-line-balancing`.
+- A lead-time problem that spans the whole stream goes to `improve-vsm`; measured TPT and WIP caps for its future state arrive from there.
+- A WIP cap run as CONWIP or a kanban loop goes to `improve-kanban-pull`.
+- Improvement topics that need a workshop or a sustain plan go to `improve-kaizen`.
+- Waiting and piles of work in process seen on a gemba walk arrive from `lead-gemba-walk`.
