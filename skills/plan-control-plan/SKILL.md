@@ -107,7 +107,7 @@ Check before answering:
 
 - Say first what the plan is ready for (release, review, Safe Launch exit) or what blocks it.
 - Then the header, the rows in `assets/control-plan-template.md`, the open gaps with owners, and the review triggers.
-- Every row carries every column: specification, gauge, sample size, frequency, control method, record and its own reaction plan with the owner. A shared rule may be defined once and cited by name, but the reaction cell is never left out.
+- Every row carries every column: specification, gauge, sample size, frequency, control method, record and its own reaction plan with the owner. A shared rule may be defined once and cited by name, but the reaction cell is never left out. Keep the template's columns: sample size and frequency each in their own cell, and every row written out in full, never "as row …".
 - For a Safe Launch, also fill `assets/safe-launch-plan.md`.
 - Write for the user in plain words; never cite this skill's step numbers or file names.
 

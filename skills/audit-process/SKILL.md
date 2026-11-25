@@ -117,7 +117,7 @@ Check before answering:
 
 - Plan: `assets/audit-plan.md` and `assets/audit-checklist.md`, filled in.
 - Write-up: `assets/audit-report.md`: the summary first (result, counts by grade, product contained), then the findings table, the good practice, and the response table with owners and dates.
-- Scored audit: the points, percentage, class after downgrading and the reason, then the findings.
+- Scored audit: the points, percentage, class after downgrading and the reason, then the findings, each with its action, owner and due date, zeros and starred questions first.
 - LPA programme: `assets/lpa-programme.md`; SFM self-audit: `assets/sfm-audit-sheet.md` with the scores and the top gaps.
 - Write for the user in plain words; never cite this skill's step numbers, section names or file names.
 
