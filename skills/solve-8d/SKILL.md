@@ -51,7 +51,7 @@ Ask for every missing fact; never invent one. Copy the numbers, lots and dates t
    - Effectiveness: the sort finds the known bad parts, and no defect is reported after the clean point.
    - **Gate:** the customer is protected and containment is verified. Details in [the gates](references/d0-d8-gates.md).
 5. **D4 Root cause.**
-   - Find the occurrence and escape root causes separately. For each, list the causes to test and the on/off test that will verify it.
+   - Find the occurrence and escape root causes separately. For each, list the causes to test and the on/off test that will verify it (`solve-is-is-not` to scope and eliminate, `solve-fishbone` to widen the list of causes, `solve-5why` for the occurrence, detection and system chains).
    - Occurrence test: recreate the suspected condition on a trial and show the defect appears; remove it and show it does not.
    - Escape test: with the suspected condition present, the check misses a known bad part; with the condition removed or restored, it catches it.
    - Escape point: the first control after the cause that should have caught the defect.
@@ -109,3 +109,6 @@ Before answering, also check: D2 has no cause, D3 names every suspect location, 
 - Containment (D3) and the verification of permanent actions use a control chart: check stability with `measure-spc`; a repeated SPC signal with an unknown cause arrives from there.
 - A low %C/A from a value stream map arrives from `improve-vsm`; a defect whose cause must be proven arrives from `improve-kaizen`.
 - Customer, safety or repeat problems found on a gemba walk arrive from `lead-gemba-walk`.
+- D4 uses `solve-is-is-not`, `solve-fishbone` and `solve-5why`; their verified causes come back to D4. The D5 verification of a permanent action can run as one test cycle in `solve-pdca`.
+- The D7 control-plan update goes to `plan-control-plan` and the station-instruction update to `plan-workstation-instructions`; a shipped nonconforming product or a Safe Launch escape arrives from `plan-control-plan`.
+- A chronic remainder after D7 goes to `solve-dmaic`; an effectiveness check by process audit after D6 or D7 goes to `audit-process`, and repeat, customer or safety-related audit findings arrive from there.

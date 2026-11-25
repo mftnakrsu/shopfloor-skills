@@ -137,3 +137,7 @@ Check before answering:
 - A root cause in maintenance planning or machine condition goes to `improve-tpm`; one in set-up or changeover goes to `improve-smed`.
 - Checking whether a fix holds on a measured characteristic goes to `measure-spc`; an SPC signal with an unknown cause arrives from there.
 - Problems seen on a gemba walk arrive from `lead-gemba-walk`; a defect whose cause must be proven arrives from `improve-kaizen`; a quality loss from the loss tree arrives from `measure-oee`.
+- Many candidate causes, or no clear first why, go to `solve-fishbone`; a problem that is not scoped (where and when unclear, or a first why disputed) goes to `solve-is-is-not` first. A surviving hypothesis from either arrives here to be drilled to its roots.
+- Document updates from closing the loop go to `plan-control-plan` and `plan-workstation-instructions`; a Safe Launch escape that needs no full 8D arrives from `plan-control-plan`.
+- Verifying an action's effect over a cycle goes to `solve-pdca`; a broad KPI or chronic problem with plenty of data goes to `solve-dmaic`, and a single defect inside a DMAIC project arrives from there.
+- Single-cause audit findings arrive from `audit-process`.

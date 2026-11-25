@@ -125,9 +125,12 @@ Check before answering:
 
 ## Hand-offs
 
-- Topics that need one owner to test a way to a target arrive from `improve-kaizen`, which chose the format; report the result and the act decision back to the topic owner there.
+- Topics that need one owner to test a way to a target arrive from `improve-kaizen`, which chose the format and keeps the 30/60/90 sustain plan; this skill runs one cycle. Report the result and the act decision back to the topic owner there.
 - Red KPIs and escalations arrive from `lead-daily-routine`; report each cycle's check and act decision at that tier meeting. Findings from a walk arrive from `lead-gemba-walk`.
 - When a cause must be proven before the countermeasure, build the chain with `solve-5why`; a customer complaint, field failure or repeat problem goes to `solve-8d`.
 - Whether a change on a measured characteristic is real or noise is checked on a control chart with `measure-spc`; a loss item from the loss tree arrives from `measure-oee`.
 - An adopted change updates station documents with `plan-workstation-instructions` and the control plan with `plan-control-plan`.
 - A cause in set-up goes to `improve-smed`; one in machine condition or maintenance goes to `improve-tpm`.
+- Many candidate causes go to `solve-fishbone`; a problem that is not scoped (where and when unclear) goes to `solve-is-is-not`. A surviving hypothesis from either, or a root-cause action from `solve-5why` whose effect needs a check over a cycle, arrives here.
+- A chronic problem with plenty of data that one cycle cannot crack goes to `solve-dmaic`.
+- The D5 verification of a permanent action can arrive from `solve-8d`; single improvement cycles from audit opportunities arrive from `audit-process`.

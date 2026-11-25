@@ -122,7 +122,7 @@ Check before answering:
 ## Hand-offs
 
 - Actions with a known cause go onto the area board and its tier meeting in `lead-daily-routine`; a management-system walk that finds a broken routine also goes there for the routine audit.
-- Customer, safety or repeat problems with an unknown cause go to `solve-8d`.
+- Customer, safety or repeat problems with an unknown cause go to `solve-8d`; other problems with an unknown cause go to `solve-5why`; a finding that needs a test of change goes to `solve-pdca`.
 - Equipment losses go to `measure-oee` for the loss tree, then `improve-tpm` (breakdowns, minor stops) or `improve-smed` (long set-ups).
 - Waiting, piles of work in process and long throughput times go to `improve-tpt`; an unbalanced manual line goes to `improve-line-balancing`.
 - Value-stream walk facts go to `improve-vsm`.
@@ -130,3 +130,5 @@ Check before answering:
 - Piles of work in process between two steps with no pull signal go to `improve-kanban-pull`; card-discipline checks at the posts arrive from there.
 - Walks as leader standard work, and a go-and-see for a red KPI, arrive from `lead-daily-routine`.
 - A reaction plan that is not followed at the station, or a chart that is not kept up to date, goes to `measure-spc`.
+- Station practice that differs from the control plan goes to `plan-control-plan`; an instruction that is not followed or not understood goes to `plan-workstation-instructions`. Checks that the plan and the instructions are followed arrive from both.
+- An LPA programme, or an audit beyond one walk segment, goes to `audit-process`: it owns the programme (layers, checklists, metrics, review); this skill owns only the LPA segment inside a walk.

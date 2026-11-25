@@ -127,4 +127,8 @@ Check before answering:
 - A shipped nonconforming product, a complaint, or a repeated escape found by a Safe Launch check goes to `solve-8d`; its D7 control-plan update arrives from there.
 - Set-up verification and first-off rules after a changeover redesign arrive from `improve-smed`; error-proofing device checks and maintenance-related controls go to `improve-tpm`.
 - Daily review of alternate controls and escalations from a reaction plan go to `lead-daily-routine`.
-- Checking that the plan is followed at the station is planned with `lead-gemba-walk`.
+- Checking that the plan is followed at the station is planned with `lead-gemba-walk`; station practice that differs from the plan arrives from there.
+- Station inspection and work instructions are derived from the plan rows in `plan-workstation-instructions`; its change requests and consistency-check gaps come back here.
+- A cause search for a Safe Launch escape that does not need a full 8D goes to `solve-5why` or `solve-fishbone`.
+- The Control-phase input arrives from `solve-dmaic`; document updates after a verified cause arrive from `solve-5why` and `solve-pdca`; the control-plan line for a charted characteristic arrives from `measure-spc`.
+- Audit findings on control plans arrive from `audit-process`; an effectiveness check by process audit after a control-plan change goes there.

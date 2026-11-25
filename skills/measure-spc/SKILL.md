@@ -139,3 +139,6 @@ Check before answering:
 - A re-check of a characteristic's stability after a repair or a set-up change arrives from `improve-tpm` and `improve-smed`; chronic quality loss on one characteristic arrives from `measure-oee`.
 - Demand or lead-time variation for a statistical kanban safety stock arrives from `improve-kanban-pull`; whether a kaizen gain is real or noise arrives from `improve-kaizen`.
 - A reaction plan that is not followed at the station is checked on walks planned with `lead-gemba-walk`.
+- A signal with an unknown cause that is not a complaint goes to `solve-is-is-not` to scope it, `solve-fishbone` for many candidate causes or `solve-5why` for the chain; checks that a fix holds arrive from those skills and from `solve-pdca`.
+- A stable process that is not capable (chronic common cause) goes to `solve-dmaic`; its baseline and Improve capability checks arrive from there.
+- The control-plan line and reaction plan for a charted characteristic go to `plan-control-plan`; a reaction plan or chart that must appear in the station instruction goes to `plan-workstation-instructions`; an audit of reaction-plan use goes to `audit-process`, and a reaction plan not followed found there arrives here.

@@ -137,3 +137,5 @@ Check before answering:
 - A single defect or event inside the project, with its cause findable at the station, goes to `solve-5why`; a customer complaint or safety topic goes to `solve-8d`.
 - A vital X in machine condition goes to `improve-tpm`; one in set-up or changeover goes to `improve-smed`.
 - Control-phase updates go to `plan-control-plan` and `plan-workstation-instructions`; a known solution with no need for analysis goes to `improve-kaizen`.
+- Candidate Xs in Analyze are listed with `solve-fishbone`; a problem is stratified with `solve-is-is-not`.
+- A chronic remainder after D7 arrives from `solve-8d`; a broad or chronic problem with plenty of data arrives from `solve-5why` and `solve-pdca`; a stable process that is not capable arrives from `measure-spc`; a problem whose cause needs data analysis arrives from `improve-kaizen`; chronic variation findings arrive from `audit-process`.

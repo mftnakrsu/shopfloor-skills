@@ -120,3 +120,4 @@ Check before answering:
 - Chronic quality loss on one characteristic goes to `measure-spc`; scrap and rework from a characteristic out of control arrive from there.
 - Improvement topics that need a workshop or a sustain plan go to `improve-kaizen`.
 - Equipment losses seen on a gemba walk arrive from `lead-gemba-walk`.
+- A loss item with an unknown cause goes to `solve-5why` for one defect, `solve-fishbone` for many candidate causes or `solve-is-is-not` when where and when are unclear; a loss item that needs a countermeasure test runs in `solve-pdca`; a chronic loss with plenty of data goes to `solve-dmaic`.

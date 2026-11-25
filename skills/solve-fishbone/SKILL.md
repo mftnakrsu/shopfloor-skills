@@ -75,7 +75,7 @@ Ask for every missing input; never invent one. Copy the user's numbers exactly.
 ### Check a claimed root cause
 
 1. Ask what evidence confirmed it. A vote, a majority, a diagram or experience is not evidence; say plainly that the cause is not verified yet.
-2. Screen it against the Is/Is-Not facts. Name every fact that contradicts it.
+2. Screen it against the Is/Is-Not facts. Name every fact that contradicts it. A full test against the specification is `solve-is-is-not`.
 3. Give the test that would confirm or refute it, with the expected results.
 4. Keep the other candidates open, especially those that fit the facts.
 5. Advise holding costly permanent actions until a test confirms the cause. Containment of suspect product goes ahead regardless.
@@ -115,3 +115,7 @@ Check before answering:
 - A loss with an unknown cause arrives from `measure-oee`.
 - A red quality KPI arrives from `lead-daily-routine`; report the test status back to that tier meeting.
 - A confirmed cause that needs a team workshop and a sustain plan goes to `improve-kaizen`.
+- This skill widens the list of causes; `solve-is-is-not` narrows it. Test the screened causes against the full specification in `solve-is-is-not`; a list that needs widening arrives from there.
+- A confirmed bone is drilled down to its systemic cause with `solve-5why`; many candidate causes, or no clear first why, arrive from there.
+- A surviving hypothesis that needs a countermeasure test goes to `solve-pdca`; the cause analysis of `solve-pdca` and the candidate Xs in the Analyze phase of `solve-dmaic` arrive here.
+- A cause search for a Safe Launch escape arrives from `plan-control-plan`; audit findings with many candidate causes arrive from `audit-process`; cause analysis in a workshop arrives from `improve-kaizen`.

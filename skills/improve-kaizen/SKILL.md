@@ -113,7 +113,7 @@ Check before answering:
 ## Hand-offs
 
 - Topics arrive from `lead-daily-routine` boards and escalations; report the format, owner and sustain-check status back to that tier meeting, where the 30/60/90 checks are reviewed.
-- A defect whose cause must be proven goes to `solve-8d` when it is a customer complaint, a repeat problem or a serious internal problem; otherwise run the kata or A3 with the user.
+- A defect whose cause must be proven goes to `solve-8d` when it is a customer complaint, a repeat problem or a serious internal problem. A kata or A3 topic runs one cycle at a time in `solve-pdca`: this skill chooses the format and keeps the 30/60/90 sustain plan; that skill runs the cycle and reports its check and act decision back.
 - Losses on a machine go to `measure-oee` for the loss tree; set-up losses go to `improve-smed`; breakdowns and minor stops to `improve-tpm`.
 - A topic about WIP or throughput time goes to `improve-tpt`; a manual line with uneven station loads goes to `improve-line-balancing`.
 - System kaizen across a stream starts from a current- and future-state map in `improve-vsm`; its loop plan and kaizen bursts arrive here.
@@ -121,3 +121,5 @@ Check before answering:
 - The check that the new standard is used can be a gemba-walk item planned with `lead-gemba-walk`; walk findings that need an improvement format arrive from there.
 - Improvement topics that need a workshop or a sustain plan arrive from `measure-oee`, `improve-tpt`, `improve-line-balancing`, `improve-smed` and `improve-tpm`.
 - Whether a gain on a measured characteristic is real or noise is checked on a control chart with `measure-spc`.
+- Cause analysis in a workshop widens the list of causes with `solve-fishbone` and narrows it with `solve-is-is-not`; a defect whose cause must be proven goes to `solve-5why`; a problem whose cause needs data analysis goes to `solve-dmaic`, and a known solution with no need for analysis arrives from there. A confirmed cause that needs a workshop and a sustain plan arrives from `solve-fishbone`.
+- New standard work after the event goes to `plan-workstation-instructions`.

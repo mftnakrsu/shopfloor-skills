@@ -116,3 +116,5 @@ Check before answering:
 - New set-up and first-off steps after a changeover study arrive from `improve-smed`; operator cleaning and inspection standards arrive from `improve-tpm`.
 - Instructions that are not followed or not understood at the station are checked on walks planned with `lead-gemba-walk`; a finding there comes back here for a fix.
 - New standard work after a kaizen arrives from `improve-kaizen`; a rebalanced line's new station content arrives from `improve-line-balancing`.
+- Document updates after a verified cause or an adopted change arrive from `solve-5why`, `solve-pdca` and `solve-dmaic`.
+- Findings on station documents arrive from `audit-process`; an effectiveness check by process audit after an instruction release goes there.

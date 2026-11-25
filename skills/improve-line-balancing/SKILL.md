@@ -115,3 +115,4 @@ Check before answering:
 - Once the line is balanced to takt, its pacemaker and pitch are set with `improve-kanban-pull`.
 - Improvement topics that need a workshop or a sustain plan go to `improve-kaizen`.
 - An unbalanced manual line seen on a gemba walk arrives from `lead-gemba-walk`.
+- A rebalanced line's new station content goes to `plan-workstation-instructions`.

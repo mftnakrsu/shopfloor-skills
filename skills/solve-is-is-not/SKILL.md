@@ -118,6 +118,9 @@ Check before answering:
 
 - A customer complaint, field failure or repeat problem runs in `solve-8d`; this analysis serves its problem description and root-cause steps.
 - A verified cause that needs its occurrence, detection and system roots goes to `solve-5why`.
-- When no change or distinction explains the facts, widen the list of possible causes with `solve-fishbone`, then test them here.
+- When only one or two ideas, or none, fit the facts, widen the list of possible causes with `solve-fishbone`, then test them here; screened causes from there arrive here for the full test.
 - A process signal with an unknown cause arrives from `measure-spc`; checking that a fix holds on a measured characteristic goes back there.
 - A red KPI with an unknown cause arrives from `lead-daily-routine`; report the verified cause back to that tier meeting.
+- A problem that is not scoped, or a disputed first why, arrives from `solve-5why` and `solve-pdca`; a loss or workshop topic with an unknown cause arrives from `measure-oee` and `improve-kaizen`.
+- A surviving cause to test with a countermeasure goes to `solve-pdca`; stratifying a DMAIC problem arrives from `solve-dmaic`.
+- Audit findings that appear on one shift or line only arrive from `audit-process`.

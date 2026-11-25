@@ -51,7 +51,7 @@ Ask only for what is missing. If there is no answer, state assumptions as assump
 7. Problem solving stays outside the meeting, and every problem leaves the meeting with an owner and a due date:
    - Product or people at risk: contain at once (Sofortmaßnahme), without waiting for the meeting.
    - Cause known: a simple action with an owner and a date.
-   - Cause unknown: give it an owner and a due date, and start structured problem solving outside the meeting; use `solve-8d` for customer complaints, safety issues and repeat problems. The meeting only starts, tracks and closes the work.
+   - Cause unknown: give it an owner and a due date, and start structured problem solving outside the meeting; use `solve-8d` for customer complaints, safety issues and repeat problems, otherwise `solve-5why` for one defect or `solve-pdca` to test a countermeasure. The meeting only starts, tracks and closes the work.
 8. IATF 16949 hooks:
    - Where alternate process controls are in use, review them daily in the tier 1 or tier 2 meeting (8.5.6.1.1).
    - Results that trigger a reaction plan in the control plan (Produktionslenkungsplan) appear as quality reds with an escalation path (9.1.1.1).
@@ -108,3 +108,6 @@ Check before answering:
 - A quality red from an SPC signal goes to `measure-spc` for chart and limit checks; an unresolved or repeat signal arrives from there.
 - A red lead-time or delivery KPI that spans several processes goes to `improve-vsm`; loop targets are tracked on the board.
 - Improvement topics from the board go to `improve-kaizen`; supermarket stock-outs and pitch misses arrive from `improve-kanban-pull`.
+- A red KPI with an unknown cause goes to `solve-5why`, to `solve-is-is-not` when where and when it occurs are unclear, or to `solve-fishbone` when many causes are named; a known gap with a cause partly known runs as one cycle in `solve-pdca`; a chronic red KPI with plenty of data goes to `solve-dmaic`. Each reports back to the tier meeting.
+- The daily review of alternate controls and escalations from a reaction plan arrive from `plan-control-plan`.
+- A formal SFM self-audit across areas goes to `audit-process`; a weak tier routine found there comes back here.

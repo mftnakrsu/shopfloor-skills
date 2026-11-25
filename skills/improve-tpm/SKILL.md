@@ -133,3 +133,5 @@ Check before answering:
 - After a repair, re-check the stability of the critical characteristics with `measure-spc`; signals traced to tool wear or machine condition arrive from there.
 - Improvement topics that need a workshop or a sustain plan go to `improve-kaizen`.
 - Breakdowns and minor stops seen on a gemba walk arrive from `lead-gemba-walk`.
+- A breakdown root cause is drilled with `solve-5why`; a root cause in machine condition or maintenance arrives from `solve-5why`, `solve-fishbone`, `solve-pdca` and `solve-dmaic`; maintenance not done as planned arrives from `audit-process`.
+- Error-proofing device checks and maintenance-related controls arrive from `plan-control-plan` and go back there as control-plan rows; operator cleaning and inspection standards go to `plan-workstation-instructions`.

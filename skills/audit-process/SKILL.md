@@ -136,4 +136,6 @@ Check before answering:
 - Root causes of repeat, customer or safety-related findings go to `solve-8d`; single-cause gaps to `solve-5why`; unclear causes with many candidates to `solve-fishbone`.
 - A control-plan row that is missing, wrong or not linked to the PFMEA goes to `plan-control-plan`; a station instruction that differs from the control plan goes to `plan-workstation-instructions`.
 - A reaction plan not followed or a control chart not kept goes to `measure-spc`; maintenance not done as planned goes to `improve-tpm`.
-- A weak tier routine found in an SFM self-audit goes to `lead-daily-routine`; an LPA segment inside one walk is planned with `lead-gemba-walk`.
+- A weak tier routine found in an SFM self-audit goes to `lead-daily-routine`; an LPA segment inside one walk is planned with `lead-gemba-walk`, and an LPA programme or an audit beyond one walk segment arrives from there.
+- Findings that appear on one shift or line only go to `solve-is-is-not`; single improvement cycles from opportunities for improvement go to `solve-pdca`; chronic variation findings go to `solve-dmaic`.
+- Effectiveness checks by process audit after a control-plan change, an instruction release or an 8D D6 or D7 arrive from `plan-control-plan`, `plan-workstation-instructions` and `solve-8d`; an audit of reaction-plan use arrives from `measure-spc`; a formal SFM self-audit across areas arrives from `lead-daily-routine`.

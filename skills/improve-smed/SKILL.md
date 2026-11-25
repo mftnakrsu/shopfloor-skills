@@ -132,3 +132,5 @@ Check before answering:
 - After the change, re-check the stability of the critical characteristics with `measure-spc`; signals that start after changeovers arrive from there.
 - Improvement topics that need a workshop or a sustain plan go to `improve-kaizen`.
 - Long set-ups seen on a gemba walk arrive from `lead-gemba-walk`.
+- New set-up verification and first-off rules go to `plan-control-plan`; the new set-up and first-off steps go to `plan-workstation-instructions`.
+- A root cause in set-up or changeover arrives from `solve-5why`, `solve-pdca` and `solve-dmaic`.
