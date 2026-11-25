@@ -28,14 +28,14 @@ There is no general rule. Ask for the customer's requirement and use it. Publish
 |---|---|---|---|
 | An electronics contract manufacturer's supplier training | 3 business days | 10 business days | 30 calendar days; closed only when the customer signs off |
 | A test-equipment maker's supplier guideline | — | — | response to the corrective action request within 14 days |
-| A supplier-quality playbook, critical issues | 4 hours, first response within 24 hours | — | — |
-| The same playbook, high priority | 48 hours | — | 8D within 14 days |
+| A blog post on supplier quality, critical issues | 4 hours, first response within 24 hours | — | — |
+| The same blog post, high priority | 48 hours | — | 8D within 14 days |
 
-The same playbook gives validation windows of about 90 days or 10 production lots as examples; set yours by local policy or the customer.
+The same blog post gives validation windows of about 90 days or 10 production lots as examples; set yours by local policy or the customer.
 
 ## Sources
 
 - Creation Technologies: [8D supplier training, 2022](https://www.creationtech.com/wp-content/uploads/2022/09/8D-Supplier-Training-9-22-22.pdf)
 - Keysight: [Root cause and corrective action guideline for suppliers](https://about.keysight.com/en/supplier/KeysightRCCA_Guideline.pdf)
-- SQE playbook: [Facilitating 8D and CAPA with suppliers](https://dev.to/beefedai/facilitating-8d-and-capa-with-suppliers-sqe-playbook-2god)
+- A blog post on supplier quality: [Facilitating 8D and CAPA with suppliers](https://dev.to/beefedai/facilitating-8d-and-capa-with-suppliers-sqe-playbook-2god)
 - DNV: [IATF 16949:2016 comparison matrix](https://www.dnv.com/siteassets/images/pdf-documents/iatf-2009-to-2016-comparison-matrix.pdf)

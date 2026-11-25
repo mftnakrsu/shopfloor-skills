@@ -20,7 +20,7 @@ A cause is verified when you can make the defect appear with the cause present a
 2. On: create the condition under control, on a trial or with sample parts, and show the defect occurs.
 3. Off: remove the condition and show the defect does not occur.
 4. Repeat enough times to rule out chance (number set by local policy).
-5. For the escape cause, run the same test on the control: feed known bad parts or a challenge part and show it misses them in the failing state and catches them after the fix.
+5. For the escape cause, run the same test on the control with known bad parts or a challenge part: with the suspected condition present, the check misses a known bad part; with the condition removed or restored, it catches it. Showing that the fixed check catches it belongs to D5.
 6. Where a destructive or safety-relevant reproduction is not allowed, use data instead: the defect appears only in the lots, times or stations where the cause was present (Is/Is-Not).
 
 Record the test conditions, counts and dates as evidence.
@@ -51,7 +51,7 @@ Rule of thumb, adapted to the line from the action hierarchy used in patient saf
 | Weak | Standardise and remind | A revised instruction, a checklist, visual aids |
 | Weakest | Train, warn or inspect by hand | Retraining, an awareness notice, an extra visual inspection |
 
-- Retraining alone, "reinforced the procedure" and "fired the operator" are not accepted as corrective actions (Creation Technologies). Supplier worked examples rate retraining as almost no benefit and error-proofing as highly effective (Keysight). Relying only on weak actions leaves the door open to repeats (RCA2).
+- Retraining, reminders to follow the procedure or disciplinary action alone are not accepted as corrective actions (Creation Technologies). Supplier worked examples rate retraining as almost no benefit and error-proofing as highly effective (Keysight). RCA2 treats training and new procedures as weaker actions.
 - Training is still part of rolling out a stronger action, never the action on its own.
 - An error-proofing device needs a test frequency in the control plan, a challenge part and a reaction plan for failure (IATF 16949 10.2.4).
 

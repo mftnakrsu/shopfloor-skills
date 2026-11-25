@@ -6,8 +6,8 @@ description: >-
   problem description, containment of all suspect stock, verified
   occurrence and escape root causes, permanent corrective actions, PFMEA
   and control-plan updates, and the 8D report. Use when a complaint or
-  escalation needs an 8D, or when checking whether an 8D can be closed
-  ("can we close it?") (8D-Bericht, Reklamation, Fehlerabstellung).
+  escalation needs an 8D, or when asked whether an 8D can be closed, e.g.
+  "can we close it?" (8D-Bericht, Reklamation, Fehlerabstellung).
 license: MIT
 metadata:
   version: "1.0.0"
@@ -39,12 +39,26 @@ Ask for every missing fact; never invent one. Copy the numbers, lots and dates t
 
 ## Procedure
 
-1. **D0 Plan and emergency response.** If there is a risk to safety or the customer, take immediate actions (Sofortmaßnahmen) such as stopping shipment, blocking stock and informing the customer as required. Decide whether an 8D is needed: customer complaint, field failure, safety or legal topic, repeat problem, or a local criterion (set by local policy or customer requirement). Note the customer's deadlines. **Gate:** emergency actions in place or not needed, and the decision recorded.
+1. **D0 Plan and emergency response.** If there is a risk to safety or the customer, take emergency actions (Notfallmaßnahmen) such as stopping shipment, blocking stock and informing the customer as required. Decide whether an 8D is needed: customer complaint, field failure, safety or legal topic, repeat problem, or a local criterion (set by local policy or customer requirement). Note the customer's deadlines. **Gate:** emergency actions in place or not needed, and the decision recorded.
 2. **D1 Team.** Form a cross-functional team with process knowledge: production, quality, engineering, maintenance and the operators of the stations involved. Name a leader and a champion with authority. **Gate:** roles named.
 3. **D2 Problem description.** Describe the problem with facts: what (part, defect), where (on the part and where found), when (found, produced, lot, delivered), how many (defective out of checked or delivered), how detected, plus an Is/Is-Not comparison (where the defect is seen and where it could be but is not, by part, lot, line, shift and time). Do not say in D2 which station made the defect or which check missed it; that belongs in D4. **Gate:** the statement is quantified and contains no cause and no solution.
-4. **D3 Containment.** List every suspect location: customer stock, in transit, finished goods, work in process, incoming or supplier stock, service parts. Give each a quantity, an action, an owner and a due date, or state why it is not suspect. Sort with a method proven able to detect the defect on known bad parts, for example a 100% check by hand or gauge; never the check that already missed it. Propose how certified parts are marked (for example a coloured dot on each part and a "certified" label with the sort date on each box), set the clean point (if the exact one is not yet known, state a provisional one, such as the first part sorted and marked or the first lot made after the 100% check started, recorded as date, lot and serial, and confirm it in D4), and verify that containment works: the sort finds the known bad parts, and no defect is reported after the clean point. **Gate:** the customer is protected and containment is verified. Details in [the gates](references/d0-d8-gates.md).
-5. **D4 Root cause.** Find the occurrence and escape root causes separately, and verify each on and off. For each, list the causes to test and the test that will verify it: occurrence, recreate the suspected condition on a trial and show the defect appears, then remove it and show it does not; escape, show the failing check misses a known bad part and the fixed check catches it. Find the escape point: the first control after the cause that should have caught the defect. Then ask why the system allowed both (systemic cause). "Operator error" is never final: ask why the process allowed it (no error-proofing, an unclear instruction, ergonomics, distraction, a training gap). Question list in [root-cause verification](references/root-cause-verification.md). **Gate:** both causes are verified with evidence.
-6. **D5 Choose and verify permanent actions.** Choose one permanent action per root cause: the occurrence cause, the escape cause and, where found, the systemic cause. Prefer making the error impossible or detecting it at the source (error-proofing, IATF 16949 10.2.4) over training or extra inspection; retraining alone is a weak action (ladder in [root-cause verification](references/root-cause-verification.md)). Verify that it works and creates no new risk (PFMEA check). **Gate:** verification evidence.
+4. **D3 Containment (Sofortmaßnahmen).**
+   - Suspect locations: customer stock, in transit, finished goods, work in process, incoming or supplier stock, service parts. Give each a quantity, an action, an owner and a due date, or state why it is not suspect.
+   - Suspect period: until D4 bounds it, treat all product made since the last known-good point as suspect, regardless of lot.
+   - Sort method: proven able to detect the defect on known bad parts, for example a 100% check by hand or gauge. Never the check that already missed it.
+   - Marking: propose how certified parts are marked, for example a coloured dot on each part and a "certified" label with the sort date on each box.
+   - Clean point: set it as date, lot and serial. If the exact one is not yet known, state a provisional one, such as the first part sorted and marked or the first lot made after the 100% check started. Confirm it with the containment effectiveness check and the D4 findings.
+   - Effectiveness: the sort finds the known bad parts, and no defect is reported after the clean point.
+   - **Gate:** the customer is protected and containment is verified. Details in [the gates](references/d0-d8-gates.md).
+5. **D4 Root cause.**
+   - Find the occurrence and escape root causes separately. For each, list the causes to test and the on/off test that will verify it.
+   - Occurrence test: recreate the suspected condition on a trial and show the defect appears; remove it and show it does not.
+   - Escape test: with the suspected condition present, the check misses a known bad part; with the condition removed or restored, it catches it.
+   - Escape point: the first control after the cause that should have caught the defect.
+   - Systemic cause: ask why the system allowed both.
+   - "Operator error" is never final: ask why the process allowed it (no error-proofing, an unclear instruction, ergonomics, distraction, a training gap). Question list in [root-cause verification](references/root-cause-verification.md).
+   - **Gate:** both causes are verified with evidence.
+6. **D5 Choose and verify permanent actions.** Choose one permanent action per root cause: the occurrence cause, the escape cause and, where found, the systemic cause. Prefer making the error impossible or detecting it at the source (error-proofing, IATF 16949 10.2.4) over training or extra inspection; retraining alone is a weak action (ladder in [root-cause verification](references/root-cause-verification.md)). Verify that it works, including that the fixed check catches a known bad part, and that it creates no new risk (PFMEA check). **Gate:** verification evidence.
 7. **D6 Implement and validate.** Implement, then validate with production evidence over a period or quantity set by local policy or the customer. Remove containment only after validation. **Gate:** validation evidence, and containment ended with a record.
 8. **D7 Prevent recurrence.** Update the PFMEA, control plan, station instructions, maintenance plans and error-proofing check frequencies. Check similar parts, lines and plants for the same risk and apply the fix there (read-across), and record the lesson learned (IATF 16949 10.2.3, SI 20). **Gate:** the document revisions are listed.
 9. **D8 Close.** Run the Validation checklist. Confirm closure with the customer where required, recognise the team, and archive the 8D. **Gate:** the checklist is complete and closure is confirmed where required.

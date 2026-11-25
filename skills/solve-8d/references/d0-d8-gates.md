@@ -77,7 +77,7 @@ Example (invented round numbers): "Customer found 10 of 1,000 brackets (part X-1
   2. Sort backwards from the shipping dock to the station where the defect arises (Creation Technologies).
   3. Choose a sort method proven able to detect the defect: test it on known bad parts first. Never sort with the check that already missed it.
   4. Mark the defective and the certified parts differently, and set the clean point: the first good part, lot, serial number or date code (Creation Technologies).
-  5. Give each action an owner, a due date, the evidence it needs and its end condition (SQE playbook).
+  5. Give each action an owner, a due date, the evidence it needs and its end condition (a blog post on supplier quality).
   6. Report found counts per location to the customer.
 - **Gate:** every location is sorted or blocked, the customer is protected, and containment is verified.
 - **How to verify containment:** the sort method found the known bad parts; no new defect is reported from shipments after the clean point; an extra audit on certified parts finds none (audit size set by local policy).
@@ -137,13 +137,13 @@ Example (invented round numbers): "Customer found 10 of 1,000 brackets (part X-1
 As of 2026-11-25: IATF 16949:2016 with the sanctioned interpretations of November 2024. The summaries are in our own words; use the official text for audits.
 
 - **10.2.3 Problem solving:** the plant needs a written way of solving problems so that they do not come back (SI 20). In practice, for an 8D:
-  - Scale the method to the problem; a field failure needs more than an audit finding (item a).
+  - Define an approach for each type and scale of problem, for example new-product issues, current production, field failures and audit findings (item a).
   - Protect the customer first with containment (item b), then find and record the causes and how you found them (item c).
   - Fix the system, not only the part, and carry the fix over to similar products and processes (item d).
   - Prove that the actions work (item e) and bring the PFMEA, control plan and other documents up to date (item f).
   - If the customer prescribes its own method or form, use it.
-- **10.2.4 Error-proofing:** a documented way of deciding on error-proofing; the method is recorded in the PFMEA and the test frequency in the control plan; devices are tested for failure or simulated failure, with records; challenge parts are identified and controlled; a device failure has a reaction plan.
-- **10.2.6 Customer complaints and field failures:** analyse complaints and returned parts, start problem solving and corrective action, and report the results to the customer and inside the organization.
+- **10.2.4 Error-proofing:** decide and record where error-proofing is used (PFMEA); test each device at the control-plan frequency with a challenge part (verified and calibrated where feasible) and keep records; react when a device fails.
+- **10.2.6 Customer complaints and field failures:** analyse complaints and returned parts, including how the product's embedded software works in the customer's system where the customer requests it; start problem solving and corrective action, and report the results to the customer and inside the organization.
 - **SI 20:** reworded 10.2.3 so that prevention of recurrence is required, because corrective actions often skipped it.
 
 ## Sources
@@ -155,6 +155,6 @@ As of 2026-11-25: IATF 16949:2016 with the sanctioned interpretations of Novembe
 - Creation Technologies: [8D supplier training, 2022](https://www.creationtech.com/wp-content/uploads/2022/09/8D-Supplier-Training-9-22-22.pdf)
 - Keysight: [Root cause and corrective action guideline for suppliers](https://about.keysight.com/en/supplier/KeysightRCCA_Guideline.pdf)
 - Quality Magazine: [Key strategies for effective problem solving](https://www.qualitymag.com/blogs/14-quality-blog/post/88658-quality-observations-key-strategies-for-effective-problem-solving)
-- SQE playbook: [Facilitating 8D and CAPA with suppliers](https://dev.to/beefedai/facilitating-8d-and-capa-with-suppliers-sqe-playbook-2god)
+- A blog post on supplier quality: [Facilitating 8D and CAPA with suppliers](https://dev.to/beefedai/facilitating-8d-and-capa-with-suppliers-sqe-playbook-2god)
 - DNV: [IATF 16949:2016 comparison matrix](https://www.dnv.com/siteassets/images/pdf-documents/iatf-2009-to-2016-comparison-matrix.pdf)
 - IATF: [Sanctioned interpretations, November 2024](https://www.iatfglobaloversight.org/wp/wp-content/uploads/2024/11/IATF-16949-SIs-Nov-2024.pdf)
