@@ -13,79 +13,83 @@ SOON = {"solve-8d"}
 FONT = "'Barlow Semi Condensed', 'Segoe UI', system-ui, sans-serif"
 MONO = "ui-monospace, SFMono-Regular, Menlo, Consolas, monospace"
 
-W, H = 1280, 650
-LANES = [(40, "See the problem"), (490, "Fix the cause"), (940, "Hold the gain")]
-NODE_W, NODE_H = 300, 46
+W, H = 1550, 850
+# (x, width, heading) per lane. The gaps between lanes (210 units) carry the arrows and their labels.
+LANES = [(40, 300, "See the problem"), (550, 350, "Fix the cause"), (1110, 400, "Hold the gain")]
+NODE_H, ROW = 56, 26
 
-# name -> (lane, y, skills shown in the box)
+# name -> (lane, top y, skills shown in the box, height or None for the default)
 NODES = {
-    "ldr": (0, 110, ["lead-daily-routine"]),
-    "spc": (0, 200, ["measure-spc"]),
-    "oee": (0, 290, ["measure-oee"]),
-    "gemba": (0, 380, ["lead-gemba-walk"]),
-    "audit": (0, 470, ["audit-process"]),
-    "vsm": (0, 560, ["improve-vsm"]),
-    "solve": (1, 110, ["solve-5why", "solve-fishbone", "solve-8d"]),
-    "smed": (1, 250, ["improve-smed"]),
-    "tpm": (1, 320, ["improve-tpm"]),
-    "kaizen": (1, 410, ["improve-kaizen"]),
-    "flow": (1, 540, ["improve-tpt", "improve-kanban-pull", "improve-line-balancing"]),
-    "cp": (2, 110, ["plan-control-plan"]),
-    "wi": (2, 330, ["plan-workstation-instructions"]),
+    "oee": (0, 154, ["measure-oee"], None),
+    "ldr": (0, 326, ["lead-daily-routine"], None),
+    "spc": (0, 422, ["measure-spc"], None),
+    "gemba": (0, 518, ["lead-gemba-walk"], None),
+    "audit": (0, 614, ["audit-process"], None),
+    "vsm": (0, 724, ["improve-vsm"], None),
+    "smed": (1, 112, ["improve-smed"], None),
+    "tpm": (1, 196, ["improve-tpm"], None),
+    "solve": (1, 300, ["solve-5why", "solve-fishbone", "solve-8d"], 136),
+    "kaizen": (1, 518, ["improve-kaizen"], None),
+    "flow": (1, 698, ["improve-tpt", "improve-kanban-pull", "improve-line-balancing"], None),
+    "cp": (2, 340, ["plan-control-plan"], None),
+    "wi": (2, 724, ["plan-workstation-instructions"], None),
 }
 
 
 def box(name):
-    lane, y, skills = NODES[name]
-    h = NODE_H + 22 * (len(skills) - 1)
-    return LANES[lane][0], y, NODE_W, h
+    lane, y, skills, h = NODES[name]
+    x, w, _ = LANES[lane]
+    return x, y, w, h or NODE_H + ROW * (len(skills) - 1)
 
 
-def side(name, which, dy=0.0):
-    x, y, w, h = box(name)
-    return {"l": (x, y + h / 2 + dy), "r": (x + w, y + h / 2 + dy),
-            "t": (x + w / 2, y), "b": (x + w / 2, y + h)}[which]
+def left(name):
+    return box(name)[0]
 
 
-def curve(a, b, dya=0.0, dyb=0.0):
-    (x1, y1), (x2, y2) = side(a, "r", dya), side(b, "l", dyb)
-    mid = (x1 + x2) / 2
-    return f"M{x1:g} {y1:g}C{mid:g} {y1:g} {mid:g} {y2:g} {x2 - 2:g} {y2:g}", (x1, y1, x2, y2)
+def right(name):
+    x, _, w, _ = box(name)
+    return x + w
+
+
+def path(*pts, r=10):
+    """An orthogonal path through the points, with rounded corners and the end pulled back for the arrowhead."""
+    pts = list(pts)
+    (ex, ey), (px, py) = pts[-1], pts[-2]
+    pts[-1] = (ex - 2 if ex > px else ex + 2 if ex < px else ex, ey - 2 if ey > py else ey + 2 if ey < py else ey)
+    d = f"M{pts[0][0]:g} {pts[0][1]:g}"
+    for (x0, y0), (x1, y1), (x2, y2) in zip(pts, pts[1:], pts[2:]):
+        sx = (x1 > x0) - (x1 < x0)
+        sy = (y1 > y0) - (y1 < y0)
+        tx = (x2 > x1) - (x2 < x1)
+        ty = (y2 > y1) - (y2 < y1)
+        d += f"L{x1 - sx * r:g} {y1 - sy * r:g}Q{x1:g} {y1:g} {x1 + tx * r:g} {y1 + ty * r:g}"
+    return d + f"L{pts[-1][0]:g} {pts[-1][1]:g}"
 
 
 def edges():
-    """(path, label, label x, label y, text-anchor) for every hand-off in spec section 4.2."""
+    """(path, label, label x, label y, text-anchor) for every hand-off in spec section 4.2.
+
+    Each label sits on a straight run of its own arrow, clear of the other arrows.
+    """
+    l1, l2, l3 = right("ldr"), left("solve"), left("cp")
+    mid1, mid2 = (l1 + l2) / 2, (right("solve") + l3) / 2
     out = []
-    d, (x1, y1, _, _) = curve("ldr", "solve", 0, -22)
-    out.append((d, "red KPI, cause unknown", (x1 + LANES[1][0]) / 2, y1 - 9, "middle"))
-    (x1, y1), (_, y2) = side("spc", "t"), side("ldr", "b")
-    out.append((f"M{x1:g} {y1:g}V{y2 + 2:g}", "out of control: escalate", x1 + 10, (y1 + y2) / 2 + 5, "start"))
-    d, (x1, y1, x2, y2) = curve("oee", "smed", -10, 0)
-    out.append((d, "set-up loss", x2 - 10, y2 - 9, "end"))
-    d, (x1, y1, x2, y2) = curve("oee", "tpm", 4, 0)
-    out.append((d, "breakdowns", x2 - 10, y2 + 18, "end"))
-    d, (x1, y1, x2, y2) = curve("oee", "solve", -16, 0)
-    out.append((d, "defects", x1 + 12, y1 - 9, "start"))
-    d, (x1, y1, x2, y2) = curve("gemba", "kaizen", 0, 0)
-    out.append((d, "observations", x2 - 10, y2 - 9, "end"))
-    d, _ = curve("gemba", "solve", -10, 14)
-    out.append((d, "", 0, 0, "start"))
-    d, (x1, y1, x2, y2) = curve("audit", "solve", -10, 30)
-    out.append((d, "findings", x1 + 12, y1 - 9, "start"))
-    # audit-process to the control plan: along the gap between lanes 2 and 3
-    x1, y1 = side("audit", "r", 10)
-    x2, y2 = side("cp", "l", 12)
-    gx = LANES[2][0] - 40
-    out.append((f"M{x1:g} {y1:g}H{gx - 12:g}Q{gx:g} {y1:g} {gx:g} {y1 - 12:g}V{y2 + 12:g}Q{gx:g} {y2:g} "
-                f"{gx + 12:g} {y2:g}H{x2 - 2:g}", "", 0, 0, "start"))
-    d, _ = curve("vsm", "flow", 0, 0)
-    out.append((d, "", 0, 0, "start"))
-    d, (x1, y1, x2, y2) = curve("solve", "cp", 0, -12)
-    out.append((d, "root cause fixed", x1 + 12, y1 - 9, "start"))
-    (x1, y1), (_, y2) = side("cp", "b"), side("wi", "t")
-    out.append((f"M{x1:g} {y1:g}V{y2 - 2:g}", "update", x1 + 10, (y1 + y2) / 2 + 5, "start"))
-    d, (x1, y1, x2, y2) = curve("flow", "wi", 0, 10)
-    out.append((d, "new standard work", x1 + 12, y1 + 20, "start"))
+    # measure-oee: three exits, routed so that no two of them cross.
+    out.append((path((l1, 166), (400, 166), (400, 140), (l2, 140)), "set-up loss", (400 + l2) / 2, 132, "middle"))
+    out.append((path((l1, 182), (420, 182), (420, 224), (l2, 224)), "breakdowns", (420 + l2) / 2, 216, "middle"))
+    out.append((path((l1, 198), (380, 198), (380, 322), (l2, 322)), "defects", (380 + l2) / 2, 314, "middle"))
+    out.append((path((l1, 354), (l2, 354)), "red KPI, cause unknown", mid1, 346, "middle"))
+    x = 130
+    out.append((path((x, box("spc")[1]), (x, box("ldr")[1] + NODE_H)), "out of control: escalate", x + 12, 407, "start"))
+    out.append((path((l1, 530), (440, 530), (440, 386), (l2, 386)), "observations", (440 + l2) / 2, 378, "middle"))
+    out.append((path((l1, 546), (l2, 546)), "observations", l1 + 12, 564, "start"))
+    out.append((path((l1, 630), (480, 630), (480, 418), (l2, 418)), "findings", l1 + 12, 622, "start"))
+    out.append((path((l1, 654), (1060, 654), (1060, 382), (l3, 382)), "findings", l2 + 10, 646, "start"))
+    out.append((path((l1, 752), (l2, 752)), "future state", mid1, 744, "middle"))
+    out.append((path((right("solve"), 356), (l3, 356)), "root cause fixed", mid2, 348, "middle"))
+    x = l3 + 200
+    out.append((path((x, box("cp")[1] + NODE_H), (x, box("wi")[1])), "update", x + 12, 565, "start"))
+    out.append((path((right("flow"), 752), (l3, 752)), "new standard work", mid2, 744, "middle"))
     return out
 
 
@@ -103,23 +107,26 @@ def node_svg(name):
     dash = "" if live or any(s in SOON for s in skills) else ' stroke-dasharray="5 4"'
     out = [f'  <rect x="{x}" y="{y}" width="{w}" height="{h}" rx="8" fill="#FFFFFF" stroke="{stroke}" '
            f'stroke-width="{2.5 if live else 1.5}"{dash}/>']
+    first = y + h / 2 - ROW * (len(skills) - 1) / 2 + 6
     for i, s in enumerate(skills):
-        ty = y + 28 + 22 * i
+        ty = first + ROW * i
         weight = "700" if s in AVAILABLE else "400"
-        out.append(f'  <text x="{x + 14}" y="{ty}" font-family="{MONO}" font-size="15" font-weight="{weight}" '
+        out.append(f'  <text x="{x + 16}" y="{ty:g}" font-family="{MONO}" font-size="17" font-weight="{weight}" '
                    f'fill="{GRAPHITE}">{s}</text>')
         tag = status(s)
         colour = GREEN if tag == "available" else MUTE
-        out.append(f'  <text x="{x + w - 12}" y="{ty}" text-anchor="end" font-family="{FONT}" font-size="13" '
+        out.append(f'  <text x="{x + w - 14}" y="{ty:g}" text-anchor="end" font-family="{FONT}" font-size="16" '
                    f'fill="{colour}">{tag}</text>')
     return "\n".join(out)
 
 
 def edge_svg(d, label, lx, ly, anchor):
-    out = [f'  <path d="{d}" fill="none" stroke="{LINE}" stroke-width="1.6" marker-end="url(#arrow)"/>']
+    out = [f'  <path d="{d}" fill="none" stroke="{LINE}" stroke-width="1.75" marker-end="url(#arrow)"/>']
     if label:
-        out.append(f'  <text x="{lx:g}" y="{ly:g}" text-anchor="{anchor}" font-family="{FONT}" font-size="13" '
-                   f'fill="{MUTE}">{label}</text>')
+        # A Chalk halo keeps the label readable where another arrow passes close by.
+        out.append(f'  <text x="{lx:g}" y="{ly:g}" text-anchor="{anchor}" font-family="{FONT}" font-size="16" '
+                   f'fill="{MUTE}" stroke="{CHALK}" stroke-width="5" stroke-linejoin="round" '
+                   f'paint-order="stroke">{label}</text>')
     return "\n".join(out)
 
 
@@ -135,10 +142,10 @@ def build():
         f'orient="auto"><path d="M0 0L10 5L0 10Z" fill="{LINE}"/></marker></defs>',
         f'  <rect width="{W}" height="{H}" rx="16" fill="{CHALK}"/>',
     ]
-    for x, title in LANES:
-        parts.append(f'  <text x="{x}" y="70" font-family="{FONT}" font-size="20" font-weight="600" '
+    for x, w, title in LANES:
+        parts.append(f'  <text x="{x}" y="62" font-family="{FONT}" font-size="24" font-weight="600" '
                      f'fill="{GRAPHITE}">{title}</text>')
-        parts.append(f'  <rect x="{x}" y="80" width="{NODE_W}" height="3" fill="{GREEN}"/>')
+        parts.append(f'  <rect x="{x}" y="76" width="{w}" height="3" fill="{GREEN}"/>')
     parts += [edge_svg(*e) for e in edges()]
     parts += [node_svg(n) for n in NODES]
     parts.append("</svg>\n")

@@ -94,13 +94,41 @@ h1#_top,
   border-style: dashed;
 }
 
-/* Wide diagrams keep their size and scroll on phones. */
+/*
+ * Page width. Starlight's 45rem column left most of a wide screen empty. The column is now
+ * 72rem, so tables and diagrams get the room they need, while running text stops at about
+ * 80 characters a line, which is still comfortable to read.
+ */
+:root {
+  --sl-content-width: 72rem;
+  --sl-prose-width: 80ch;
+}
+.sl-markdown-content > :is(p, ul, ol, dl, blockquote),
+.sl-markdown-content .starlight-aside {
+  max-width: var(--sl-prose-width);
+}
+
+/* Tables fill the column on wide screens. Below that they keep Starlight's scrolling block. */
+@media (min-width: 72rem) {
+  .sl-markdown-content table:not(:where(.not-content *)) {
+    display: table;
+    width: 100%;
+  }
+}
+
+/* Diagrams fill the column. On phones they keep a readable size and scroll sideways. */
 .sl-markdown-content .figure {
   display: block;
   overflow-x: auto;
 }
 .sl-markdown-content .figure img {
-  min-width: 40rem;
-  max-width: 100%;
+  display: block;
+  width: 100%;
+  min-width: 52rem;
   height: auto;
+}
+@media (min-width: 50rem) {
+  .sl-markdown-content .figure img {
+    min-width: 0;
+  }
 }

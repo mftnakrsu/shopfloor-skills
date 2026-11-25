@@ -6,7 +6,7 @@ tableOfContents: false
 
 Each skill does one job and then hands over. A skill's **Hand-offs** section names where the work goes next. Together they form one loop: see the problem, fix the cause, hold the gain.
 
-<div class="figure"><img src="/hand-off-loop.svg" alt="Three columns. See the problem: lead-daily-routine, measure-spc, measure-oee, lead-gemba-walk, audit-process and improve-vsm. Fix the cause: the solve skills, improve-smed, improve-tpm, improve-kaizen and the flow skills. Hold the gain: plan-control-plan, then plan-workstation-instructions. Arrows show each hand-off." width="1280" height="650" /></div>
+<div class="figure"><a href="/hand-off-loop.svg" title="Open the diagram at full size"><img src="/hand-off-loop.svg" alt="Three columns. See the problem: lead-daily-routine, measure-spc, measure-oee, lead-gemba-walk, audit-process and improve-vsm. Fix the cause: the solve skills, improve-smed, improve-tpm, improve-kaizen and the flow skills. Hold the gain: plan-control-plan, then plan-workstation-instructions. Arrows show each hand-off." width="1550" height="850" /></a></div>
 
 Today only `lead-daily-routine` is available, and `solve-8d` is coming soon. The other boxes are planned skills, drawn with a dashed border.
 

@@ -1,82 +1,85 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 650" width="1280" height="650" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1550 850" width="1550" height="850" role="img" aria-labelledby="title desc">
   <title id="title">The shopfloor-skills hand-off loop</title>
   <desc id="desc">Skills that see a problem hand it to skills that fix the cause, which hand the result to the skills that hold the gain in the control plan and station instructions. lead-daily-routine is available; solve-8d is coming soon; the other skills are planned.</desc>
   <defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#6B7479"/></marker></defs>
-  <rect width="1280" height="650" rx="16" fill="#F1F4F2"/>
-  <text x="40" y="70" font-family="'Barlow Semi Condensed', 'Segoe UI', system-ui, sans-serif" font-size="20" font-weight="600" fill="#1F2428">See the problem</text>
-  <rect x="40" y="80" width="300" height="3" fill="#2E8A55"/>
-  <text x="490" y="70" font-family="'Barlow Semi Condensed', 'Segoe UI', system-ui, sans-serif" font-size="20" font-weight="600" fill="#1F2428">Fix the cause</text>
-  <rect x="490" y="80" width="300" height="3" fill="#2E8A55"/>
-  <text x="940" y="70" font-family="'Barlow Semi Condensed', 'Segoe UI', system-ui, sans-serif" font-size="20" font-weight="600" fill="#1F2428">Hold the gain</text>
-  <rect x="940" y="80" width="300" height="3" fill="#2E8A55"/>
-  <path d="M340 133C415 133 415 133 488 133" fill="none" stroke="#6B7479" stroke-width="1.6" marker-end="url(#arrow)"/>
-  <text x="415" y="124" text-anchor="middle" font-family="'Barlow Semi Condensed', 'Segoe UI', system-ui, sans-serif" font-size="13" fill="#5B6368">red KPI, cause unknown</text>
-  <path d="M190 200V158" fill="none" stroke="#6B7479" stroke-width="1.6" marker-end="url(#arrow)"/>
-  <text x="200" y="183" text-anchor="start" font-family="'Barlow Semi Condensed', 'Segoe UI', system-ui, sans-serif" font-size="13" fill="#5B6368">out of control: escalate</text>
-  <path d="M340 303C415 303 415 273 488 273" fill="none" stroke="#6B7479" stroke-width="1.6" marker-end="url(#arrow)"/>
-  <text x="480" y="264" text-anchor="end" font-family="'Barlow Semi Condensed', 'Segoe UI', system-ui, sans-serif" font-size="13" fill="#5B6368">set-up loss</text>
-  <path d="M340 317C415 317 415 343 488 343" fill="none" stroke="#6B7479" stroke-width="1.6" marker-end="url(#arrow)"/>
-  <text x="480" y="361" text-anchor="end" font-family="'Barlow Semi Condensed', 'Segoe UI', system-ui, sans-serif" font-size="13" fill="#5B6368">breakdowns</text>
-  <path d="M340 297C415 297 415 155 488 155" fill="none" stroke="#6B7479" stroke-width="1.6" marker-end="url(#arrow)"/>
-  <text x="352" y="288" text-anchor="start" font-family="'Barlow Semi Condensed', 'Segoe UI', system-ui, sans-serif" font-size="13" fill="#5B6368">defects</text>
-  <path d="M340 403C415 403 415 433 488 433" fill="none" stroke="#6B7479" stroke-width="1.6" marker-end="url(#arrow)"/>
-  <text x="480" y="424" text-anchor="end" font-family="'Barlow Semi Condensed', 'Segoe UI', system-ui, sans-serif" font-size="13" fill="#5B6368">observations</text>
-  <path d="M340 393C415 393 415 169 488 169" fill="none" stroke="#6B7479" stroke-width="1.6" marker-end="url(#arrow)"/>
-  <path d="M340 483C415 483 415 185 488 185" fill="none" stroke="#6B7479" stroke-width="1.6" marker-end="url(#arrow)"/>
-  <text x="352" y="474" text-anchor="start" font-family="'Barlow Semi Condensed', 'Segoe UI', system-ui, sans-serif" font-size="13" fill="#5B6368">findings</text>
-  <path d="M340 503H888Q900 503 900 491V157Q900 145 912 145H938" fill="none" stroke="#6B7479" stroke-width="1.6" marker-end="url(#arrow)"/>
-  <path d="M340 583C415 583 415 585 488 585" fill="none" stroke="#6B7479" stroke-width="1.6" marker-end="url(#arrow)"/>
-  <path d="M790 155C865 155 865 121 938 121" fill="none" stroke="#6B7479" stroke-width="1.6" marker-end="url(#arrow)"/>
-  <text x="802" y="146" text-anchor="start" font-family="'Barlow Semi Condensed', 'Segoe UI', system-ui, sans-serif" font-size="13" fill="#5B6368">root cause fixed</text>
-  <path d="M1090 156V328" fill="none" stroke="#6B7479" stroke-width="1.6" marker-end="url(#arrow)"/>
-  <text x="1100" y="248" text-anchor="start" font-family="'Barlow Semi Condensed', 'Segoe UI', system-ui, sans-serif" font-size="13" fill="#5B6368">update</text>
-  <path d="M790 585C865 585 865 363 938 363" fill="none" stroke="#6B7479" stroke-width="1.6" marker-end="url(#arrow)"/>
-  <text x="802" y="605" text-anchor="start" font-family="'Barlow Semi Condensed', 'Segoe UI', system-ui, sans-serif" font-size="13" fill="#5B6368">new standard work</text>
-  <rect x="40" y="110" width="300" height="46" rx="8" fill="#FFFFFF" stroke="#2E8A55" stroke-width="2.5"/>
-  <text x="54" y="138" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="15" font-weight="700" fill="#1F2428">lead-daily-routine</text>
-  <text x="328" y="138" text-anchor="end" font-family="'Barlow Semi Condensed', 'Segoe UI', system-ui, sans-serif" font-size="13" fill="#2E8A55">available</text>
-  <rect x="40" y="200" width="300" height="46" rx="8" fill="#FFFFFF" stroke="#6B7479" stroke-width="1.5" stroke-dasharray="5 4"/>
-  <text x="54" y="228" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="15" font-weight="400" fill="#1F2428">measure-spc</text>
-  <text x="328" y="228" text-anchor="end" font-family="'Barlow Semi Condensed', 'Segoe UI', system-ui, sans-serif" font-size="13" fill="#5B6368">planned</text>
-  <rect x="40" y="290" width="300" height="46" rx="8" fill="#FFFFFF" stroke="#6B7479" stroke-width="1.5" stroke-dasharray="5 4"/>
-  <text x="54" y="318" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="15" font-weight="400" fill="#1F2428">measure-oee</text>
-  <text x="328" y="318" text-anchor="end" font-family="'Barlow Semi Condensed', 'Segoe UI', system-ui, sans-serif" font-size="13" fill="#5B6368">planned</text>
-  <rect x="40" y="380" width="300" height="46" rx="8" fill="#FFFFFF" stroke="#6B7479" stroke-width="1.5" stroke-dasharray="5 4"/>
-  <text x="54" y="408" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="15" font-weight="400" fill="#1F2428">lead-gemba-walk</text>
-  <text x="328" y="408" text-anchor="end" font-family="'Barlow Semi Condensed', 'Segoe UI', system-ui, sans-serif" font-size="13" fill="#5B6368">planned</text>
-  <rect x="40" y="470" width="300" height="46" rx="8" fill="#FFFFFF" stroke="#6B7479" stroke-width="1.5" stroke-dasharray="5 4"/>
-  <text x="54" y="498" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="15" font-weight="400" fill="#1F2428">audit-process</text>
-  <text x="328" y="498" text-anchor="end" font-family="'Barlow Semi Condensed', 'Segoe UI', system-ui, sans-serif" font-size="13" fill="#5B6368">planned</text>
-  <rect x="40" y="560" width="300" height="46" rx="8" fill="#FFFFFF" stroke="#6B7479" stroke-width="1.5" stroke-dasharray="5 4"/>
-  <text x="54" y="588" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="15" font-weight="400" fill="#1F2428">improve-vsm</text>
-  <text x="328" y="588" text-anchor="end" font-family="'Barlow Semi Condensed', 'Segoe UI', system-ui, sans-serif" font-size="13" fill="#5B6368">planned</text>
-  <rect x="490" y="110" width="300" height="90" rx="8" fill="#FFFFFF" stroke="#6B7479" stroke-width="1.5"/>
-  <text x="504" y="138" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="15" font-weight="400" fill="#1F2428">solve-5why</text>
-  <text x="778" y="138" text-anchor="end" font-family="'Barlow Semi Condensed', 'Segoe UI', system-ui, sans-serif" font-size="13" fill="#5B6368">planned</text>
-  <text x="504" y="160" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="15" font-weight="400" fill="#1F2428">solve-fishbone</text>
-  <text x="778" y="160" text-anchor="end" font-family="'Barlow Semi Condensed', 'Segoe UI', system-ui, sans-serif" font-size="13" fill="#5B6368">planned</text>
-  <text x="504" y="182" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="15" font-weight="400" fill="#1F2428">solve-8d</text>
-  <text x="778" y="182" text-anchor="end" font-family="'Barlow Semi Condensed', 'Segoe UI', system-ui, sans-serif" font-size="13" fill="#5B6368">coming soon</text>
-  <rect x="490" y="250" width="300" height="46" rx="8" fill="#FFFFFF" stroke="#6B7479" stroke-width="1.5" stroke-dasharray="5 4"/>
-  <text x="504" y="278" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="15" font-weight="400" fill="#1F2428">improve-smed</text>
-  <text x="778" y="278" text-anchor="end" font-family="'Barlow Semi Condensed', 'Segoe UI', system-ui, sans-serif" font-size="13" fill="#5B6368">planned</text>
-  <rect x="490" y="320" width="300" height="46" rx="8" fill="#FFFFFF" stroke="#6B7479" stroke-width="1.5" stroke-dasharray="5 4"/>
-  <text x="504" y="348" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="15" font-weight="400" fill="#1F2428">improve-tpm</text>
-  <text x="778" y="348" text-anchor="end" font-family="'Barlow Semi Condensed', 'Segoe UI', system-ui, sans-serif" font-size="13" fill="#5B6368">planned</text>
-  <rect x="490" y="410" width="300" height="46" rx="8" fill="#FFFFFF" stroke="#6B7479" stroke-width="1.5" stroke-dasharray="5 4"/>
-  <text x="504" y="438" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="15" font-weight="400" fill="#1F2428">improve-kaizen</text>
-  <text x="778" y="438" text-anchor="end" font-family="'Barlow Semi Condensed', 'Segoe UI', system-ui, sans-serif" font-size="13" fill="#5B6368">planned</text>
-  <rect x="490" y="540" width="300" height="90" rx="8" fill="#FFFFFF" stroke="#6B7479" stroke-width="1.5" stroke-dasharray="5 4"/>
-  <text x="504" y="568" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="15" font-weight="400" fill="#1F2428">improve-tpt</text>
-  <text x="778" y="568" text-anchor="end" font-family="'Barlow Semi Condensed', 'Segoe UI', system-ui, sans-serif" font-size="13" fill="#5B6368">planned</text>
-  <text x="504" y="590" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="15" font-weight="400" fill="#1F2428">improve-kanban-pull</text>
-  <text x="778" y="590" text-anchor="end" font-family="'Barlow Semi Condensed', 'Segoe UI', system-ui, sans-serif" font-size="13" fill="#5B6368">planned</text>
-  <text x="504" y="612" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="15" font-weight="400" fill="#1F2428">improve-line-balancing</text>
-  <text x="778" y="612" text-anchor="end" font-family="'Barlow Semi Condensed', 'Segoe UI', system-ui, sans-serif" font-size="13" fill="#5B6368">planned</text>
-  <rect x="940" y="110" width="300" height="46" rx="8" fill="#FFFFFF" stroke="#6B7479" stroke-width="1.5" stroke-dasharray="5 4"/>
-  <text x="954" y="138" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="15" font-weight="400" fill="#1F2428">plan-control-plan</text>
-  <text x="1228" y="138" text-anchor="end" font-family="'Barlow Semi Condensed', 'Segoe UI', system-ui, sans-serif" font-size="13" fill="#5B6368">planned</text>
-  <rect x="940" y="330" width="300" height="46" rx="8" fill="#FFFFFF" stroke="#6B7479" stroke-width="1.5" stroke-dasharray="5 4"/>
-  <text x="954" y="358" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="15" font-weight="400" fill="#1F2428">plan-workstation-instructions</text>
-  <text x="1228" y="358" text-anchor="end" font-family="'Barlow Semi Condensed', 'Segoe UI', system-ui, sans-serif" font-size="13" fill="#5B6368">planned</text>
+  <rect width="1550" height="850" rx="16" fill="#F1F4F2"/>
+  <text x="40" y="62" font-family="'Barlow Semi Condensed', 'Segoe UI', system-ui, sans-serif" font-size="24" font-weight="600" fill="#1F2428">See the problem</text>
+  <rect x="40" y="76" width="300" height="3" fill="#2E8A55"/>
+  <text x="550" y="62" font-family="'Barlow Semi Condensed', 'Segoe UI', system-ui, sans-serif" font-size="24" font-weight="600" fill="#1F2428">Fix the cause</text>
+  <rect x="550" y="76" width="350" height="3" fill="#2E8A55"/>
+  <text x="1110" y="62" font-family="'Barlow Semi Condensed', 'Segoe UI', system-ui, sans-serif" font-size="24" font-weight="600" fill="#1F2428">Hold the gain</text>
+  <rect x="1110" y="76" width="400" height="3" fill="#2E8A55"/>
+  <path d="M340 166L390 166Q400 166 400 156L400 150Q400 140 410 140L548 140" fill="none" stroke="#6B7479" stroke-width="1.75" marker-end="url(#arrow)"/>
+  <text x="475" y="132" text-anchor="middle" font-family="'Barlow Semi Condensed', 'Segoe UI', system-ui, sans-serif" font-size="16" fill="#5B6368" stroke="#F1F4F2" stroke-width="5" stroke-linejoin="round" paint-order="stroke">set-up loss</text>
+  <path d="M340 182L410 182Q420 182 420 192L420 214Q420 224 430 224L548 224" fill="none" stroke="#6B7479" stroke-width="1.75" marker-end="url(#arrow)"/>
+  <text x="485" y="216" text-anchor="middle" font-family="'Barlow Semi Condensed', 'Segoe UI', system-ui, sans-serif" font-size="16" fill="#5B6368" stroke="#F1F4F2" stroke-width="5" stroke-linejoin="round" paint-order="stroke">breakdowns</text>
+  <path d="M340 198L370 198Q380 198 380 208L380 312Q380 322 390 322L548 322" fill="none" stroke="#6B7479" stroke-width="1.75" marker-end="url(#arrow)"/>
+  <text x="465" y="314" text-anchor="middle" font-family="'Barlow Semi Condensed', 'Segoe UI', system-ui, sans-serif" font-size="16" fill="#5B6368" stroke="#F1F4F2" stroke-width="5" stroke-linejoin="round" paint-order="stroke">defects</text>
+  <path d="M340 354L548 354" fill="none" stroke="#6B7479" stroke-width="1.75" marker-end="url(#arrow)"/>
+  <text x="445" y="346" text-anchor="middle" font-family="'Barlow Semi Condensed', 'Segoe UI', system-ui, sans-serif" font-size="16" fill="#5B6368" stroke="#F1F4F2" stroke-width="5" stroke-linejoin="round" paint-order="stroke">red KPI, cause unknown</text>
+  <path d="M130 422L130 384" fill="none" stroke="#6B7479" stroke-width="1.75" marker-end="url(#arrow)"/>
+  <text x="142" y="407" text-anchor="start" font-family="'Barlow Semi Condensed', 'Segoe UI', system-ui, sans-serif" font-size="16" fill="#5B6368" stroke="#F1F4F2" stroke-width="5" stroke-linejoin="round" paint-order="stroke">out of control: escalate</text>
+  <path d="M340 530L430 530Q440 530 440 520L440 396Q440 386 450 386L548 386" fill="none" stroke="#6B7479" stroke-width="1.75" marker-end="url(#arrow)"/>
+  <text x="495" y="378" text-anchor="middle" font-family="'Barlow Semi Condensed', 'Segoe UI', system-ui, sans-serif" font-size="16" fill="#5B6368" stroke="#F1F4F2" stroke-width="5" stroke-linejoin="round" paint-order="stroke">observations</text>
+  <path d="M340 546L548 546" fill="none" stroke="#6B7479" stroke-width="1.75" marker-end="url(#arrow)"/>
+  <text x="352" y="564" text-anchor="start" font-family="'Barlow Semi Condensed', 'Segoe UI', system-ui, sans-serif" font-size="16" fill="#5B6368" stroke="#F1F4F2" stroke-width="5" stroke-linejoin="round" paint-order="stroke">observations</text>
+  <path d="M340 630L470 630Q480 630 480 620L480 428Q480 418 490 418L548 418" fill="none" stroke="#6B7479" stroke-width="1.75" marker-end="url(#arrow)"/>
+  <text x="352" y="622" text-anchor="start" font-family="'Barlow Semi Condensed', 'Segoe UI', system-ui, sans-serif" font-size="16" fill="#5B6368" stroke="#F1F4F2" stroke-width="5" stroke-linejoin="round" paint-order="stroke">findings</text>
+  <path d="M340 654L1050 654Q1060 654 1060 644L1060 392Q1060 382 1070 382L1108 382" fill="none" stroke="#6B7479" stroke-width="1.75" marker-end="url(#arrow)"/>
+  <text x="560" y="646" text-anchor="start" font-family="'Barlow Semi Condensed', 'Segoe UI', system-ui, sans-serif" font-size="16" fill="#5B6368" stroke="#F1F4F2" stroke-width="5" stroke-linejoin="round" paint-order="stroke">findings</text>
+  <path d="M340 752L548 752" fill="none" stroke="#6B7479" stroke-width="1.75" marker-end="url(#arrow)"/>
+  <text x="445" y="744" text-anchor="middle" font-family="'Barlow Semi Condensed', 'Segoe UI', system-ui, sans-serif" font-size="16" fill="#5B6368" stroke="#F1F4F2" stroke-width="5" stroke-linejoin="round" paint-order="stroke">future state</text>
+  <path d="M900 356L1108 356" fill="none" stroke="#6B7479" stroke-width="1.75" marker-end="url(#arrow)"/>
+  <text x="1005" y="348" text-anchor="middle" font-family="'Barlow Semi Condensed', 'Segoe UI', system-ui, sans-serif" font-size="16" fill="#5B6368" stroke="#F1F4F2" stroke-width="5" stroke-linejoin="round" paint-order="stroke">root cause fixed</text>
+  <path d="M1310 396L1310 722" fill="none" stroke="#6B7479" stroke-width="1.75" marker-end="url(#arrow)"/>
+  <text x="1322" y="565" text-anchor="start" font-family="'Barlow Semi Condensed', 'Segoe UI', system-ui, sans-serif" font-size="16" fill="#5B6368" stroke="#F1F4F2" stroke-width="5" stroke-linejoin="round" paint-order="stroke">update</text>
+  <path d="M900 752L1108 752" fill="none" stroke="#6B7479" stroke-width="1.75" marker-end="url(#arrow)"/>
+  <text x="1005" y="744" text-anchor="middle" font-family="'Barlow Semi Condensed', 'Segoe UI', system-ui, sans-serif" font-size="16" fill="#5B6368" stroke="#F1F4F2" stroke-width="5" stroke-linejoin="round" paint-order="stroke">new standard work</text>
+  <rect x="40" y="154" width="300" height="56" rx="8" fill="#FFFFFF" stroke="#6B7479" stroke-width="1.5" stroke-dasharray="5 4"/>
+  <text x="56" y="188" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="17" font-weight="400" fill="#1F2428">measure-oee</text>
+  <text x="326" y="188" text-anchor="end" font-family="'Barlow Semi Condensed', 'Segoe UI', system-ui, sans-serif" font-size="16" fill="#5B6368">planned</text>
+  <rect x="40" y="326" width="300" height="56" rx="8" fill="#FFFFFF" stroke="#2E8A55" stroke-width="2.5"/>
+  <text x="56" y="360" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="17" font-weight="700" fill="#1F2428">lead-daily-routine</text>
+  <text x="326" y="360" text-anchor="end" font-family="'Barlow Semi Condensed', 'Segoe UI', system-ui, sans-serif" font-size="16" fill="#2E8A55">available</text>
+  <rect x="40" y="422" width="300" height="56" rx="8" fill="#FFFFFF" stroke="#6B7479" stroke-width="1.5" stroke-dasharray="5 4"/>
+  <text x="56" y="456" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="17" font-weight="400" fill="#1F2428">measure-spc</text>
+  <text x="326" y="456" text-anchor="end" font-family="'Barlow Semi Condensed', 'Segoe UI', system-ui, sans-serif" font-size="16" fill="#5B6368">planned</text>
+  <rect x="40" y="518" width="300" height="56" rx="8" fill="#FFFFFF" stroke="#6B7479" stroke-width="1.5" stroke-dasharray="5 4"/>
+  <text x="56" y="552" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="17" font-weight="400" fill="#1F2428">lead-gemba-walk</text>
+  <text x="326" y="552" text-anchor="end" font-family="'Barlow Semi Condensed', 'Segoe UI', system-ui, sans-serif" font-size="16" fill="#5B6368">planned</text>
+  <rect x="40" y="614" width="300" height="56" rx="8" fill="#FFFFFF" stroke="#6B7479" stroke-width="1.5" stroke-dasharray="5 4"/>
+  <text x="56" y="648" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="17" font-weight="400" fill="#1F2428">audit-process</text>
+  <text x="326" y="648" text-anchor="end" font-family="'Barlow Semi Condensed', 'Segoe UI', system-ui, sans-serif" font-size="16" fill="#5B6368">planned</text>
+  <rect x="40" y="724" width="300" height="56" rx="8" fill="#FFFFFF" stroke="#6B7479" stroke-width="1.5" stroke-dasharray="5 4"/>
+  <text x="56" y="758" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="17" font-weight="400" fill="#1F2428">improve-vsm</text>
+  <text x="326" y="758" text-anchor="end" font-family="'Barlow Semi Condensed', 'Segoe UI', system-ui, sans-serif" font-size="16" fill="#5B6368">planned</text>
+  <rect x="550" y="112" width="350" height="56" rx="8" fill="#FFFFFF" stroke="#6B7479" stroke-width="1.5" stroke-dasharray="5 4"/>
+  <text x="566" y="146" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="17" font-weight="400" fill="#1F2428">improve-smed</text>
+  <text x="886" y="146" text-anchor="end" font-family="'Barlow Semi Condensed', 'Segoe UI', system-ui, sans-serif" font-size="16" fill="#5B6368">planned</text>
+  <rect x="550" y="196" width="350" height="56" rx="8" fill="#FFFFFF" stroke="#6B7479" stroke-width="1.5" stroke-dasharray="5 4"/>
+  <text x="566" y="230" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="17" font-weight="400" fill="#1F2428">improve-tpm</text>
+  <text x="886" y="230" text-anchor="end" font-family="'Barlow Semi Condensed', 'Segoe UI', system-ui, sans-serif" font-size="16" fill="#5B6368">planned</text>
+  <rect x="550" y="300" width="350" height="136" rx="8" fill="#FFFFFF" stroke="#6B7479" stroke-width="1.5"/>
+  <text x="566" y="348" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="17" font-weight="400" fill="#1F2428">solve-5why</text>
+  <text x="886" y="348" text-anchor="end" font-family="'Barlow Semi Condensed', 'Segoe UI', system-ui, sans-serif" font-size="16" fill="#5B6368">planned</text>
+  <text x="566" y="374" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="17" font-weight="400" fill="#1F2428">solve-fishbone</text>
+  <text x="886" y="374" text-anchor="end" font-family="'Barlow Semi Condensed', 'Segoe UI', system-ui, sans-serif" font-size="16" fill="#5B6368">planned</text>
+  <text x="566" y="400" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="17" font-weight="400" fill="#1F2428">solve-8d</text>
+  <text x="886" y="400" text-anchor="end" font-family="'Barlow Semi Condensed', 'Segoe UI', system-ui, sans-serif" font-size="16" fill="#5B6368">coming soon</text>
+  <rect x="550" y="518" width="350" height="56" rx="8" fill="#FFFFFF" stroke="#6B7479" stroke-width="1.5" stroke-dasharray="5 4"/>
+  <text x="566" y="552" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="17" font-weight="400" fill="#1F2428">improve-kaizen</text>
+  <text x="886" y="552" text-anchor="end" font-family="'Barlow Semi Condensed', 'Segoe UI', system-ui, sans-serif" font-size="16" fill="#5B6368">planned</text>
+  <rect x="550" y="698" width="350" height="108" rx="8" fill="#FFFFFF" stroke="#6B7479" stroke-width="1.5" stroke-dasharray="5 4"/>
+  <text x="566" y="732" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="17" font-weight="400" fill="#1F2428">improve-tpt</text>
+  <text x="886" y="732" text-anchor="end" font-family="'Barlow Semi Condensed', 'Segoe UI', system-ui, sans-serif" font-size="16" fill="#5B6368">planned</text>
+  <text x="566" y="758" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="17" font-weight="400" fill="#1F2428">improve-kanban-pull</text>
+  <text x="886" y="758" text-anchor="end" font-family="'Barlow Semi Condensed', 'Segoe UI', system-ui, sans-serif" font-size="16" fill="#5B6368">planned</text>
+  <text x="566" y="784" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="17" font-weight="400" fill="#1F2428">improve-line-balancing</text>
+  <text x="886" y="784" text-anchor="end" font-family="'Barlow Semi Condensed', 'Segoe UI', system-ui, sans-serif" font-size="16" fill="#5B6368">planned</text>
+  <rect x="1110" y="340" width="400" height="56" rx="8" fill="#FFFFFF" stroke="#6B7479" stroke-width="1.5" stroke-dasharray="5 4"/>
+  <text x="1126" y="374" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="17" font-weight="400" fill="#1F2428">plan-control-plan</text>
+  <text x="1496" y="374" text-anchor="end" font-family="'Barlow Semi Condensed', 'Segoe UI', system-ui, sans-serif" font-size="16" fill="#5B6368">planned</text>
+  <rect x="1110" y="724" width="400" height="56" rx="8" fill="#FFFFFF" stroke="#6B7479" stroke-width="1.5" stroke-dasharray="5 4"/>
+  <text x="1126" y="758" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="17" font-weight="400" fill="#1F2428">plan-workstation-instructions</text>
+  <text x="1496" y="758" text-anchor="end" font-family="'Barlow Semi Condensed', 'Segoe UI', system-ui, sans-serif" font-size="16" fill="#5B6368">planned</text>
 </svg>
