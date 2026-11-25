@@ -323,6 +323,11 @@ class TermTest(LintTestCase):
         self.repo.write(".claude/worktrees/w/README.md", "Zeta Works 417\n")
         self.assertEqual(self.errors(private_terms=["zeta works 417"]), [])
 
+    def test_build_folders_are_skipped(self):
+        self.repo.write("docs-site/node_modules/x.js", "Zeta Works 417\n")
+        self.repo.write("docs-site/dist/index.html", "Zeta Works 417\n")
+        self.assertEqual(self.errors(private_terms=["zeta works 417"]), [])
+
     def test_private_terms_are_checked_everywhere_except_private(self):
         self.repo.write("docs/notes.md", "Visit Zeta Works 417 today.\n")
         self.repo.write("private/research.md", "Zeta Works 417\n")
