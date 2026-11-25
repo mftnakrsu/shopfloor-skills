@@ -38,8 +38,7 @@ jobs:
       - name: Validate the Claude Code plugin
         run: |
           npm install -g @anthropic-ai/claude-code@2.1.332
-          claude plugin validate . --strict
-          claude plugin validate . --profile directory
+          claude plugin validate . --strict --profile directory
       - name: Validate skills against the Agent Skills specification
         run: |
           pip install skills-ref==0.1.1

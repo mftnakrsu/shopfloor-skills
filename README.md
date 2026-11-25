@@ -25,7 +25,7 @@ Agent Skills and subagents for people who run production lines: manufacturing an
 
 Each skill is a folder of plain markdown: a procedure with the inputs to ask for, the steps, the checks to run before answering, and a template for the result. Every number has a source or is marked as a rule of thumb.
 
-**Status:** in development. All 20 skills are available today, plus the `8d-moderator` agent. The other agents are planned and arrive in batches; see [CHANGELOG.md](CHANGELOG.md).
+**Status:** 1.0.0. All 20 skills and all 6 agents are available; see [CHANGELOG.md](CHANGELOG.md).
 
 ## What's inside
 
@@ -33,14 +33,14 @@ The design has 20 skills in six stages and 6 agents. The prefix of a skill's nam
 
 | Stage | Covers | Skills |
 |---|---|---|
-| `lead-` | Daily shopfloor leadership | [`lead-daily-routine`](skills/lead-daily-routine/SKILL.md), [`lead-gemba-walk`](skills/lead-gemba-walk/SKILL.md) (available) |
-| `measure-` | Seeing the losses | [`measure-oee`](skills/measure-oee/SKILL.md), [`measure-spc`](skills/measure-spc/SKILL.md) (available) |
-| `improve-` | Productivity and flow | [`improve-tpt`](skills/improve-tpt/SKILL.md), [`improve-line-balancing`](skills/improve-line-balancing/SKILL.md), [`improve-smed`](skills/improve-smed/SKILL.md), [`improve-tpm`](skills/improve-tpm/SKILL.md), [`improve-vsm`](skills/improve-vsm/SKILL.md), [`improve-kanban-pull`](skills/improve-kanban-pull/SKILL.md), [`improve-kaizen`](skills/improve-kaizen/SKILL.md) (available) |
-| `plan-` | The documents that keep a line stable | [`plan-control-plan`](skills/plan-control-plan/SKILL.md), [`plan-workstation-instructions`](skills/plan-workstation-instructions/SKILL.md) (available) |
-| `solve-` | Root cause and problem solving | [`solve-8d`](skills/solve-8d/SKILL.md), [`solve-5why`](skills/solve-5why/SKILL.md), [`solve-fishbone`](skills/solve-fishbone/SKILL.md), [`solve-is-is-not`](skills/solve-is-is-not/SKILL.md), [`solve-pdca`](skills/solve-pdca/SKILL.md), [`solve-dmaic`](skills/solve-dmaic/SKILL.md) (available) |
-| `audit-` | Checking the system | [`audit-process`](skills/audit-process/SKILL.md) (available) |
+| `lead-` | Daily shopfloor leadership | [`lead-daily-routine`](skills/lead-daily-routine/SKILL.md), [`lead-gemba-walk`](skills/lead-gemba-walk/SKILL.md) |
+| `measure-` | Seeing the losses | [`measure-oee`](skills/measure-oee/SKILL.md), [`measure-spc`](skills/measure-spc/SKILL.md) |
+| `improve-` | Productivity and flow | [`improve-tpt`](skills/improve-tpt/SKILL.md), [`improve-line-balancing`](skills/improve-line-balancing/SKILL.md), [`improve-smed`](skills/improve-smed/SKILL.md), [`improve-tpm`](skills/improve-tpm/SKILL.md), [`improve-vsm`](skills/improve-vsm/SKILL.md), [`improve-kanban-pull`](skills/improve-kanban-pull/SKILL.md), [`improve-kaizen`](skills/improve-kaizen/SKILL.md) |
+| `plan-` | The documents that keep a line stable | [`plan-control-plan`](skills/plan-control-plan/SKILL.md), [`plan-workstation-instructions`](skills/plan-workstation-instructions/SKILL.md) |
+| `solve-` | Root cause and problem solving | [`solve-8d`](skills/solve-8d/SKILL.md), [`solve-5why`](skills/solve-5why/SKILL.md), [`solve-fishbone`](skills/solve-fishbone/SKILL.md), [`solve-is-is-not`](skills/solve-is-is-not/SKILL.md), [`solve-pdca`](skills/solve-pdca/SKILL.md), [`solve-dmaic`](skills/solve-dmaic/SKILL.md) |
+| `audit-` | Checking the system | [`audit-process`](skills/audit-process/SKILL.md) |
 
-**Agents:** [`skill-reviewer`](agents/skill-reviewer.md) (available, a tool for maintainers) reviews a new skill against the project's rules. [`8d-moderator`](agents/8d-moderator.md) (available) leads an 8D team from D0 to D8. `problem-solving-coach`, `inspection-planner`, `pfmea-chain-checker` and `process-auditor` are planned.
+**Agents:** [`skill-reviewer`](agents/skill-reviewer.md) (a tool for maintainers) reviews a new skill against the project's rules. [`8d-moderator`](agents/8d-moderator.md) leads an 8D team from D0 to D8. [`problem-solving-coach`](agents/problem-solving-coach.md) takes everyday line problems, picks the root-cause method and hands over to `8d-moderator` when the 8D criteria are met. [`inspection-planner`](agents/inspection-planner.md) builds the control plan, derives the station instructions from it and runs the 7 consistency checks. [`pfmea-chain-checker`](agents/pfmea-chain-checker.md) checks, station by station, that every PFMEA failure mode needing a control has one in the control plan, and reports gaps without editing. [`process-auditor`](agents/process-auditor.md) runs process audits, layered process audits and shopfloor-management self-audits, backed by gemba evidence.
 
 The skills hand work to each other as one loop: see the problem, fix the cause, hold the gain in the control plan and station instructions. The [docs site](https://shopfloor-skills.mefby.com) has the full catalogue and the loop.
 
@@ -99,7 +99,7 @@ MIT License. See [LICENSE](LICENSE).
 
 `shopfloor-skills`, üretim hatlarını yöneten kişiler için Agent Skills ve alt agent'lardan oluşan açık kaynaklı bir settir: üretim ve proses mühendisleri, vardiya ve alan liderleri, sürekli iyileştirme koçları için. Verimlilik ve akışı (OEE, geçiş süresi, hat dengeleme, SMED, TPM, kanban), günlük sahada liderliği (kademeli toplantılar, gemba yürüyüşleri) ve hattı kararlı tutan dokümanları (kontrol planı, istasyon talimatları, SPC, 8D, proses denetimleri) kapsar.
 
-Proje geliştirme aşamasındadır. Bugün 20 skill'in tamamı hazırdır; ayrıca `8d-moderator` agent'ı. Diğer agent'lar planlanmıştır.
+Sürüm 1.0.0: 20 skill'in ve 6 agent'ın tamamı hazırdır.
 
 **Kurulum.** Claude Code oturumunda:
 
