@@ -1,0 +1,15 @@
+# Research notes and the private term list: never published
+/private/
+
+# Created when scripts/install.py runs inside this repo
+/.agents/
+/.opencode/
+/.qwen/
+/.cursor/
+
+/.claude/settings.local.json
+/evals/results/
+__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db
