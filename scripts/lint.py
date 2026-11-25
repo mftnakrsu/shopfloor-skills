@@ -25,8 +25,6 @@ PUBLIC_TERMS = ("examplecorp", "xps", "examplecorp production system")
 PUBLIC_DIRS = ("skills", "agents", "evals", ".claude-plugin")
 PUBLIC_FILES = ("README.md", "CHANGELOG.md", "CONTRIBUTING.md")
 SKIP_DIRS = {".git", "private", "__pycache__", ".agents", ".opencode", ".qwen", ".cursor"}
-ABOUT_START = "<!-- about-author:start -->"
-ABOUT_END = "<!-- about-author:end -->"
 NAME = re.compile(r"^[a-z0-9]+(-[a-z0-9]+)*$")
 SEMVER = re.compile(r"^[0-9]+\.[0-9]+\.[0-9]+$")
 LINK = re.compile(r"\[[^\]]*\]\(([^)\s]+)[^)]*\)")
@@ -280,10 +278,7 @@ def check_docs(root):
     readme = root / "README.md"
     if not readme.is_file():
         return ["README.md: missing"]
-    text = readme.read_text(encoding="utf-8")
     errors = []
-    if text.count(ABOUT_START) != 1 or text.count(ABOUT_END) != 1 or text.find(ABOUT_START) > text.find(ABOUT_END):
-        errors.append(f"README.md: needs exactly one {ABOUT_START} ... {ABOUT_END} block")
     for name in PUBLIC_FILES:
         path = root / name
         if path.is_file():
@@ -294,14 +289,6 @@ def check_docs(root):
 def term_pattern(term):
     words = r"\s+".join(re.escape(word) for word in term.split())
     return re.compile(r"(?<![A-Za-z0-9])" + words + r"(?![A-Za-z0-9])", re.IGNORECASE)
-
-
-def blank_about_block(text):
-    start, end = text.find(ABOUT_START), text.find(ABOUT_END)
-    if start == -1 or end < start:
-        return text
-    block = text[start:end + len(ABOUT_END)]
-    return text[:start] + "\n" * block.count("\n") + text[end + len(ABOUT_END):]
 
 
 def walk_files(root, top):
@@ -318,7 +305,7 @@ def walk_files(root, top):
             yield current / name
 
 
-def term_errors(root, files, terms, label, allow_about_block):
+def term_errors(root, files, terms, label):
     patterns = [(term, term_pattern(term)) for term in terms]
     errors = []
     for path in files:
@@ -326,8 +313,6 @@ def term_errors(root, files, terms, label, allow_about_block):
             text = path.read_text(encoding="utf-8")
         except (UnicodeDecodeError, OSError):
             continue
-        if allow_about_block and path == root / "README.md":
-            text = blank_about_block(text)
         for number, line in enumerate(text.splitlines(), 1):
             for term, pattern in patterns:
                 if pattern.search(line):
@@ -360,9 +345,9 @@ def lint(root, private_terms=()):
         errors += check_agent(root, agent, skill_names)
     errors += check_evals(root, skill_names, agent_names)
     errors += check_docs(root)
-    errors += term_errors(root, public_files(root), PUBLIC_TERMS, "public", True)
+    errors += term_errors(root, public_files(root), PUBLIC_TERMS, "public")
     if private_terms:
-        errors += term_errors(root, walk_files(root, "."), private_terms, "private", False)
+        errors += term_errors(root, walk_files(root, "."), private_terms, "private")
     return errors
 
 

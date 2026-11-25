@@ -56,7 +56,7 @@ skills: [{skills}]
 Uses `{body_skill}` when needed.
 """
 
-README = "# Test\n\n<!-- about-author:start -->\nBio.\n<!-- about-author:end -->\n"
+README = "# Test\n"
 
 
 def skill_text(replace=(), name="solve-8d", handoff="solve-8d"):
@@ -293,9 +293,9 @@ class EvalTest(LintTestCase):
 
 
 class TermTest(LintTestCase):
-    def test_readme_needs_the_about_block(self):
-        self.repo.write("README.md", "# Test\n")
-        self.assertError("README.md: needs exactly one")
+    def test_readme_is_required(self):
+        (self.repo.root / "README.md").unlink()
+        self.assertError("README.md: missing")
 
     def test_public_term_in_skill(self):
         self.repo.skill(text=skill_text([("- Shift length.", "- examplecorp shift length.")]))
@@ -305,11 +305,9 @@ class TermTest(LintTestCase):
         self.repo.skill(text=skill_text([("- Shift length.", "- Link speed 10 kbps.")]))
         self.assertClean()
 
-    def test_public_term_only_allowed_inside_the_about_block(self):
-        self.repo.write("README.md", README.replace("Bio.", "Bio at examplecorp."))
-        self.assertClean()
-        self.repo.write("README.md", README + "\nexamplecorp again.\n")
-        self.assertError("README.md:7: contains public term 'examplecorp'")
+    def test_public_term_anywhere_in_readme_fails(self):
+        self.repo.write("README.md", "# Test\n\nBuilt at examplecorp.\n")
+        self.assertError("README.md:3: contains public term 'examplecorp'")
 
     def test_multi_word_public_term(self):
         self.repo.write("CHANGELOG.md", "Inspired by the examplecorp  production system.\n")

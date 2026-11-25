@@ -33,14 +33,6 @@ npx skills add mftnakrsu/shopfloor-skills
 
 See [CONTRIBUTING.md](CONTRIBUTING.md).
 
-## About the author
-
-<!-- about-author:start -->
-
-
-
-<!-- about-author:end -->
-
 ## Standards and license
 
 ISO, IATF, VDA and AIAG publications are copyrighted by their publishers. Clause numbers in this project are pointers, and every summary is written in our own words. Use the official documents for the binding text.
