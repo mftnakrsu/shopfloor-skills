@@ -20,19 +20,19 @@ The design plans 20 skills in six stages. The prefix of a skill's name is its st
 
 | Skill | Status | What it does |
 |---|---|---|
-| `measure-oee` | <span class="status planned">planned</span> | Computes OEE and TEEP from an agreed time model, builds a loss tree in minutes, and catches averaging errors |
+| [`measure-oee`](/skills/measure-oee/) | <span class="status available">available</span> | Computes OEE and TEEP from an agreed time model, builds a loss tree in minutes, and catches averaging errors |
 | `measure-spc` | <span class="status planned">planned</span> | Chooses the control chart, computes limits, applies out-of-control rules, and links each signal to the reaction plan and tier escalation |
 
 ## improve: productivity and flow
 
 | Skill | Status | What it does |
 |---|---|---|
-| `improve-tpt` | <span class="status planned">planned</span> | Reduces throughput time (Durchlaufzeit): measures it with a Little's Law cross-check, finds critical WIP, and caps it |
+| [`improve-tpt`](/skills/improve-tpt/) | <span class="status available">available</span> | Reduces throughput time (Durchlaufzeit): measures it with a Little's Law cross-check, finds critical WIP, and caps it |
 | `improve-vsm` | <span class="status planned">planned</span> | Draws current and future-state value streams and ends in a loop plan with owners and a 30/60/90 review |
 | `improve-kanban-pull` | <span class="status planned">planned</span> | Chooses a supermarket, FIFO lane or CONWIP, sizes the loops with a cited formula, and sets the pitch |
-| `improve-line-balancing` | <span class="status planned">planned</span> | Balances manual lines in a fixed order, from volume and mix to takt, ergonomics and a fill-up yamazumi, and outputs standard work |
-| `improve-smed` | <span class="status planned">planned</span> | Runs a changeover study from video, separates internal from external work, and decides between more capacity and smaller lots |
-| `improve-tpm` | <span class="status planned">planned</span> | Audits autonomous-maintenance steps, covers planned-maintenance basics, and diagnoses with MTBF and MTTR |
+| [`improve-line-balancing`](/skills/improve-line-balancing/) | <span class="status available">available</span> | Balances manual lines in a fixed order, from volume and mix to takt, ergonomics and a fill-up yamazumi, and outputs standard work |
+| [`improve-smed`](/skills/improve-smed/) | <span class="status available">available</span> | Runs a changeover study from video, separates internal from external work, and decides between more capacity and smaller lots |
+| [`improve-tpm`](/skills/improve-tpm/) | <span class="status available">available</span> | Audits autonomous-maintenance steps, covers planned-maintenance basics, and diagnoses with MTBF and MTTR |
 | `improve-kaizen` | <span class="status planned">planned</span> | Picks the improvement format, from a point fix to a kaizen event or an A3, and ends every result in a new standard |
 
 ## plan: the documents that keep a line stable

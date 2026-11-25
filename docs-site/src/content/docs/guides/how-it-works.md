@@ -8,17 +8,25 @@ Each skill does one job and then hands over. A skill's **Hand-offs** section nam
 
 <div class="figure"><a href="/hand-off-loop.svg" title="Open the diagram at full size"><img src="/hand-off-loop.svg" alt="Three columns. See the problem: lead-daily-routine, measure-spc, measure-oee, lead-gemba-walk, audit-process and improve-vsm. Fix the cause: the solve skills, improve-smed, improve-tpm, improve-kaizen and the flow skills. Hold the gain: plan-control-plan, then plan-workstation-instructions. Arrows show each hand-off." width="1550" height="850" /></a></div>
 
-Today `lead-daily-routine` and `solve-8d` are available. The other boxes are planned skills, drawn with a dashed border.
+Today `lead-daily-routine`, `measure-oee`, `improve-tpt`, `improve-line-balancing`, `improve-smed`, `improve-tpm` and `solve-8d` are available. The other boxes are planned skills, drawn with a dashed border.
 
 ## The hand-offs
 
 | From | When | To |
 |---|---|---|
 | `lead-daily-routine` | A KPI is red and the cause is unknown | `solve-5why`, `solve-fishbone` or `solve-8d` |
+| `lead-daily-routine` | The OEE KPI is red | `measure-oee`, for the loss tree |
+| `lead-daily-routine` | The breakdown KPI is red, or AM tags are overdue | `improve-tpm` |
+| `lead-daily-routine` | A line keeps missing the hour-by-hour plan | `improve-line-balancing` |
 | `measure-spc` | A process is out of control | Escalation in `lead-daily-routine` |
 | `measure-oee` | The loss tree shows set-up loss | `improve-smed` |
 | `measure-oee` | The loss tree shows breakdowns | `improve-tpm` |
 | `measure-oee` | The loss tree shows defects | the solve skills |
+| `measure-oee` | The bottleneck is known and the problem is the flow | `improve-tpt` |
+| `improve-smed`, `improve-tpm` | The change is in | `measure-oee`, to re-measure with the same time model |
+| `improve-tpt` | Long set-ups or breakdowns at the bottleneck | `improve-smed` or `improve-tpm` |
+| `improve-line-balancing` | Losses were kept out of takt | `measure-oee`, `improve-tpm` or `improve-smed` |
+| `solve-8d` | D7 needs a maintenance-plan update | `improve-tpm` |
 | `lead-gemba-walk` | Observations | `improve-kaizen` or the solve skills |
 | `audit-process` | Findings | the solve skills or `plan-control-plan` |
 | `improve-vsm` | The future state needs one part fixed | `improve-tpt`, `improve-kanban-pull` or `improve-line-balancing` |

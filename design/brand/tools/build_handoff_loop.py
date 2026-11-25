@@ -8,7 +8,10 @@ import argparse
 import os
 
 GRAPHITE, GREEN, CHALK, MUTE, LINE = "#1F2428", "#2E8A55", "#F1F4F2", "#5B6368", "#6B7479"
-AVAILABLE = {"lead-daily-routine", "solve-8d"}
+AVAILABLE = {
+    "lead-daily-routine", "solve-8d", "measure-oee", "improve-line-balancing", "improve-smed", "improve-tpt",
+    "improve-tpm",
+}
 SOON = set()
 FONT = "'Barlow Semi Condensed', 'Segoe UI', system-ui, sans-serif"
 MONO = "ui-monospace, SFMono-Regular, Menlo, Consolas, monospace"
@@ -80,6 +83,7 @@ def edges():
     out.append((path((l1, 198), (380, 198), (380, 322), (l2, 322)), "defects", (380 + l2) / 2, 314, "middle"))
     out.append((path((l1, 354), (l2, 354)), "red KPI, cause unknown", mid1, 346, "middle"))
     x = 130
+    out.append((path((x, box("ldr")[1]), (x, box("oee")[1] + NODE_H)), "red OEE KPI", x + 12, 272, "start"))
     out.append((path((x, box("spc")[1]), (x, box("ldr")[1] + NODE_H)), "out of control: escalate", x + 12, 407, "start"))
     out.append((path((l1, 530), (440, 530), (440, 386), (l2, 386)), "observations", (440 + l2) / 2, 378, "middle"))
     out.append((path((l1, 546), (l2, 546)), "observations", l1 + 12, 564, "start"))
@@ -87,6 +91,8 @@ def edges():
     out.append((path((l1, 654), (1060, 654), (1060, 382), (l3, 382)), "findings", l2 + 10, 646, "start"))
     out.append((path((l1, 752), (l2, 752)), "future state", mid1, 744, "middle"))
     out.append((path((right("solve"), 356), (l3, 356)), "root cause fixed", mid2, 348, "middle"))
+    x = 820
+    out.append((path((x, box("solve")[1]), (x, box("tpm")[1] + NODE_H)), "D7: maintenance plan", x - 12, 284, "end"))
     x = l3 + 200
     out.append((path((x, box("cp")[1] + NODE_H), (x, box("wi")[1])), "update", x + 12, 565, "start"))
     out.append((path((right("flow"), 752), (l3, 752)), "new standard work", mid2, 744, "middle"))
@@ -136,8 +142,9 @@ def build():
         f'aria-labelledby="title desc">',
         '  <title id="title">The shopfloor-skills hand-off loop</title>',
         '  <desc id="desc">Skills that see a problem hand it to skills that fix the cause, which hand the result '
-        'to the skills that hold the gain in the control plan and station instructions. lead-daily-routine and '
-        'solve-8d are available; the other skills are planned.</desc>',
+        'to the skills that hold the gain in the control plan and station instructions. lead-daily-routine, '
+        'solve-8d, measure-oee, improve-line-balancing, improve-smed, improve-tpt and improve-tpm are available; '
+        'the other skills are planned.</desc>',
         '  <defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" '
         f'orient="auto"><path d="M0 0L10 5L0 10Z" fill="{LINE}"/></marker></defs>',
         f'  <rect width="{W}" height="{H}" rx="16" fill="{CHALK}"/>',

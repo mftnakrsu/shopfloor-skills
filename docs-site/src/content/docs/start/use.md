@@ -5,7 +5,7 @@ description: Ask your agent in your own words. It picks the skill whose descript
 
 You do not call a skill by name. Ask your agent in your own words, and it loads the skill whose description matches the request.
 
-Examples for `lead-daily-routine`, one of the two skills available today:
+Examples for `lead-daily-routine`, one of the skills available today:
 
 - *"Design a tier meeting cascade for our plant: three levels, two shifts, the early shift starts at 06:00."*
 - *"Here are today's board values and open actions. Build the agenda for the tier 1 meeting."*

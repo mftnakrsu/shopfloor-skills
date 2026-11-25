@@ -35,7 +35,7 @@ export default defineConfig({
       ],
       sidebar: [
         { label: 'Start here', items: ['start/install', 'start/use'] },
-        { label: 'Catalogue', items: ['skills/catalogue', 'skills/lead-daily-routine', 'skills/solve-8d', 'skills/agents'] },
+        { label: 'Catalogue', items: ['skills/catalogue', 'skills/lead-daily-routine', 'skills/measure-oee', 'skills/improve-tpt', 'skills/improve-line-balancing', 'skills/improve-smed', 'skills/improve-tpm', 'skills/solve-8d', 'skills/agents'] },
         { label: 'Guides', items: ['guides/how-it-works'] },
         { label: 'Project', items: ['project/contributing', 'project/brand'] },
         { label: 'Türkçe', link: '/turkce/', attrs: { lang: 'tr' } },
