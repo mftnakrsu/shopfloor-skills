@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256" role="img" aria-labelledby="title">
+  <title id="title">shopfloor-skills icon</title>
+  <rect width="256" height="256" rx="56" fill="#1F2428"/>
+  <g transform="translate(48 53) scale(0.625)">
+    <path fill="#3FA56A" d="M8 16H248V32H8Z"/>
+    <path fill="#F1F4F2" d="M24 48H72V224H24ZM104 144H152V224H104ZM104 48H152V128H104ZM184 176H232V224H184ZM184 112H232V160H184ZM184 48H232V96H184Z"/>
+  </g>
+</svg>

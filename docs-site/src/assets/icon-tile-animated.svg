@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256" role="img" aria-labelledby="title desc">
+  <title id="title">shopfloor-skills icon, animated</title>
+  <desc id="desc">On a graphite tile, work blocks stack up on three stations until every stack ends level just under the green takt line.</desc>
+  <style>
+    .b { transform-box: fill-box; transform-origin: 50% 100%; animation-duration: 8s; animation-delay: -4s; animation-iteration-count: infinite; animation-timing-function: cubic-bezier(.3, 0, .2, 1); }
+    .takt { animation: takt 8s linear -4s infinite; }
+    .b1 { animation-name: fill1; }
+    @keyframes fill1 { 0%, 6% { transform: scaleY(0); opacity: 1; } 14.5%, 86% { transform: scaleY(1); opacity: 1; } 94% { transform: scaleY(1); opacity: 0; } 100% { transform: scaleY(0); opacity: 0; } }
+    .b2 { animation-name: fill2; }
+    @keyframes fill2 { 0%, 12.5% { transform: scaleY(0); opacity: 1; } 21%, 86% { transform: scaleY(1); opacity: 1; } 94% { transform: scaleY(1); opacity: 0; } 100% { transform: scaleY(0); opacity: 0; } }
+    .b3 { animation-name: fill3; }
+    @keyframes fill3 { 0%, 19% { transform: scaleY(0); opacity: 1; } 27.5%, 86% { transform: scaleY(1); opacity: 1; } 94% { transform: scaleY(1); opacity: 0; } 100% { transform: scaleY(0); opacity: 0; } }
+    .b4 { animation-name: fill4; }
+    @keyframes fill4 { 0%, 25.5% { transform: scaleY(0); opacity: 1; } 34%, 86% { transform: scaleY(1); opacity: 1; } 94% { transform: scaleY(1); opacity: 0; } 100% { transform: scaleY(0); opacity: 0; } }
+    .b5 { animation-name: fill5; }
+    @keyframes fill5 { 0%, 32% { transform: scaleY(0); opacity: 1; } 40.5%, 86% { transform: scaleY(1); opacity: 1; } 94% { transform: scaleY(1); opacity: 0; } 100% { transform: scaleY(0); opacity: 0; } }
+    .b6 { animation-name: fill6; }
+    @keyframes fill6 { 0%, 38.5% { transform: scaleY(0); opacity: 1; } 47%, 86% { transform: scaleY(1); opacity: 1; } 94% { transform: scaleY(1); opacity: 0; } 100% { transform: scaleY(0); opacity: 0; } }
+    @keyframes takt { 0%, 47% { opacity: 0.35; } 51%, 86% { opacity: 1; } 94%, 100% { opacity: 0.35; } }
+    @media (prefers-reduced-motion: reduce) { .b, .takt { animation: none; } }
+  </style>
+  <rect width="256" height="256" rx="56" fill="#1F2428"/>
+  <g transform="translate(48 53) scale(0.625)">
+    <path fill="#3FA56A" class="takt" d="M8 16H248V32H8Z"/>
+    <rect class="b b1" x="24" y="48" width="48" height="176" fill="#F1F4F2"/>
+    <rect class="b b2" x="104" y="144" width="48" height="80" fill="#F1F4F2"/>
+    <rect class="b b3" x="104" y="48" width="48" height="80" fill="#F1F4F2"/>
+    <rect class="b b4" x="184" y="176" width="48" height="48" fill="#F1F4F2"/>
+    <rect class="b b5" x="184" y="112" width="48" height="48" fill="#F1F4F2"/>
+    <rect class="b b6" x="184" y="48" width="48" height="48" fill="#F1F4F2"/>
+  </g>
+</svg>
