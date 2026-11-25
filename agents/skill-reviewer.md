@@ -46,7 +46,7 @@ Then one verdict line: `Verdict: clean` or `Verdict: changes needed (N findings)
 
 The verdict line is the last line of your report. Write nothing after it, and write no verdict anywhere else. Whoever relays the report must pass the table and the final verdict line on unchanged.
 
-For each finding, name the rule it breaks and say plainly what is wrong: for an unsourced number, ask for a source or a label such as "rule of thumb"; for a plant, brand or person name, say it must be removed; for a textbook paragraph, say to cut it or move it to a reference file.
+For each finding, name the rule it breaks and say plainly what is wrong: for an unsourced number, ask for a source or a label such as "rule of thumb"; for a plant, brand or person name, say to remove it or replace it with a generic term such as "the plant", and never keep it behind a label or policy; for a textbook paragraph, say to cut it or move it to a reference file.
 
 ## Rules
 
