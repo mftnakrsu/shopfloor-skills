@@ -150,6 +150,11 @@ def _value(raw, where):
     if raw.startswith("["):
         if not raw.endswith("]"):
             raise FrontmatterError(f"{where}: an inline list must end with ']'")
+        if raw.startswith("[{"):
+            try:
+                return json.loads(raw)
+            except json.JSONDecodeError as exc:
+                raise FrontmatterError(f"{where}: bad inline list of mappings ({exc.msg})") from None
         inner = raw[1:-1].strip()
         return [_value(item.strip(), where) for item in inner.split(",")] if inner else []
     return _plain(raw, where)
@@ -206,6 +211,8 @@ def _scalar(value):
         return "null"
     if isinstance(value, (int, float)):
         return repr(value)
+    if isinstance(value, list) and any(isinstance(item, dict) for item in value):
+        return json.dumps(value, ensure_ascii=False)  # JSON is valid YAML flow style
     if isinstance(value, list):
         return "[" + ", ".join(_scalar(item) for item in value) + "]"
     return json.dumps(str(value), ensure_ascii=False)

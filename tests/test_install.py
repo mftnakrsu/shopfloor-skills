@@ -1,5 +1,6 @@
 import contextlib
 import io
+import json
 import sys
 import tempfile
 import unittest
@@ -78,8 +79,15 @@ class ProjectScopeTest(InstallTestCase):
         self.assertIn("- `solve-8d`: `.agents/skills/solve-8d/SKILL.md`", body)
         self.assertIn("- `lead-daily-routine`: `.agents/skills/lead-daily-routine/SKILL.md`", body)
         self.assertNotIn("`solve-unknown`:", body)
-        meta, _ = self.agent(self.dest / ".opencode/agents", "skill-reviewer")
-        self.assertEqual(meta["permission"], {"edit": "deny", "bash": "deny"})
+        text = (self.dest / ".opencode/agents/skill-reviewer.md").read_text(encoding="utf-8")
+        head = text.split("---\n")[1]
+        rules = [line for line in head.splitlines() if line.startswith("permissions: ")]
+        self.assertEqual(len(rules), 1)
+        self.assertEqual(
+            json.loads(rules[0][len("permissions: "):]),
+            [{"action": "edit", "resource": "*", "effect": "deny"}, {"action": "shell", "resource": "*", "effect": "deny"}],
+        )
+        self.assertNotIn("\npermission:", head)
 
     def test_qwen_format(self):
         self.run_install("--tool", "qwen", "--dest", str(self.dest))
