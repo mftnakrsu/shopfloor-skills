@@ -9,9 +9,8 @@ description: >-
   request mentions MTBF, MTTR, breakdowns, machine downtime, repeat
   failures, a preventive maintenance plan, autonomous maintenance or an
   AM step audit, also when the data is already given: when asked to
-  compute MTBF or MTTR, asked to sign off, pass or confirm an AM step
-  audit, or asked whether the next AM step can start (TPM, autonome Instandhaltung, Jishu Hozen, geplante
-  Instandhaltung, Wartungsplan, Störungen, Stillstände).
+  compute MTBF or MTTR, or when an AM step audit result must be checked
+  (TPM, autonome Instandhaltung, Jishu Hozen, geplante Instandhaltung, Wartungsplan, Störungen, Stillstände).
 license: MIT
 metadata:
   version: "1.0.0"
@@ -129,7 +128,7 @@ Check before answering:
 - Set-up and adjustment loss goes to `improve-smed`.
 - Unplanned stops at the bottleneck arrive from `improve-tpt`; breakdowns seen during changeovers arrive from `improve-smed`.
 - A maintenance-plan update from the prevent-recurrence step of `solve-8d` arrives here.
-- An uptime kaizen burst arrives from `improve-vsm`; breakdowns at a kanban supplier arrive from `improve-kanban-pull`.
+- An uptime kaizen burst arrives from `improve-vsm`; breakdowns at a kanban supplier arrive from `improve-kanban-pull`; breakdown losses kept out of takt arrive from `improve-line-balancing`.
 - After a repair, re-check the stability of the critical characteristics with `measure-spc`; signals traced to tool wear or machine condition arrive from there.
 - Improvement topics that need a workshop or a sustain plan go to `improve-kaizen`.
 - Breakdowns and minor stops seen on a gemba walk arrive from `lead-gemba-walk`.

@@ -24,8 +24,7 @@ metadata:
 
 - The gemba (Ort der Wertschöpfung) is where the work is done. A walk is a prepared visit with a purpose, a route and follow-up; walking around without them is not a gemba walk.
 - Walk types: the value-stream and management-system walks follow Womack; the process walk is a common practitioner form (Shook, KaiNexus).
-- An observation is a fact seen at the gemba: where, what, how often. An interpretation is labelled as one. A finding is an observation that needs action.
-- Observations describe the process, never a person. The log names stations and roles, not people.
+- An observation is a fact seen at the gemba: where, what, how often. An interpretation is labelled as one. A finding is an observation that needs action. Observations describe the process, never a person. The log names stations and roles, not people.
 - A layered process audit (LPA, geschichtetes Prozessaudit) is a short yes/no check of critical process controls by several management layers. Layer 1 is closest to the work. In automotive it supports IATF 16949 9.2.2.3 (manufacturing process audit) and the daily review in 8.5.6.1.1; pointers in [layered audit](references/layered-audit.md).
 - Durations are in minutes.
 

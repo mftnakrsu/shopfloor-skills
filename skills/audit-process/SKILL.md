@@ -5,7 +5,7 @@ description: >-
   scored VDA 6.3 process audits and self-assessments, whole layered
   process audit programmes (not a single walk segment) and
   shopfloor-management self-audits. Use when planning or doing an
-  internal or customer-style process audit, scoring a VDA 6.3 element,
+  internal or customer-style process audit, scoring a VDA 6.3 element or checking its A/B/C class against the 2/3 and downgrading rules,
   writing audit notes up as findings, grading nonconformities (major,
   minor, observation) and mapping them to ISO 9001 and IATF 16949
   clauses, designing or reviewing an LPA programme

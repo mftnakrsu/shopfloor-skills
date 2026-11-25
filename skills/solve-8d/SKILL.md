@@ -6,8 +6,8 @@ description: >-
   problem description, containment of all suspect stock, verified
   occurrence and escape root causes, permanent corrective actions, PFMEA
   and control-plan updates, and the 8D report. Use when a complaint or
-  escalation needs an 8D, or when asked whether an 8D can be closed, e.g.
-  "can we close it?" (8D-Bericht, Reklamation, Fehlerabstellung).
+  escalation needs an 8D, or when asked whether an open 8D can be closed
+  (8D-Bericht, Reklamation, Fehlerabstellung).
 license: MIT
 metadata:
   version: "1.0.0"
@@ -109,6 +109,7 @@ Before answering, also check: D2 has no cause, D3 names every suspect location, 
 - Containment (D3) and the verification of permanent actions use a control chart: check stability with `measure-spc`; a repeated SPC signal with an unknown cause arrives from there.
 - A low %C/A from a value stream map arrives from `improve-vsm`; a defect whose cause must be proven arrives from `improve-kaizen`.
 - Customer, safety or repeat problems found on a gemba walk arrive from `lead-gemba-walk`.
+- Complaint, safety or repeat problems arrive from `measure-oee` (process defects), `improve-smed` (set-up defects that reached the customer), `improve-tpt` (rework loops) and `improve-line-balancing` (problems on a new balance).
 - D4 uses `solve-is-is-not`, `solve-fishbone` and `solve-5why`; their verified causes come back to D4. The D5 verification of a permanent action can run as one test cycle in `solve-pdca`.
 - The D7 control-plan update goes to `plan-control-plan` and the station-instruction update to `plan-workstation-instructions`; a shipped nonconforming product or a Safe Launch escape arrives from `plan-control-plan`.
 - A chronic remainder after D7 goes to `solve-dmaic`; an effectiveness check by process audit after D6 or D7 goes to `audit-process`, and repeat, customer or safety-related audit findings arrive from there.

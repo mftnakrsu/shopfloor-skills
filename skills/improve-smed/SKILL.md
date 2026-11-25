@@ -21,12 +21,11 @@ metadata:
 
 ## Conventions
 
-- Changeover time (Rüstzeit) runs from the last good part of the old run to the first good part of the new run, both at normal speed. Trial parts, adjustment and the wait for first-piece approval are inside it.
+- Changeover time (Rüstzeit) runs from the last good part of the old run to the first good part of the new run, both at normal speed. Trial parts, adjustment and the wait for first-piece approval are inside it. Times are in minutes. Elapsed time is the machine-stopped time; labour time is the sum over all people.
 - Internal work (inneres Rüsten) can only be done with the machine stopped. External work (äußeres Rüsten) can be done while it runs.
 - SMED (single-minute exchange of die) aims for a changeover under 10 minutes, a single-digit number of minutes, not one minute.
 - EPEI (every part every interval; German texts usually keep the acronym) is how often every product on a machine is made once. Lot size is Losgröße.
 - Set-up verification is the check that the new set-up makes good parts before the run continues, including first-piece approval (Erstteilfreigabe).
-- Times are in minutes. Elapsed time is the machine-stopped time; labour time is the sum over all people.
 
 ## Inputs
 

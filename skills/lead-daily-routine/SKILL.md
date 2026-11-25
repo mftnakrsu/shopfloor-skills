@@ -107,6 +107,7 @@ Check before answering:
 - Leader standard work walks and a go-and-see for a red KPI are planned with `lead-gemba-walk`; actions from walks arrive on the board from there.
 - A quality red from an SPC signal goes to `measure-spc` for chart and limit checks; an unresolved or repeat signal arrives from there.
 - A red lead-time or delivery KPI that spans several processes goes to `improve-vsm`; loop targets are tracked on the board.
+- A red lead-time KPI on one line goes to `improve-tpt`, which reports the TPT trend back; changeover-loss escalations arrive from `improve-smed`.
 - Improvement topics from the board go to `improve-kaizen`; supermarket stock-outs and pitch misses arrive from `improve-kanban-pull`.
 - A red KPI with an unknown cause goes to `solve-5why`, to `solve-is-is-not` when where and when it occurs are unclear, or to `solve-fishbone` when many causes are named; a known gap with a cause partly known runs as one cycle in `solve-pdca`; a chronic red KPI with plenty of data goes to `solve-dmaic`. Each reports back to the tier meeting.
 - The daily review of alternate controls and escalations from a reaction plan arrive from `plan-control-plan`.

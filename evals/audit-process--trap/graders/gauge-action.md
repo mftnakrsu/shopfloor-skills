@@ -1,4 +1,4 @@
 ---
 type: llm
 ---
-The response treats the bore gauges without measurement system analysis as the top action, with an owner or a due date, before the customer audit.
+The response includes an action to complete the measurement system analysis for the bore gauges before the customer audit, with an owner or a due date.

@@ -22,13 +22,11 @@ metadata:
 
 ## Conventions
 
-- One cycle (PDCA-Zyklus, Deming-Kreis) is one test of one countermeasure (Gegenmaßnahme): Plan, Do, Check, Act. A topic usually needs several cycles; each starts from what the last one taught.
+- One cycle (PDCA-Zyklus, Deming-Kreis) is one test of one countermeasure (Gegenmaßnahme): Plan, Do, Check, Act. A topic usually needs several cycles; each starts from what the last one taught. SDCA (standardise, do, check, act) holds a standard; PDCA raises it (Imai, via secondary sources). A cycle starts from a standard that is followed and ends in a new one.
 - Plan holds the gap, the cause and a **prediction** (Vorhersage): the result the team expects, in the metric of the goal, written before Do. Check (also "Study") compares the measured result with that prediction and with the goal (Moen and Norman; Wikipedia).
 - Act has three outcomes: **adopt** (goal met: standardise), **adapt** (partly met: change the countermeasure and run the next cycle), **abandon** (no effect or harm: back to the analysis) (Deming 1993, via Moen and Norman).
-- SDCA (standardise, do, check, act) holds a standard; PDCA raises it (Imai, via secondary sources). A cycle starts from a standard that is followed and ends in a new one.
 - The A3 (A3-Bericht) is one sheet, owner and date at the top, read left to right: background, current condition, goal, analysis on the left; countermeasures, plan, check, follow-up on the right (Shook). The layout is flexible; the logic is fixed.
-- Choosing between point fix, event and kata is `improve-kaizen`; the 30/60/90 sustain plan stays there.
-- ISO 9001 0.3.2 describes processes and the management system run as a PDCA cycle; 10.2.1 asks that the effect of a corrective action is reviewed; 10.3 and IATF 16949 10.3.1 ask for continual improvement with a method and an effectiveness check. This skill gives one cycle its working steps.
+- ISO 9001 0.3.2 describes processes and the management system run as a PDCA cycle; 10.2.1 asks that the effect of a corrective action is reviewed; 10.3 and IATF 16949 10.3.1 ask for continual improvement with a method and an effectiveness check. This skill gives one cycle its working steps. Choosing between point fix, event and kata is `improve-kaizen`; the 30/60/90 sustain plan stays there.
 
 ## Inputs
 

@@ -22,11 +22,10 @@ metadata:
 
 ## Conventions
 
-- The effect (Wirkung) is the head of the fish: one measurable deviation, stated without a cause. One effect per diagram.
+- The effect (Wirkung) is the head of the fish: one measurable deviation, stated without a cause. One effect per diagram. Is/Is-Not: where, when and on what the effect occurs, compared with where it could occur but does not (Kepner-Tregoe).
 - The bones are cause categories. The default is 6M: man (people, Mensch), machine (Maschine), method (Methode), material (Material), measurement (Messung) and environment (Mitwelt, also called mother nature or milieu). Rename or add bones to fit the process (ASQ).
 - Every item on a fishbone is a hypothesis, not a finding, until a test confirms it (UF Health QPSI). A vote at most breaks ties in the test order; it never verifies a cause.
 - A testable cause is a condition someone can check or switch: a thing plus how it deviates from its standard, for example "clamp pressure below set value", not "clamp".
-- Is/Is-Not: where, when and on what the effect occurs, compared with where it could occur but does not (Kepner-Tregoe).
 - IATF 16949 10.2.3 asks for a documented problem-solving process that includes root cause analysis; the screened sheet and the test records are that evidence.
 
 ## Inputs

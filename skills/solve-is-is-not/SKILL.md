@@ -22,13 +22,11 @@ metadata:
 
 ## Conventions
 
-- Deviation (Abweichung): the gap between what should happen and what happens. The method fits when the cause is unknown and must be known to act (Kepner-Tregoe).
+- Deviation (Abweichung): the gap between what should happen and what happens. The method fits when the cause is unknown and must be known to act (Kepner-Tregoe). This skill narrows: it tests a known list of causes against the full specification. Building a broad list of causes is `solve-fishbone`.
 - Object and defect: the thing, or group of things, that has the problem, and what is wrong with it.
 - Is: where, when and how much the defect is seen. Is-Not (Ist-nicht): the closest comparable object, place, time or amount where the defect could be but is not. It is a real comparison, not the negation of the Is.
 - Distinction (Unterschied): what is true only of the Is side compared with its Is-Not. Change (Änderung): something new or different in, on or around a distinction, with its date.
-- Possible cause: a statement "change or distinction X causes the defect by mechanism Y". Most probable cause: the possible cause that explains every Is and Is-Not with the fewest and most reasonable assumptions. True cause: a most probable cause that a test has verified.
-- This skill narrows: it tests a known list of causes against the full specification. Building a broad list of causes is `solve-fishbone`.
-- Cause status: **eliminated** (contradicts a fact), **fits only if** (needs an assumption), **fits** (explains every pair), **verified** (proved by a test).
+- Possible cause: a statement "change or distinction X causes the defect by mechanism Y". Most probable cause: the possible cause that explains every Is and Is-Not with the fewest and most reasonable assumptions. True cause: a most probable cause that a test has verified. Cause status: **eliminated** (contradicts a fact), **fits only if** (needs an assumption), **fits** (explains every pair), **verified** (proved by a test).
 
 ## Inputs
 

@@ -19,7 +19,7 @@ PFMEA extract (the rows that need a control):
 | 40 | Residual dirt (product) | ≤ 3 mg per part | – | – | Gravimetric lab test, 1 part per week |
 | 50 | Leak rate (product) | ≤ 2.0 cm³/min at 1.5 bar | SC | – | Leak tester 100 %; NOK parts are locked into a red box automatically; checked at shift start with leak master LM-2 |
 
-Set-up: after every set-up and every insert change, the first part is measured on the CMM and released before production continues.
+Set-up: after every set-up and every insert change, the first part is measured on the CMM against all drawing dimensions and released before production continues.
 
 Gauges: the thread gauges, LT-1 and the lab method have passed their gauge studies. No gauge study has been done for FG-07 yet.
 
