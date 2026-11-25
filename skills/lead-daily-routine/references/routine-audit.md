@@ -69,7 +69,7 @@ Measure over a fixed period, for example one week as in the self-audit template 
 | Reds with a countermeasure or escalation % | (reds with countermeasure or escalation) ÷ reds × 100 | 30 ÷ 40 × 100 = 75% |
 | Action closure rate % | actions closed by their due date ÷ actions due × 100 | 15 ÷ 20 × 100 = 75% |
 | Average open age (days) | sum of the ages of all open actions ÷ number of open actions | (2 + 4 + 6 + 8 + 10) ÷ 5 = 6 days |
-| Escalation answer time (hours) | time the answer reached the raising team − time raised, averaged | (2 + 4 + 6) ÷ 3 = 4 hours |
+| Escalation answer time (hours) | from "Raised at" to "Answered at" on the escalation list, in hours, averaged over the escalations | (2 + 4 + 6) ÷ 3 = 4 hours |
 
 In the examples, 20 meetings were scheduled in one week (4 tiers × 5 days). In the attendance example, 10 people are invited to each of the 16 meetings held, so 160 places were invited and 120 were filled.
 

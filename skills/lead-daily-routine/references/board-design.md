@@ -20,7 +20,7 @@ How to lay out a tier board (Shopfloor-Board) and choose its KPIs (Kennzahlen).
 | Safety | Sicherheit | Safety | accidents, first-aid book entries, hazard reports, risk assessments, 5S level |
 | Quality | Qualität | Quality | customer complaints, scrap, first-pass yield, ppm, rework time, top quality problems |
 | Delivery | Logistik | Delivery | output against plan, delivery-date adherence, throughput time, work in process, inventory coverage |
-| Cost | Kosten | Cost | productivity, OEE, downtime, scrap cost, setup and maintenance cost |
+| Cost | Kosten | Cost | productivity, OEE, downtime, material cost, setup and maintenance cost |
 | People | Personal | Morale | attendance, sickness rate, improvement suggestions, overtime, training hours, qualification matrix |
 
 - In German expert interviews, quality and productivity KPIs were used in the shopfloor management of 94% of the companies. Quality, productivity and delivery were the most common categories, and explicit cost KPIs were rare (BVL).
@@ -55,6 +55,7 @@ A board is specific to its company and area. Review its design from time to time
 - Keep the number of KPIs limited (Meißner et al. 2018, via IEOM 2024). Digital systems make it easy to add many automatic KPIs and lose focus (IEOM 2024).
 - Use 5–8 KPIs per board as a rule of thumb.
 - KPIs are consolidated on the way up the hierarchy (BVL), so a higher-tier board shows fewer, aggregated KPIs and the escalations from below.
+- KPIs cut from a board move to a weekly or monthly review, or are dropped. A lower board takes one only within its own 5–8 limit (rule of thumb).
 
 ## Red, green and trend
 

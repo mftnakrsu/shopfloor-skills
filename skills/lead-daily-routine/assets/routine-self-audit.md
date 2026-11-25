@@ -60,7 +60,7 @@ Score only what you saw in real meetings. Write "not observed" when you could no
 | Reds with a countermeasure or escalation % | (reds with countermeasure or escalation) ÷ reds × 100 | | |
 | Action closure rate % | actions closed by their due date ÷ actions due × 100 | | |
 | Average open age (days) | sum of the ages of all open actions ÷ number of open actions | | |
-| Escalation answer time (hours) | time the answer reached the raising team − time raised, averaged | | |
+| Escalation answer time (hours) | from "Raised at" to "Answered at" on the escalation list, in hours, averaged | | |
 
 ## Top three gaps
 

@@ -28,7 +28,7 @@ metadata:
 - Mode: design (a new cascade), run (today's meeting) or audit (check or fix a running routine). Infer it from the request.
 - The leadership levels and who attends.
 - The shift pattern and start times.
-- The KPIs tracked, with their targets and how often the data refreshes.
+- The KPIs (Kennzahlen) tracked, with their targets and how often the data refreshes.
 - Run mode: today's board values and open actions.
 - Audit mode: observations of real meetings.
 
@@ -46,12 +46,12 @@ Ask only for what is missing. If there is no answer, state assumptions as assump
 2. Times: tier 1 within the first hour of the shift; each next tier 30–60 minutes after the one below, so issues travel up the same morning; the top tier ends before late morning (rule of thumb; example cascade in [tier design](references/tier-design.md)). A shift that starts after the cascade holds its own tier 1 and escalates to a named leader on shift, who can decide and answers within the shift. Only what needs a higher tier waits for the next morning's cascade, marked as an exception with an owner and a due date.
 3. Timeboxes: tier 1 ≤15 min, tier 2 about 15 min, tier 3 15–20 min, tier 4 15–30 min (rule of thumb from practitioner sources). Meet standing at the board, at the same time and place every day, and start on time.
 4. One fixed agenda order at every tier: safety, quality, delivery (output against plan, hour by hour at tier 1), cost and productivity, people, actions due today, new problems, escalations up and answers down. Discuss only the reds; a green needs no discussion.
-5. Board: 5–8 KPIs per board (rule of thumb), each with target, actual, red or green, and trend; an action list with problem, action, owner, due date and status; an escalation list; an hour-by-hour board at the line. Choose the KPIs with the six questions in [board design](references/board-design.md). Put each KPI the user already tracks into its SQDCP category. Name every empty category as a gap and propose a KPI for it, marked as a proposal.
+5. Board: 5–8 KPIs per board (rule of thumb), each with target, actual, red or green, and trend; an action list (Maßnahmenplan) with problem, action, owner, due date and status; an escalation list; an hour-by-hour board at the line. Choose the KPIs with the six questions in [board design](references/board-design.md). Put each KPI the user already tracks into its SQDCP category. Name every empty category as a gap and propose a KPI for it, marked as a proposal. KPIs cut from a board move to a weekly or monthly review, or are dropped; a lower board takes one only within its own 5–8 limit.
 6. Escalation rules: escalate when a problem is outside the tier's authority or resources, recurs, or cannot be fixed the same day. Every escalation gets an owner and a due date, and the answer returns to the raising team the same day. If a higher tier does not meet daily, name a daily contact who answers escalations the same day.
 7. Problem solving stays outside the meeting, and every problem leaves the meeting with an owner and a due date:
    - Product or people at risk: contain at once (Sofortmaßnahme), without waiting for the meeting.
    - Cause known: a simple action with an owner and a date.
-   - Cause unknown: start structured problem solving outside the meeting; use an 8D for customer complaints, safety issues and repeat problems. The meeting only starts, tracks and closes the work.
+   - Cause unknown: give it an owner and a due date, and start structured problem solving outside the meeting; use an 8D for customer complaints, safety issues and repeat problems. The meeting only starts, tracks and closes the work.
 8. IATF 16949 hooks:
    - Where alternate process controls are in use, review them daily in the tier 1 or tier 2 meeting (8.5.6.1.1).
    - Results that trigger a reaction plan in the control plan (Produktionslenkungsplan) appear as quality reds with an escalation path (9.1.1.1).
@@ -70,7 +70,7 @@ Ask only for what is missing. If there is no answer, state assumptions as assump
 2. Score the checklist in `assets/routine-self-audit.md`.
 3. Compute the adherence metrics defined in [routine audit](references/routine-audit.md): meetings held, started on time, within timebox, attendance, reds with a countermeasure or escalation, action closure and open age, and escalation answer time.
 4. Name the three biggest gaps.
-5. If the user only describes the routine, check the description against Validation and Pitfalls. Open with one short paragraph that names the main failures and the new standard in numbers: the timebox, the KPI limit, reds only, same-day escalation, and problem solving outside the meeting. Then list every gap the description shows, each with its fix from part A; low attendance, overruns and skipped meetings are gaps too. Say once that nothing was observed in a real meeting. End with the corrected agenda, with clock times and minutes that add up to the timebox, and the adherence metrics to track.
+5. If the user only describes the routine, check the description against Validation and Pitfalls. Open with one short paragraph that names the main failures found and the standard each one breaks, in numbers. Then list every gap the description shows, each with its fix from part A; low attendance, overruns and skipped meetings are gaps too. Say once that nothing was observed in a real meeting. End with the corrected agenda, with clock times and minutes that add up to the timebox, and the adherence metrics to track.
 
 ## Validation
 

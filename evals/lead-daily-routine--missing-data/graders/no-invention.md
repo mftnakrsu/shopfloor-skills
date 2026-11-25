@@ -1,4 +1,4 @@
 ---
 type: llm
 ---
-The response does not present a complete schedule built on invented facts. If it shows an example, it labels the assumptions it made.
+The response does not present a tier schedule with clock times or timeboxes as the design for the user's line.

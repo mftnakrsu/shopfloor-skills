@@ -143,10 +143,11 @@ As of 2026-11-25: IATF 16949:2016, with the sanctioned interpretations of Novemb
 
 - **8.5.6.1.1 Temporary change of process controls.**
   - Keep a list of the process controls (inspection, measuring, test and error-proofing) that have approved backup or alternate methods.
+  - Approve each alternate by risk and severity, with customer approval before shipment where the customer requires it.
   - Write standard work for each alternate method.
   - Review the use of alternates at least once a day, for example in a tier meeting or a layered process audit.
-  - Verify the process before going back to the primary control, and keep product made under an alternate traceable, for example by the first and last piece of each shift.
-  - The interpretations add: not every control needs an alternate, but every alternate must be on the list and in the process flow, PFMEA, control plan and standard work. If a primary control fails and no alternate exists, assess the risk in the FMEA first; if an alternate is approved, write its standard work, verify it through daily management, and revalidate when the primary control is back (SI 11; FAQ 17).
+  - When the primary control is back, verify and document that it works fully again.
+  - Keep product made under an alternate traceable, for example by the first and last piece of each shift.
 - **9.1.1.1 Monitoring and measurement of manufacturing processes.**
   - Verify that the process flow, PFMEA and control plan are followed in practice: measurement methods, sampling, acceptance criteria and records of measured values.
   - When acceptance criteria are not met, a reaction plan and an escalation process apply.
