@@ -51,7 +51,7 @@ Ask only for what is missing. If there is no answer, state assumptions as assump
 7. Problem solving stays outside the meeting, and every problem leaves the meeting with an owner and a due date:
    - Product or people at risk: contain at once (Sofortmaßnahme), without waiting for the meeting.
    - Cause known: a simple action with an owner and a date.
-   - Cause unknown: give it an owner and a due date, and start structured problem solving outside the meeting; use an 8D for customer complaints, safety issues and repeat problems. The meeting only starts, tracks and closes the work.
+   - Cause unknown: give it an owner and a due date, and start structured problem solving outside the meeting; use `solve-8d` for customer complaints, safety issues and repeat problems. The meeting only starts, tracks and closes the work.
 8. IATF 16949 hooks:
    - Where alternate process controls are in use, review them daily in the tier 1 or tier 2 meeting (8.5.6.1.1).
    - Results that trigger a reaction plan in the control plan (Produktionslenkungsplan) appear as quality reds with an escalation path (9.1.1.1).
@@ -102,4 +102,4 @@ Check before answering:
 
 ## Hand-offs
 
-- A complaint, safety issue or repeat problem with an unknown cause: start an 8D outside the meeting and track it on the action list.
+- A complaint, safety issue or repeat problem with an unknown cause goes to `solve-8d`.
