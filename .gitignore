@@ -7,6 +7,11 @@
 /.qwen/
 /.cursor/
 
+# Written by a local editor hook when marketplace.json is saved; not part of this project
+/.codex-plugin/
+/.cursor-plugin/
+/gemini-extension.json
+
 /.claude/settings.local.json
 /.claude/worktrees/
 /evals/results/
