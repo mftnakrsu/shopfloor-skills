@@ -13,12 +13,14 @@ Examples for `lead-daily-routine`, one of the skills available today:
 
 The skill works in three modes, design, run and audit, and picks the mode from your request. When something it needs is missing, it asks for it. It does not invent board values or shift times.
 
-Examples for `solve-8d`, the other one:
+Examples for `solve-8d`:
 
 - *"A customer complained about cracked housings on part H-200: 12 of 4,000 delivered. Start an 8D."*
 - *"Here is our 8D. Can we close it?"*
 
 ## Start a skill by name
+
+Smaller models (for example Haiku) may not load a skill on their own; name it in the prompt, e.g. 'use measure-spc'.
 
 In Claude Code you can also start a skill directly:
 

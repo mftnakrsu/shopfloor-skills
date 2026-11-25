@@ -8,7 +8,7 @@ Each skill does one job and then hands over. A skill's **Hand-offs** section nam
 
 <div class="figure"><a href="/hand-off-loop.svg" title="Open the diagram at full size"><img src="/hand-off-loop.svg" alt="Three columns. See the problem: lead-daily-routine, measure-spc, measure-oee, lead-gemba-walk, audit-process and improve-vsm. Fix the cause: the solve skills, improve-smed, improve-tpm, improve-kaizen and the flow skills. Hold the gain: plan-control-plan, then plan-workstation-instructions. Arrows show each hand-off." width="1550" height="850" /></a></div>
 
-Today `lead-daily-routine`, `measure-oee`, `improve-tpt`, `improve-line-balancing`, `improve-smed`, `improve-tpm` and `solve-8d` are available. The other boxes are planned skills, drawn with a dashed border.
+Today `lead-daily-routine`, `lead-gemba-walk`, `measure-oee`, `measure-spc`, `improve-tpt`, `improve-line-balancing`, `improve-smed`, `improve-tpm`, `improve-vsm`, `improve-kanban-pull`, `improve-kaizen` and `solve-8d` are available. The other boxes are planned skills, drawn with a dashed border.
 
 ## The hand-offs
 
@@ -18,7 +18,12 @@ Today `lead-daily-routine`, `measure-oee`, `improve-tpt`, `improve-line-balancin
 | `lead-daily-routine` | The OEE KPI is red | `measure-oee`, for the loss tree |
 | `lead-daily-routine` | The breakdown KPI is red, or AM tags are overdue | `improve-tpm` |
 | `lead-daily-routine` | A line keeps missing the hour-by-hour plan | `improve-line-balancing` |
+| `lead-daily-routine` | A quality red comes from an SPC signal | `measure-spc` |
+| `lead-daily-routine` | A leader walk or a go-and-see for a red | `lead-gemba-walk` |
+| `lead-daily-routine` | A red lead-time KPI spans several processes | `improve-vsm` |
 | `measure-spc` | A process is out of control | Escalation in `lead-daily-routine` |
+| `measure-spc` | A repeated signal has an unknown cause | `solve-8d` |
+| `measure-spc` | Signals from tool wear or after set-ups | `improve-tpm` or `improve-smed` |
 | `measure-oee` | The loss tree shows set-up loss | `improve-smed` |
 | `measure-oee` | The loss tree shows breakdowns | `improve-tpm` |
 | `measure-oee` | The loss tree shows defects | the solve skills |
@@ -27,9 +32,17 @@ Today `lead-daily-routine`, `measure-oee`, `improve-tpt`, `improve-line-balancin
 | `improve-tpt` | Long set-ups or breakdowns at the bottleneck | `improve-smed` or `improve-tpm` |
 | `improve-line-balancing` | Losses were kept out of takt | `measure-oee`, `improve-tpm` or `improve-smed` |
 | `solve-8d` | D7 needs a maintenance-plan update | `improve-tpm` |
-| `lead-gemba-walk` | Observations | `improve-kaizen` or the solve skills |
+| `solve-8d` | Containment or a permanent action needs a stability check | `measure-spc` |
+| `lead-gemba-walk` | Findings that need an improvement format | `improve-kaizen` |
+| `lead-gemba-walk` | Customer, safety or repeat problems | `solve-8d` |
+| `lead-gemba-walk` | Value-stream walk facts | `improve-vsm` |
 | `audit-process` | Findings | the solve skills or `plan-control-plan` |
 | `improve-vsm` | The future state needs one part fixed | `improve-tpt`, `improve-kanban-pull` or `improve-line-balancing` |
+| `improve-vsm` | A kaizen burst needs an event | `improve-kaizen` |
+| `improve-vsm` | A changeover or uptime burst | `improve-smed` or `improve-tpm` |
+| `improve-kanban-pull` | Long supplier change-overs or breakdowns | `improve-smed` or `improve-tpm` |
+| `improve-kaizen` | A defect's cause must be proven | `solve-8d` |
+| `improve-kaizen` | The new standard needs a check | `lead-gemba-walk` |
 | the solve skills | The root cause is fixed | `plan-control-plan`, to update it |
 | `plan-control-plan` | The control plan changed | `plan-workstation-instructions` |
 | the flow skills | A new standard work exists | `plan-workstation-instructions` |

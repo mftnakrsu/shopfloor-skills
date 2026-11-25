@@ -15,7 +15,7 @@ description: shopfloor-skills, üretim hatlarını yöneten kişiler için Agent
 
 ## Durum
 
-Proje geliştirme aşamasındadır. Bugün yedi skill hazırdır: `lead-daily-routine`, `measure-oee`, `improve-tpt`, `improve-line-balancing`, `improve-smed`, `improve-tpm` ve `solve-8d`; ayrıca `8d-moderator` agent'ı. `lead-daily-routine` kademeli toplantıları, SQDCP panosunu, aynı gün eskalasyonu ve aksiyon takibini tasarlar, yürütür ve denetler. `solve-8d` bir 8D'yi D0'dan D8'e yürütür ve açık bir 8D'nin kapatılıp kapatılamayacağını kontrol eder. `measure-oee` OEE ve TEEP'i hesaplar ve kayıpları dakika cinsinden bir kayıp ağacında sıralar. `improve-tpt` geçiş süresini Little Yasası ile ölçer ve WIP sınırıyla kısaltır. `improve-line-balancing` hattı takt, ergonomi ve dolum yamazumisiyle dengeler. `improve-smed` bir ürün değişimi (setup) çalışması yürütür. `improve-tpm` MTBF ve MTTR'yi hesaplar ve otonom bakım adımlarını denetler. [Katalogdaki](/skills/catalogue/) diğer skill'ler planlanmıştır ve gruplar hâlinde eklenecektir.
+Proje geliştirme aşamasındadır. Bugün on iki skill hazırdır: `lead-daily-routine`, `lead-gemba-walk`, `measure-oee`, `measure-spc`, `improve-tpt`, `improve-line-balancing`, `improve-smed`, `improve-tpm`, `improve-vsm`, `improve-kanban-pull`, `improve-kaizen` ve `solve-8d`; ayrıca `8d-moderator` agent'ı. `lead-daily-routine` kademeli toplantıları, SQDCP panosunu, aynı gün eskalasyonu ve aksiyon takibini tasarlar, yürütür ve denetler. `solve-8d` bir 8D'yi D0'dan D8'e yürütür ve açık bir 8D'nin kapatılıp kapatılamayacağını kontrol eder. `measure-oee` OEE ve TEEP'i hesaplar ve kayıpları dakika cinsinden bir kayıp ağacında sıralar. `improve-tpt` geçiş süresini Little Yasası ile ölçer ve WIP sınırıyla kısaltır. `improve-line-balancing` hattı takt, ergonomi ve dolum yamazumisiyle dengeler. `improve-smed` bir ürün değişimi (setup) çalışması yürütür. `improve-tpm` MTBF ve MTTR'yi hesaplar ve otonom bakım adımlarını denetler. `lead-gemba-walk` gemba yürüyüşlerini planlar, yürütür ve suçlamasız bir gözlem kaydıyla takip eder. `measure-spc` kontrol kartını seçer, kontrol sınırlarını hesaplar, sinyalleri bulur ve her sinyali reaksiyon planına bağlar. `improve-vsm` mevcut ve gelecek durum değer akışı haritalarını çizer ve gelecek durumu sorumlu ve hedefli bir döngü planına çevirir. `improve-kanban-pull` süpermarket, FIFO hattı veya CONWIP arasında seçim yapar ve kanban kart sayısını hesaplar. `improve-kaizen` doğru iyileştirme biçimini seçer ve her sonucu yeni bir standart ve 30/60/90 günlük sürdürme planıyla bitirir. [Katalogdaki](/skills/catalogue/) diğer skill'ler planlanmıştır ve gruplar hâlinde eklenecektir.
 
 ## Kurulum
 
@@ -42,7 +42,7 @@ npx skills add mftnakrsu/shopfloor-skills
 
 ## Kullanım
 
-Skill'i adıyla çağırmanız gerekmez. Agent'ınıza kendi cümlelerinizle sorun; agent, isteğinize uyan skill'i kendisi yükler. Örneğin: *"Fabrikamız için üç kademeli bir toplantı düzeni tasarla; iki vardiya var, sabah vardiyası 06:00'da başlıyor."* Eksik bir bilgi varsa skill onu sorar, uydurmaz.
+Skill'i adıyla çağırmanız gerekmez. Agent'ınıza kendi cümlelerinizle sorun; agent, isteğinize uyan skill'i kendisi yükler. Örneğin: *"Fabrikamız için üç kademeli bir toplantı düzeni tasarla; iki vardiya var, sabah vardiyası 06:00'da başlıyor."* Eksik bir bilgi varsa skill onu sorar, uydurmaz. Daha küçük modeller (örneğin Haiku) skill'i kendiliğinden yüklemeyebilir; istemde adını verin, örneğin 'measure-spc kullan'.
 
 ## Kurallar
 

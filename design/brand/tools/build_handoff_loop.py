@@ -10,7 +10,7 @@ import os
 GRAPHITE, GREEN, CHALK, MUTE, LINE = "#1F2428", "#2E8A55", "#F1F4F2", "#5B6368", "#6B7479"
 AVAILABLE = {
     "lead-daily-routine", "solve-8d", "measure-oee", "improve-line-balancing", "improve-smed", "improve-tpt",
-    "improve-tpm",
+    "improve-tpm", "improve-vsm", "improve-kanban-pull", "improve-kaizen", "lead-gemba-walk", "measure-spc",
 }
 SOON = set()
 FONT = "'Barlow Semi Condensed', 'Segoe UI', system-ui, sans-serif"
@@ -89,7 +89,8 @@ def edges():
     out.append((path((l1, 546), (l2, 546)), "observations", l1 + 12, 564, "start"))
     out.append((path((l1, 630), (480, 630), (480, 418), (l2, 418)), "findings", l1 + 12, 622, "start"))
     out.append((path((l1, 654), (1060, 654), (1060, 382), (l3, 382)), "findings", l2 + 10, 646, "start"))
-    out.append((path((l1, 752), (l2, 752)), "future state", mid1, 744, "middle"))
+    out.append((path((l1, 752), (l2, 752)), "future state", mid1, 772, "middle"))
+    out.append((path((l1, 736), (500, 736), (500, 562), (l2, 562)), "kaizen bursts", l1 + 12, 728, "start"))
     out.append((path((right("solve"), 356), (l3, 356)), "root cause fixed", mid2, 348, "middle"))
     x = 820
     out.append((path((x, box("solve")[1]), (x, box("tpm")[1] + NODE_H)), "D7: maintenance plan", x - 12, 284, "end"))
@@ -143,7 +144,8 @@ def build():
         '  <title id="title">The shopfloor-skills hand-off loop</title>',
         '  <desc id="desc">Skills that see a problem hand it to skills that fix the cause, which hand the result '
         'to the skills that hold the gain in the control plan and station instructions. lead-daily-routine, '
-        'solve-8d, measure-oee, improve-line-balancing, improve-smed, improve-tpt and improve-tpm are available; '
+        'solve-8d, lead-gemba-walk, measure-oee, measure-spc, improve-line-balancing, improve-smed, improve-tpt, '
+        'improve-tpm, improve-vsm, improve-kanban-pull and improve-kaizen are available; '
         'the other skills are planned.</desc>',
         '  <defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" '
         f'orient="auto"><path d="M0 0L10 5L0 10Z" fill="{LINE}"/></marker></defs>',

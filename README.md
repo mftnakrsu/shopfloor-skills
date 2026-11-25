@@ -25,7 +25,7 @@ Agent Skills and subagents for people who run production lines: manufacturing an
 
 Each skill is a folder of plain markdown: a procedure with the inputs to ask for, the steps, the checks to run before answering, and a template for the result. Every number has a source or is marked as a rule of thumb.
 
-**Status:** in development. Seven skills are available today: `lead-daily-routine`, `measure-oee`, `improve-tpt`, `improve-line-balancing`, `improve-smed`, `improve-tpm` and `solve-8d`, plus the `8d-moderator` agent. The rest are planned and arrive in batches; see [CHANGELOG.md](CHANGELOG.md).
+**Status:** in development. Twelve skills are available today: `lead-daily-routine`, `lead-gemba-walk`, `measure-oee`, `measure-spc`, `improve-tpt`, `improve-line-balancing`, `improve-smed`, `improve-tpm`, `improve-vsm`, `improve-kanban-pull`, `improve-kaizen` and `solve-8d`, plus the `8d-moderator` agent. The rest are planned and arrive in batches; see [CHANGELOG.md](CHANGELOG.md).
 
 ## What's inside
 
@@ -33,9 +33,9 @@ The design plans 20 skills in six stages and 6 agents. The prefix of a skill's n
 
 | Stage | Covers | Skills |
 |---|---|---|
-| `lead-` | Daily shopfloor leadership | [`lead-daily-routine`](skills/lead-daily-routine/SKILL.md) (available); `lead-gemba-walk` (planned) |
-| `measure-` | Seeing the losses | [`measure-oee`](skills/measure-oee/SKILL.md) (available); `measure-spc` (planned) |
-| `improve-` | Productivity and flow | [`improve-tpt`](skills/improve-tpt/SKILL.md), [`improve-line-balancing`](skills/improve-line-balancing/SKILL.md), [`improve-smed`](skills/improve-smed/SKILL.md), [`improve-tpm`](skills/improve-tpm/SKILL.md) (available); `improve-vsm`, `improve-kanban-pull`, `improve-kaizen` (planned) |
+| `lead-` | Daily shopfloor leadership | [`lead-daily-routine`](skills/lead-daily-routine/SKILL.md), [`lead-gemba-walk`](skills/lead-gemba-walk/SKILL.md) (available) |
+| `measure-` | Seeing the losses | [`measure-oee`](skills/measure-oee/SKILL.md), [`measure-spc`](skills/measure-spc/SKILL.md) (available) |
+| `improve-` | Productivity and flow | [`improve-tpt`](skills/improve-tpt/SKILL.md), [`improve-line-balancing`](skills/improve-line-balancing/SKILL.md), [`improve-smed`](skills/improve-smed/SKILL.md), [`improve-tpm`](skills/improve-tpm/SKILL.md), [`improve-vsm`](skills/improve-vsm/SKILL.md), [`improve-kanban-pull`](skills/improve-kanban-pull/SKILL.md), [`improve-kaizen`](skills/improve-kaizen/SKILL.md) (available) |
 | `plan-` | The documents that keep a line stable | `plan-control-plan`, `plan-workstation-instructions` (planned) |
 | `solve-` | Root cause and problem solving | [`solve-8d`](skills/solve-8d/SKILL.md) (available); `solve-5why`, `solve-fishbone`, `solve-is-is-not`, `solve-pdca`, `solve-dmaic` (planned) |
 | `audit-` | Checking the system | `audit-process` (planned) |
@@ -83,6 +83,8 @@ Ask your agent in your own words. It loads the skill whose description matches t
 
 > Here is our 8D. Can we close it?
 
+Smaller models (for example Haiku) may not load a skill on their own; name it in the prompt, e.g. 'use measure-spc'.
+
 ## Contributing
 
 See [CONTRIBUTING.md](CONTRIBUTING.md). The logo and its rules are in [assets/brand/BRAND.md](assets/brand/BRAND.md).
@@ -97,7 +99,7 @@ MIT License. See [LICENSE](LICENSE).
 
 `shopfloor-skills`, üretim hatlarını yöneten kişiler için Agent Skills ve alt agent'lardan oluşan açık kaynaklı bir settir: üretim ve proses mühendisleri, vardiya ve alan liderleri, sürekli iyileştirme koçları için. Verimlilik ve akışı (OEE, geçiş süresi, hat dengeleme, SMED, TPM, kanban), günlük sahada liderliği (kademeli toplantılar, gemba yürüyüşleri) ve hattı kararlı tutan dokümanları (kontrol planı, istasyon talimatları, SPC, 8D, proses denetimleri) kapsar.
 
-Proje geliştirme aşamasındadır. Bugün yedi skill hazırdır: `lead-daily-routine`, `measure-oee`, `improve-tpt`, `improve-line-balancing`, `improve-smed`, `improve-tpm` ve `solve-8d`; ayrıca `8d-moderator` agent'ı. Diğerleri planlanmıştır.
+Proje geliştirme aşamasındadır. Bugün on iki skill hazırdır: `lead-daily-routine`, `lead-gemba-walk`, `measure-oee`, `measure-spc`, `improve-tpt`, `improve-line-balancing`, `improve-smed`, `improve-tpm`, `improve-vsm`, `improve-kanban-pull`, `improve-kaizen` ve `solve-8d`; ayrıca `8d-moderator` agent'ı. Diğerleri planlanmıştır.
 
 **Kurulum.** Claude Code oturumunda:
 
@@ -108,4 +110,4 @@ Proje geliştirme aşamasındadır. Bugün yedi skill hazırdır: `lead-daily-ro
 
 OpenCode, Qwen Code veya Cursor için depoyu klonlayıp proje klasörünüzde `python3 ../shopfloor-skills/scripts/install.py --tool opencode` (ya da `qwen`, `cursor`, `all`) çalıştırın. Agent Skills okuyan diğer araçlarda yalnızca skill'ler için: `npx skills add mftnakrsu/shopfloor-skills`.
 
-**Kullanım.** Agent'ınıza kendi cümlelerinizle sorun; uygun skill'i kendisi yükler. Eksik bir bilgi varsa skill onu sorar, uydurmaz. ISO, IATF, VDA ve AIAG yayınlarının telif hakkı yayıncılarına aittir; bu projede yalnızca madde numaraları anılır. Ayrıntılar için [dokümantasyon sitesindeki Türkçe sayfaya](https://shopfloor-skills.mefby.com/turkce/) bakın.
+**Kullanım.** Agent'ınıza kendi cümlelerinizle sorun; uygun skill'i kendisi yükler. Eksik bir bilgi varsa skill onu sorar, uydurmaz. Daha küçük modeller (örneğin Haiku) skill'i kendiliğinden yüklemeyebilir; istemde adını verin, örneğin 'measure-spc kullan'. ISO, IATF, VDA ve AIAG yayınlarının telif hakkı yayıncılarına aittir; bu projede yalnızca madde numaraları anılır. Ayrıntılar için [dokümantasyon sitesindeki Türkçe sayfaya](https://shopfloor-skills.mefby.com/turkce/) bakın.
