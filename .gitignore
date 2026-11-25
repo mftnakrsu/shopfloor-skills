@@ -1,5 +1,5 @@
-# Research notes and the private term list: never published
-/private/
+# Research notes and the private term list: never published (no trailing slash, so a symlink is ignored too)
+/private
 
 # Created when scripts/install.py runs inside this repo
 /.agents/
@@ -8,6 +8,7 @@
 /.cursor/
 
 /.claude/settings.local.json
+/.claude/worktrees/
 /evals/results/
 __pycache__/
 *.pyc
