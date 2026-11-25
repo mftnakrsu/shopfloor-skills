@@ -88,7 +88,7 @@ Ask for every missing input; never invent one. Copy the user's times and quantit
 ### D. Review a plan or claim
 
 1. Check it against Validation and Pitfalls.
-2. Name each gap with its fix and the minutes it saves; add them up against the target.
+2. Name each gap with its fix and the minutes it saves; add them up against the target. Where the split inside an element is not known, give an estimate per fix, labelled as an estimate to confirm by re-timing, so the total can still be checked against the target.
 3. Reject any saving that comes from dropping verification, and show a path to the target that keeps it.
 
 ## Validation
