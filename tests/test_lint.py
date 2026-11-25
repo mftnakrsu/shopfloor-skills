@@ -3,6 +3,7 @@ import io
 import sys
 import tempfile
 import unittest
+from unittest import mock
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
@@ -298,20 +299,24 @@ class TermTest(LintTestCase):
         self.assertError("README.md: missing")
 
     def test_public_term_in_skill(self):
-        self.repo.skill(text=skill_text([("- Shift length.", "- examplecorp shift length.")]))
-        self.assertError("skills/solve-8d/SKILL.md:17: contains public term 'examplecorp'")
+        with mock.patch.object(lint, "PUBLIC_TERMS", ("examplecorp", "examplecorp production system")):
+            self.repo.skill(text=skill_text([("- Shift length.", "- Examplecorp shift length.")]))
+            self.assertError("skills/solve-8d/SKILL.md:17: contains public term 'examplecorp'")
 
     def test_public_term_is_matched_as_a_whole_word(self):
-        self.repo.skill(text=skill_text([("- Shift length.", "- Link speed 10 kbps.")]))
-        self.assertClean()
+        with mock.patch.object(lint, "PUBLIC_TERMS", ("examplecorp", "examplecorp production system")):
+            self.repo.skill(text=skill_text([("- Shift length.", "- Link speed 10 kbps.")]))
+            self.assertClean()
 
     def test_public_term_anywhere_in_readme_fails(self):
-        self.repo.write("README.md", "# Test\n\nBuilt at examplecorp.\n")
-        self.assertError("README.md:3: contains public term 'examplecorp'")
+        with mock.patch.object(lint, "PUBLIC_TERMS", ("examplecorp", "examplecorp production system")):
+            self.repo.write("README.md", "# Test\n\nBuilt at Examplecorp.\n")
+            self.assertError("README.md:3: contains public term 'examplecorp'")
 
     def test_multi_word_public_term(self):
-        self.repo.write("CHANGELOG.md", "Inspired by the examplecorp  production system.\n")
-        self.assertError("contains public term 'examplecorp production system'")
+        with mock.patch.object(lint, "PUBLIC_TERMS", ("examplecorp", "examplecorp production system")):
+            self.repo.write("CHANGELOG.md", "Inspired by the examplecorp  production system.\n")
+            self.assertError("contains public term 'examplecorp production system'")
 
     def test_private_terms_are_checked_everywhere_except_private(self):
         self.repo.write("docs/notes.md", "Visit Zeta Works 417 today.\n")
