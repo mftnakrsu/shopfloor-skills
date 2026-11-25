@@ -68,9 +68,9 @@ Ask for every missing input; never invent one.
 
    | Loss | Route |
    |---|---|
-   | Setup, changeover, start-up rejects | Changeover reduction study (single-minute exchange of die, SMED) |
-   | Breakdowns | Planned maintenance and total productive maintenance, TPM (review of mean time between failures, MTBF, and mean time to repair, MTTR) |
-   | Minor stops, reduced speed | Autonomous maintenance (restore basic conditions) and focused improvement |
+   | Setup, changeover, start-up rejects | Changeover reduction study (single-minute exchange of die, SMED), `improve-smed` |
+   | Breakdowns | Planned maintenance and total productive maintenance, TPM (review of mean time between failures, MTBF, and mean time to repair, MTTR), `improve-tpm` |
+   | Minor stops, reduced speed | Autonomous maintenance (restore basic conditions) and focused improvement, `improve-tpm` |
    | Process defects, rework | Structured root-cause work; an 8D for complaints or repeat defects |
    | Material, staffing, starved or blocked | The owning area, through the daily tier meeting |
 
@@ -112,4 +112,7 @@ Check before answering:
 ## Hand-offs
 
 - Process defects that come from a customer complaint, or repeat, go to `solve-8d`.
-- Losses owned by other areas (material, staffing) and red OEE results go to the board in `lead-daily-routine`.
+- Losses owned by other areas (material, staffing) and red OEE results go to the board in `lead-daily-routine`; a red OEE KPI from that board comes back here for the loss tree.
+- Setup, changeover and start-up reject losses go to `improve-smed`; breakdowns, minor stops and speed loss go to `improve-tpm`. Both come back here to re-measure with the same time model.
+- When the bottleneck is known and the problem is throughput time rather than its losses, go to `improve-tpt`.
+- A changed available capacity or machine cycle time on a manual line goes to `improve-line-balancing`; `improve-line-balancing` and `improve-tpt` send their bottleneck here for its OEE.

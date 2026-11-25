@@ -125,3 +125,6 @@ Check before answering:
 
 - Escalations about changeover losses or over-capacity machines go to the tier meeting in `lead-daily-routine`.
 - A set-up that produced defects reaching the customer goes to `solve-8d`.
+- The set-up loss arrives from the loss tree in `measure-oee`, from `improve-tpm` or from long set-ups at the bottleneck in `improve-tpt`; after the change, re-measure availability in `measure-oee`.
+- Breakdowns or machine-condition problems seen during changeovers go to `improve-tpm`.
+- New machine cycle times or freed capacity on a manual line go to `improve-line-balancing`.

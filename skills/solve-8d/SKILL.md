@@ -60,7 +60,7 @@ Ask for every missing fact; never invent one. Copy the numbers, lots and dates t
    - **Gate:** both causes are verified with evidence.
 6. **D5 Choose and verify permanent actions.** Choose one permanent action per root cause: the occurrence cause, the escape cause and, where found, the systemic cause. Prefer making the error impossible or detecting it at the source (error-proofing, IATF 16949 10.2.4) over training or extra inspection; retraining alone is a weak action (ladder in [root-cause verification](references/root-cause-verification.md)). Verify that it works, including that the fixed check catches a known bad part, and that it creates no new risk (PFMEA check). **Gate:** verification evidence.
 7. **D6 Implement and validate.** Implement, then validate with production evidence over a period or quantity set by local policy or the customer. Remove containment only after validation. **Gate:** validation evidence, and containment ended with a record.
-8. **D7 Prevent recurrence.** Update the PFMEA, control plan, station instructions, maintenance plans and error-proofing check frequencies. Check similar parts, lines and plants for the same risk and apply the fix there (read-across), and record the lesson learned (IATF 16949 10.2.3, SI 20). **Gate:** the document revisions are listed.
+8. **D7 Prevent recurrence.** Update the PFMEA, control plan, station instructions, maintenance plans (`improve-tpm`) and error-proofing check frequencies. Check similar parts, lines and plants for the same risk and apply the fix there (read-across), and record the lesson learned (IATF 16949 10.2.3, SI 20). **Gate:** the document revisions are listed.
 9. **D8 Close.** Run the Validation checklist. Confirm closure with the customer where required, recognise the team, and archive the 8D. **Gate:** the checklist is complete and closure is confirmed where required.
 
 ### Check an 8D for closure
@@ -105,3 +105,4 @@ Before answering, also check: D2 has no cause, D3 names every suspect location, 
 ## Hand-offs
 
 - Escalations arrive from `lead-daily-routine`; report the 8D status back to that tier meeting.
+- A D7 maintenance-plan update goes to `improve-tpm`.

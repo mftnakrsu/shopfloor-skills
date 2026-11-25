@@ -107,3 +107,7 @@ Check before answering:
 
 - Track hour-by-hour output and the open ergonomic and kaizen actions in the tier meetings of `lead-daily-routine`.
 - A safety incident or a repeat output or quality problem with an unknown cause on the new balance goes to `solve-8d`.
+- Lines that keep missing the hour-by-hour plan arrive from `lead-daily-routine`.
+- The downtime, minor-stop and changeover losses kept out of takt go to `measure-oee` for the loss tree, to `improve-tpm` for breakdowns and to `improve-smed` for changeovers.
+- A changed available capacity or new machine cycle times arrive from `measure-oee` and `improve-smed`.
+- WIP and throughput time after the rebalance go to `improve-tpt`.

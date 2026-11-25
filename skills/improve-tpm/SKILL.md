@@ -51,7 +51,7 @@ Ask for missing inputs; never invent them.
 | Breakdowns | Part B, then the planned-maintenance tasks in part D; AM steps 1–3 to restore basic conditions |
 | Minor stops, reduced speed | AM steps 1–2 on that machine: clean, find and remove contamination and deterioration; then focused improvement on the top stop reason |
 | Defects, start-up scrap | Hold the machine conditions that make good parts (quality maintenance), and structured problem solving; `solve-8d` for a customer complaint or a repeat problem |
-| Set-up and adjustment | A changeover study, not this skill |
+| Set-up and adjustment | A changeover study in `improve-smed`, not this skill |
 | Waiting for material or people, starved or blocked | Not an equipment loss; escalate in the tier meeting |
 
 2. Start with the largest loss on the bottleneck machine. Check that the breakdown minutes match the maintenance log for the same period; if not, reconcile the data first.
@@ -124,4 +124,8 @@ Check before answering:
 ## Hand-offs
 
 - A breakdown or repeat failure that caused a customer complaint or a safety issue goes to `solve-8d`.
-- Missing maintenance resources and overdue tags are escalated through `lead-daily-routine`.
+- Missing maintenance resources and overdue tags are escalated through `lead-daily-routine`; a red breakdown KPI or overdue AM tags from that board arrive here.
+- Breakdown, minor-stop and speed loss items arrive from `measure-oee`; report the MTBF and MTTR results back and re-measure OEE there with the same time model.
+- Set-up and adjustment loss goes to `improve-smed`.
+- Unplanned stops at the bottleneck arrive from `improve-tpt`; breakdowns seen during changeovers arrive from `improve-smed`.
+- A maintenance-plan update from the prevent-recurrence step of `solve-8d` arrives here.

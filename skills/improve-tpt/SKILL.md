@@ -112,3 +112,6 @@ Check before answering:
 
 - A red delivery or lead-time KPI arrives from `lead-daily-routine`; report the TPT trend back to that tier meeting.
 - A quality problem that drives rework loops or scrap with an unknown cause goes to `solve-8d` when it is a complaint or repeat problem.
+- Long set-ups or large lots at the bottleneck go to `improve-smed`; unplanned stops or breakdowns there (high variability, low availability) go to `improve-tpm`; bottleneck losses that need a loss tree go to `measure-oee`.
+- Station imbalance on a manual line, or a near-bottleneck manual station, goes to `improve-line-balancing`.
+- A known bottleneck whose problem is the flow rather than its losses arrives from `measure-oee`; WIP and throughput time after a rebalance arrive from `improve-line-balancing`.
