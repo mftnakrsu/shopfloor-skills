@@ -2,17 +2,13 @@
 """Build the hand-off loop diagram (design spec, section 4.2) as a static SVG.
 
 Standard library only. The diagram brings its own Chalk card, so it reads on light and dark
-pages. Update AVAILABLE and SOON when a skill ships, then run this script again.
+pages. All 20 skills are available, so every box is drawn solid and no status tags are shown.
+Run this script again after a change to the nodes or the edges.
 """
 import argparse
 import os
 
 GRAPHITE, GREEN, CHALK, MUTE, LINE = "#1F2428", "#2E8A55", "#F1F4F2", "#5B6368", "#6B7479"
-AVAILABLE = {
-    "lead-daily-routine", "solve-8d", "measure-oee", "improve-line-balancing", "improve-smed", "improve-tpt",
-    "improve-tpm", "improve-vsm", "improve-kanban-pull", "improve-kaizen", "lead-gemba-walk", "measure-spc",
-}
-SOON = set()
 FONT = "'Barlow Semi Condensed', 'Segoe UI', system-ui, sans-serif"
 MONO = "ui-monospace, SFMono-Regular, Menlo, Consolas, monospace"
 
@@ -31,7 +27,8 @@ NODES = {
     "vsm": (0, 724, ["improve-vsm"], None),
     "smed": (1, 112, ["improve-smed"], None),
     "tpm": (1, 196, ["improve-tpm"], None),
-    "solve": (1, 300, ["solve-5why", "solve-fishbone", "solve-8d"], 136),
+    "solve": (1, 300, ["solve-is-is-not", "solve-fishbone", "solve-5why", "solve-pdca", "solve-8d", "solve-dmaic"],
+              186),
     "kaizen": (1, 518, ["improve-kaizen"], None),
     "flow": (1, 698, ["improve-tpt", "improve-kanban-pull", "improve-line-balancing"], None),
     "cp": (2, 340, ["plan-control-plan"], None),
@@ -90,40 +87,32 @@ def edges():
     out.append((path((l1, 630), (480, 630), (480, 418), (l2, 418)), "findings", l1 + 12, 622, "start"))
     out.append((path((l1, 654), (1060, 654), (1060, 382), (l3, 382)), "findings", l2 + 10, 646, "start"))
     out.append((path((l1, 752), (l2, 752)), "future state", mid1, 772, "middle"))
+    x = 130
+    out.append((path((x, box("gemba")[1] + NODE_H), (x, box("audit")[1])), "LPA programme", x + 12, 599, "start"))
     out.append((path((l1, 736), (500, 736), (500, 562), (l2, 562)), "kaizen bursts", l1 + 12, 728, "start"))
     out.append((path((right("solve"), 356), (l3, 356)), "root cause fixed", mid2, 348, "middle"))
     x = 820
     out.append((path((x, box("solve")[1]), (x, box("tpm")[1] + NODE_H)), "D7: maintenance plan", x - 12, 284, "end"))
-    x = l3 + 200
-    out.append((path((x, box("cp")[1] + NODE_H), (x, box("wi")[1])), "update", x + 12, 565, "start"))
+    x = 820
+    out.append((path((x, box("kaizen")[1]), (x, box("solve")[1] + box("solve")[3])), "kata or A3", x - 12, 507, "end"))
+    x = l3 + 150
+    out.append((path((x, box("cp")[1] + NODE_H), (x, box("wi")[1])), "update", x - 12, 565, "end"))
+    x = l3 + 300
+    out.append((path((x, box("wi")[1]), (x, box("cp")[1] + NODE_H)), "change request", x - 12, 600, "end"))
     out.append((path((right("flow"), 752), (l3, 752)), "new standard work", mid2, 744, "middle"))
     return out
-
-
-def status(skill):
-    if skill in AVAILABLE:
-        return "available"
-    return "coming soon" if skill in SOON else "planned"
 
 
 def node_svg(name):
     x, y, w, h = box(name)
     skills = NODES[name][2]
-    live = any(s in AVAILABLE for s in skills)
-    stroke = GREEN if live else LINE
-    dash = "" if live or any(s in SOON for s in skills) else ' stroke-dasharray="5 4"'
-    out = [f'  <rect x="{x}" y="{y}" width="{w}" height="{h}" rx="8" fill="#FFFFFF" stroke="{stroke}" '
-           f'stroke-width="{2.5 if live else 1.5}"{dash}/>']
+    out = [f'  <rect x="{x}" y="{y}" width="{w}" height="{h}" rx="8" fill="#FFFFFF" stroke="{GREEN}" '
+           f'stroke-width="2.5"/>']
     first = y + h / 2 - ROW * (len(skills) - 1) / 2 + 6
     for i, s in enumerate(skills):
         ty = first + ROW * i
-        weight = "700" if s in AVAILABLE else "400"
-        out.append(f'  <text x="{x + 16}" y="{ty:g}" font-family="{MONO}" font-size="17" font-weight="{weight}" '
+        out.append(f'  <text x="{x + 16}" y="{ty:g}" font-family="{MONO}" font-size="17" font-weight="700" '
                    f'fill="{GRAPHITE}">{s}</text>')
-        tag = status(s)
-        colour = GREEN if tag == "available" else MUTE
-        out.append(f'  <text x="{x + w - 14}" y="{ty:g}" text-anchor="end" font-family="{FONT}" font-size="16" '
-                   f'fill="{colour}">{tag}</text>')
     return "\n".join(out)
 
 
@@ -143,10 +132,8 @@ def build():
         f'aria-labelledby="title desc">',
         '  <title id="title">The shopfloor-skills hand-off loop</title>',
         '  <desc id="desc">Skills that see a problem hand it to skills that fix the cause, which hand the result '
-        'to the skills that hold the gain in the control plan and station instructions. lead-daily-routine, '
-        'solve-8d, lead-gemba-walk, measure-oee, measure-spc, improve-line-balancing, improve-smed, improve-tpt, '
-        'improve-tpm, improve-vsm, improve-kanban-pull and improve-kaizen are available; '
-        'the other skills are planned.</desc>',
+        'to the skills that hold the gain in the control plan and station instructions. All 20 skills '
+        'are available.</desc>',
         '  <defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" '
         f'orient="auto"><path d="M0 0L10 5L0 10Z" fill="{LINE}"/></marker></defs>',
         f'  <rect width="{W}" height="{H}" rx="16" fill="{CHALK}"/>',

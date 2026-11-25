@@ -30,7 +30,7 @@ A plan needs the purpose, the area and who walks; without them the skill asks an
 
 ## Where the work goes next
 
-Actions with a known cause go to the board in [`lead-daily-routine`](/skills/lead-daily-routine/), and findings that need an improvement format go to [`improve-kaizen`](/skills/improve-kaizen/). Customer, safety or repeat problems go to [`solve-8d`](/skills/solve-8d/). Value-stream facts go to [`improve-vsm`](/skills/improve-vsm/), equipment losses to [`measure-oee`](/skills/measure-oee/), and waiting and piles of WIP to [`improve-tpt`](/skills/improve-tpt/) or [`improve-kanban-pull`](/skills/improve-kanban-pull/).
+Actions with a known cause go to the board in [`lead-daily-routine`](/skills/lead-daily-routine/), and findings that need an improvement format go to [`improve-kaizen`](/skills/improve-kaizen/). Customer, safety or repeat problems go to [`solve-8d`](/skills/solve-8d/), and other unknown causes to [`solve-5why`](/skills/solve-5why/). An LPA programme, or an audit beyond one walk segment, goes to [`audit-process`](/skills/audit-process/), which owns the programme; this skill keeps only the segment inside the walk. Value-stream facts go to [`improve-vsm`](/skills/improve-vsm/), equipment losses to [`measure-oee`](/skills/measure-oee/), and waiting and piles of WIP to [`improve-tpt`](/skills/improve-tpt/) or [`improve-kanban-pull`](/skills/improve-kanban-pull/).
 
 ## What is in the folder
 

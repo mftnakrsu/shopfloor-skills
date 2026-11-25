@@ -35,7 +35,7 @@ export default defineConfig({
       ],
       sidebar: [
         { label: 'Start here', items: ['start/install', 'start/use'] },
-        { label: 'Catalogue', items: ['skills/catalogue', 'skills/lead-daily-routine', 'skills/lead-gemba-walk', 'skills/measure-oee', 'skills/measure-spc', 'skills/improve-tpt', 'skills/improve-line-balancing', 'skills/improve-smed', 'skills/improve-tpm', 'skills/improve-vsm', 'skills/improve-kanban-pull', 'skills/improve-kaizen', 'skills/solve-8d', 'skills/agents'] },
+        { label: 'Catalogue', items: ['skills/catalogue', 'skills/lead-daily-routine', 'skills/lead-gemba-walk', 'skills/measure-oee', 'skills/measure-spc', 'skills/improve-tpt', 'skills/improve-line-balancing', 'skills/improve-smed', 'skills/improve-tpm', 'skills/improve-vsm', 'skills/improve-kanban-pull', 'skills/improve-kaizen', 'skills/plan-control-plan', 'skills/plan-workstation-instructions', 'skills/solve-8d', 'skills/solve-5why', 'skills/solve-fishbone', 'skills/solve-is-is-not', 'skills/solve-pdca', 'skills/solve-dmaic', 'skills/audit-process', 'skills/agents'] },
         { label: 'Guides', items: ['guides/how-it-works'] },
         { label: 'Project', items: ['project/contributing', 'project/brand'] },
         { label: 'Türkçe', link: '/turkce/', attrs: { lang: 'tr' } },

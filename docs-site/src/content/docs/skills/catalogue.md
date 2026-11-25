@@ -1,13 +1,9 @@
 ---
 title: Skills catalogue
-description: All 20 planned skills of shopfloor-skills, grouped by stage, with what each one does and whether it is available yet.
+description: All 20 skills of shopfloor-skills, grouped by stage, with what each one does.
 ---
 
-The design plans 20 skills in six stages. The prefix of a skill's name is its stage. Skills arrive in batches; this page shows the state of each one.
-
-- <span class="status available">available</span>: in the repository and installed with the plugin.
-- <span class="status soon">coming soon</span>: being written and tested now.
-- <span class="status planned">planned</span>: designed, not written yet. The description says what the skill will do.
+The design has 20 skills in six stages. The prefix of a skill's name is its stage. All 20 are <span class="status available">available</span>: in the repository and installed with the plugin.
 
 ## lead: daily shopfloor leadership
 
@@ -39,24 +35,24 @@ The design plans 20 skills in six stages. The prefix of a skill's name is its st
 
 | Skill | Status | What it does |
 |---|---|---|
-| `plan-control-plan` | <span class="status planned">planned</span> | Builds or reviews a process control plan as the master for all station documents, with reaction plans and review triggers |
-| `plan-workstation-instructions` | <span class="status planned">planned</span> | Drafts and reviews station inspection and work instructions from control-plan rows, and runs consistency checks |
+| [`plan-control-plan`](/skills/plan-control-plan/) | <span class="status available">available</span> | Builds or reviews a process control plan as the master for all station documents, with reaction plans and review triggers |
+| [`plan-workstation-instructions`](/skills/plan-workstation-instructions/) | <span class="status available">available</span> | Drafts and reviews station inspection and work instructions from control-plan rows, and runs consistency checks |
 
 ## solve: root cause and problem solving
 
 | Skill | Status | What it does |
 |---|---|---|
 | [`solve-8d`](/skills/solve-8d/) | <span class="status available">available</span> | Runs an 8D from D0 to D8: containment, occurrence and escape root causes, verification, and the PFMEA and control-plan updates |
-| `solve-5why` | <span class="status planned">planned</span> | Builds 5-Why chains for occurrence, detection and system causes, with an evidence check on every link |
-| `solve-fishbone` | <span class="status planned">planned</span> | Turns a 6M brainstorm into cause hypotheses that can be tested |
-| `solve-is-is-not` | <span class="status planned">planned</span> | Scopes a problem with Is/Is-Not, distinctions and changes, then eliminates hypotheses |
-| `solve-pdca` | <span class="status planned">planned</span> | Runs one PDCA or A3 cycle on a defined problem or improvement |
-| `solve-dmaic` | <span class="status planned">planned</span> | Runs DMAIC on chronic problems that have plenty of data |
+| [`solve-5why`](/skills/solve-5why/) | <span class="status available">available</span> | Builds 5-Why chains for occurrence, detection and system causes, with an evidence check on every link |
+| [`solve-fishbone`](/skills/solve-fishbone/) | <span class="status available">available</span> | Turns a 6M brainstorm into cause hypotheses that can be tested; it widens the list of causes |
+| [`solve-is-is-not`](/skills/solve-is-is-not/) | <span class="status available">available</span> | Scopes a problem with Is/Is-Not, distinctions and changes, then eliminates hypotheses; it narrows the list of causes |
+| [`solve-pdca`](/skills/solve-pdca/) | <span class="status available">available</span> | Runs one PDCA or A3 cycle on a defined problem or improvement; choosing the format stays with `improve-kaizen` |
+| [`solve-dmaic`](/skills/solve-dmaic/) | <span class="status available">available</span> | Runs DMAIC on chronic problems that have plenty of data |
 
 ## audit: check the system
 
 | Skill | Status | What it does |
 |---|---|---|
-| `audit-process` | <span class="status planned">planned</span> | Runs process audits, layered process audits and shopfloor-management self-audits, and maps findings to ISO 9001 and IATF 16949 clauses |
+| [`audit-process`](/skills/audit-process/) | <span class="status available">available</span> | Runs process audits, VDA 6.3 scoring, the layered process audit programme and shopfloor-management self-audits, and maps findings to ISO 9001 and IATF 16949 clauses |
 
-For the order in which the skills arrive, see the [CHANGELOG](https://github.com/mftnakrsu/shopfloor-skills/blob/main/CHANGELOG.md). For how they hand work to each other, see [How it works](/guides/how-it-works/).
+For the order in which the skills arrived, see the [CHANGELOG](https://github.com/mftnakrsu/shopfloor-skills/blob/main/CHANGELOG.md). For how they hand work to each other, see [How it works](/guides/how-it-works/).
