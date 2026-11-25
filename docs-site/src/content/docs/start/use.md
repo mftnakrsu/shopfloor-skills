@@ -5,13 +5,18 @@ description: Ask your agent in your own words. It picks the skill whose descript
 
 You do not call a skill by name. Ask your agent in your own words, and it loads the skill whose description matches the request.
 
-Examples for `lead-daily-routine`, the skill available today:
+Examples for `lead-daily-routine`, one of the two skills available today:
 
 - *"Design a tier meeting cascade for our plant: three levels, two shifts, the early shift starts at 06:00."*
 - *"Here are today's board values and open actions. Build the agenda for the tier 1 meeting."*
 - *"Our tier 2 meeting runs 40 minutes and people stop coming. Audit the routine."*
 
 The skill works in three modes, design, run and audit, and picks the mode from your request. When something it needs is missing, it asks for it. It does not invent board values or shift times.
+
+Examples for `solve-8d`, the other one:
+
+- *"A customer complained about cracked housings on part H-200: 12 of 4,000 delivered. Start an 8D."*
+- *"Here is our 8D. Can we close it?"*
 
 ## Start a skill by name
 

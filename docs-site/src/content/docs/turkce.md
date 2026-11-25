@@ -15,7 +15,7 @@ description: shopfloor-skills, üretim hatlarını yöneten kişiler için Agent
 
 ## Durum
 
-Proje geliştirme aşamasındadır. Bugün bir skill hazırdır: `lead-daily-routine`. Kademeli toplantıları, SQDCP panosunu, aynı gün eskalasyonu ve aksiyon takibini tasarlar, yürütür ve denetler. `solve-8d` ve `8d-moderator` agent'ı yakında gelecek. [Katalogdaki](/skills/catalogue/) diğer skill'ler planlanmıştır ve gruplar hâlinde eklenecektir.
+Proje geliştirme aşamasındadır. Bugün iki skill hazırdır: `lead-daily-routine` ve `solve-8d`; ayrıca `8d-moderator` agent'ı. `lead-daily-routine` kademeli toplantıları, SQDCP panosunu, aynı gün eskalasyonu ve aksiyon takibini tasarlar, yürütür ve denetler. `solve-8d` bir 8D'yi D0'dan D8'e yürütür ve açık bir 8D'nin kapatılıp kapatılamayacağını kontrol eder. [Katalogdaki](/skills/catalogue/) diğer skill'ler planlanmıştır ve gruplar hâlinde eklenecektir.
 
 ## Kurulum
 

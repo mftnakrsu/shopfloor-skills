@@ -95,7 +95,7 @@ class ProjectScopeTest(InstallTestCase):
         self.assertEqual(meta, {"name": "8d-moderator", "description": "Moderates an 8D. Use when testing."})
         self.assertIn("## Skill files", body)
         meta, body = self.agent(self.dest / ".qwen/agents", "skill-reviewer")
-        self.assertEqual(meta["tools"], install.QWEN_READ_ONLY_TOOLS)
+        self.assertEqual(meta["tools"], ["read_file", "list_directory", "glob", "grep_search"])
         self.assertNotIn("## Skill files", body)
 
     def test_cursor_format(self):

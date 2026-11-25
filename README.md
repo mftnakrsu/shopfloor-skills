@@ -53,7 +53,7 @@ The skills hand work to each other as one loop: see the problem, fix the cause, 
 /plugin install shopfloor-skills@shopfloor-skills
 ```
 
-**OpenCode, Qwen Code or Cursor**
+**OpenCode (version 2 or later), Qwen Code or Cursor**
 
 ```
 git clone https://github.com/mftnakrsu/shopfloor-skills
@@ -77,6 +77,12 @@ Ask your agent in your own words. It loads the skill whose description matches t
 
 `lead-daily-routine` designs the cascade, runs today's meeting from your board values, or audits a routine that is not working. When an input it needs is missing, it asks for it instead of inventing it. In Claude Code you can also start it by name with `/shopfloor-skills:lead-daily-routine`.
 
+`solve-8d` leads an 8D from D0 to D8, or checks whether an open one can be closed:
+
+> A customer complained about cracked housings on part H-200: 12 of 4,000 delivered. Start an 8D.
+
+> Here is our 8D. Can we close it?
+
 ## Contributing
 
 See [CONTRIBUTING.md](CONTRIBUTING.md). The logo and its rules are in [assets/brand/BRAND.md](assets/brand/BRAND.md).
@@ -91,7 +97,7 @@ MIT License. See [LICENSE](LICENSE).
 
 `shopfloor-skills`, üretim hatlarını yöneten kişiler için Agent Skills ve alt agent'lardan oluşan açık kaynaklı bir settir: üretim ve proses mühendisleri, vardiya ve alan liderleri, sürekli iyileştirme koçları için. Verimlilik ve akışı (OEE, geçiş süresi, hat dengeleme, SMED, TPM, kanban), günlük sahada liderliği (kademeli toplantılar, gemba yürüyüşleri) ve hattı kararlı tutan dokümanları (kontrol planı, istasyon talimatları, SPC, 8D, proses denetimleri) kapsar.
 
-Proje geliştirme aşamasındadır. Bugün bir skill hazırdır: `lead-daily-routine`. `solve-8d` ve `8d-moderator` agent'ı yakında gelecek; diğerleri planlanmıştır.
+Proje geliştirme aşamasındadır. Bugün iki skill hazırdır: `lead-daily-routine` ve `solve-8d`; ayrıca `8d-moderator` agent'ı. Diğerleri planlanmıştır.
 
 **Kurulum.** Claude Code oturumunda:
 

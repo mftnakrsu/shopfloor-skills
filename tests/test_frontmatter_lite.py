@@ -61,6 +61,10 @@ class ParseTest(unittest.TestCase):
             ("m:\n  a: 1\n    b: 2\n", "one level"),
             ('a: "open\n', "closing quote"),
             ("a: *ref\n", "start with"),
+            ("a: [{a: 1}]\n", "inline list of mappings"),
+            ('a: [{"a": 1}, b]\n', "inline list of mappings"),
+            ('a: [{"a": 1, "a": 2}]\n', "duplicate key"),
+            ('a: [{"a": NaN}]\n', "not allowed"),
         ]
         for text, message in cases:
             with self.subTest(message=message):
@@ -76,6 +80,7 @@ class DumpTest(unittest.TestCase):
             "readonly": True,
             "tools": ["read_file", "glob"],
             "permission": {"edit": "deny", "bash": "deny"},
+            "permissions": [{"action": "edit", "resource": "*", "effect": "deny"}],
         }
         self.assertEqual(fm.parse(fm.dump(data)), data)
 

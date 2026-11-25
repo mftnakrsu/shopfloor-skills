@@ -14,6 +14,18 @@ class FrontmatterError(ValueError):
     pass
 
 
+def _no_duplicates(pairs):
+    keys = [k for k, _ in pairs]
+    for key in keys:
+        if keys.count(key) > 1:
+            raise FrontmatterError(f"duplicate key '{key}' in an inline mapping")
+    return dict(pairs)
+
+
+def _no_constant(name):
+    raise FrontmatterError(f"'{name}' is not allowed in an inline mapping")
+
+
 def split(text):
     lines = text.splitlines(keepends=True)
     if not lines or lines[0].rstrip("\r\n") != "---":
@@ -152,7 +164,7 @@ def _value(raw, where):
             raise FrontmatterError(f"{where}: an inline list must end with ']'")
         if raw.startswith("[{"):
             try:
-                return json.loads(raw)
+                return json.loads(raw, object_pairs_hook=_no_duplicates, parse_constant=_no_constant)
             except json.JSONDecodeError as exc:
                 raise FrontmatterError(f"{where}: bad inline list of mappings ({exc.msg})") from None
         inner = raw[1:-1].strip()

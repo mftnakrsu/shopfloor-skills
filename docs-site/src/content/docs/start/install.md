@@ -41,7 +41,7 @@ Where the files go:
 
 | Tool | Skills | Agents |
 |---|---|---|
-| OpenCode | `.agents/skills/<name>/` | `.opencode/agents/` |
+| OpenCode (version 2 or later) | `.agents/skills/<name>/` | `.opencode/agents/` |
 | Qwen Code | `.agents/skills/<name>/` | `.qwen/agents/` |
 | Cursor | `.agents/skills/<name>/` | `.cursor/agents/` |
 

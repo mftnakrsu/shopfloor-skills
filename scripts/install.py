@@ -15,12 +15,12 @@ PROJECT_SKILLS = ".agents/skills"
 PROJECT_AGENTS = {"opencode": ".opencode/agents", "qwen": ".qwen/agents", "cursor": ".cursor/agents"}
 USER_SKILLS = {"opencode": ".config/opencode/skills", "qwen": ".qwen/skills", "cursor": ".cursor/skills"}
 USER_AGENTS = {"opencode": ".config/opencode/agents", "qwen": ".qwen/agents", "cursor": ".cursor/agents"}
-# OpenCode 2.x: ordered permission rules; shell commands are the "shell" action.
+# OpenCode 2 or later: ordered permission rules; shell commands are the "shell" action.
 OPENCODE_READ_ONLY_PERMISSIONS = [
     {"action": "edit", "resource": "*", "effect": "deny"},
     {"action": "shell", "resource": "*", "effect": "deny"},
 ]
-QWEN_READ_ONLY_TOOLS = ["read_file", "read_many_files", "list_directory", "glob", "grep_search"]
+QWEN_READ_ONLY_TOOLS = ["read_file", "list_directory", "glob", "grep_search"]
 SKILL_FILES_INTRO = "Before you apply a method named in this file, read its skill file:"
 
 
