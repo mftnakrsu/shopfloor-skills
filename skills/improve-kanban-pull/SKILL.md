@@ -48,7 +48,7 @@ Ask for every missing input; never invent one. Copy the user's numbers exactly.
    | Situation | System |
    |---|---|
    | One-off, built to order, short shelf life, or rare and costly parts | FIFO lane with a maximum, or CONWIP over several steps |
-   | Too many part numbers to stock each one at the supplier | FIFO lane or CONWIP (sequential pull) |
+   | Many part numbers with no dominant high runners, too many to stock each one at the supplier | FIFO lane or CONWIP (sequential pull) |
    | Many part numbers, a few of them carrying most of the volume (an 80/20 pattern, LEI), the tail not stockable | Mixed: supermarket for the high runners, FIFO lane or CONWIP for the rest |
    | Repeating parts, each stockable, daily demand within about ±10% of the plan (Monden) | Supermarket with kanban |
    | Demand swings wider than that | Level the mix at the pacemaker first and recalculate cards each plan period; else CONWIP with a finished-goods buffer |
@@ -87,7 +87,7 @@ Check before answering:
 ## Output
 
 - `assets/kanban-loop-sheet.md`, filled in: flow and pacemaker, system per part group with the reason, each loop's lead-time build-up and card count, FIFO and CONWIP maxima, pitch, owners and the tracking plan.
-- Show every formula with the user's numbers and units. Optional calculator: `scripts/kanban_calc.py` (standard library); every result can be computed by hand from the formulas above.
+- Show every formula with the user's numbers and units. Optional calculator: `scripts/kanban_calc.py` (standard library); every result can be computed by hand from the formulas above. Its `conwip` option gives the card count only; check the output at that count by hand with the practical-worst-case formula.
 - Write for the user in plain words; never cite this skill's step numbers or file names.
 
 ## Pitfalls

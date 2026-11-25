@@ -95,5 +95,6 @@ A2, D3 and D4 from NIST; d2 from the standard factor table (York). A2 = 3 ÷ (d2
 
 - NIST/SEMATECH e-Handbook: [X-bar and R, S charts](https://www.itl.nist.gov/div898/handbook/pmc/section3/pmc321.htm); [Individuals charts](https://www.itl.nist.gov/div898/handbook/pmc/section3/pmc322.htm); [p charts](https://www.itl.nist.gov/div898/handbook/pmc/section3/pmc332.htm); [c charts](https://www.itl.nist.gov/div898/handbook/pmc/section3/pmc331.htm); [Process capability](https://www.itl.nist.gov/div898/handbook/pmc/section1/pmc16.htm)
 - ISO: [ISO 7870-2 catalogue entry](https://www.iso.org/standard/78859.html)
+- Lawson, J.: [Shewhart control charts in Phase I](https://bookdown.org/lawson/an_introduction_to_acceptance_sampling_and_spc_with_r26/shewhart-control-charts-in-phase-i.html) (25 or more subgroups for trial limits, rule of thumb)
 - York: [Factors for control charts (d2)](https://www.york.ac.uk/depts/maths/histstat/tables/controlfactors.pdf)
 - Wikipedia: [Shewhart individuals chart](https://en.wikipedia.org/wiki/Shewhart_individuals_control_chart); [p-chart](https://en.wikipedia.org/wiki/P-chart); [u-chart](https://en.wikipedia.org/wiki/U-chart)

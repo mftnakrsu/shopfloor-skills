@@ -6,7 +6,6 @@ How a chart signal becomes a reaction at the workstation and, when needed, an es
 
 As of November 2026; IATF 16949:2016 with its sanctioned interpretations is the current edition. Re-check the clause numbers when a new edition appears.
 
-
 - IATF 16949 8.5.1.1 e: the control plan carries a reaction plan for when nonconforming product is found or the process becomes statistically unstable or not capable.
 - IATF 16949 9.1.1.1: keep the measured values for variable data, follow reaction plans with an escalation process when criteria are not met, record significant process events such as tool changes and repairs; unstable or not capable characteristics get containment, including 100% inspection where appropriate.
 - A complete reaction plan covers containment of suspect product, stopping suspect production, restoring control, and who is responsible (secondary summary of the AIAG control plan manual, Umbrex).

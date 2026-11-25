@@ -26,7 +26,7 @@ metadata:
 - Walk types: the value-stream and management-system walks follow Womack; the process walk is a common practitioner form (Shook, KaiNexus).
 - An observation is a fact seen at the gemba: where, what, how often. An interpretation is labelled as one. A finding is an observation that needs action.
 - Observations describe the process, never a person. The log names stations and roles, not people.
-- A layered process audit (LPA, geschichtetes Prozessaudit) is a short yes/no check of critical process controls by several management layers. Layer 1 is closest to the work.
+- A layered process audit (LPA, geschichtetes Prozessaudit) is a short yes/no check of critical process controls by several management layers. Layer 1 is closest to the work. In automotive it supports IATF 16949 9.2.2.3 (manufacturing process audit) and the daily review in 8.5.6.1.1; pointers in [layered audit](references/layered-audit.md).
 - Durations are in minutes.
 
 ## Inputs
@@ -63,7 +63,7 @@ Ask only for what is missing:
 4. Timebox: split the available time into a short opening with the area leader, one segment per stop on the route, the LPA segment if any, and a reflection at the end. Rule of thumb: about 5 minutes opening, 5–10 minutes reflection, the rest on the route. The segments must not exceed the time available. Worked example (invented round numbers): 60 minutes = 5 opening + 4 stops × 9 + 10 LPA + 9 reflection = 60.
 5. Questions: prepare open questions and ask them in the order what → why → what if → why not (Shook, crediting Verble). Core set (Mann): What is the process here? How can you tell it is working? What do you do when it is not? Is there work going on to improve it? Ask the people doing the work, not only their leader. Question bank in [walk design](references/walk-design.md).
 6. What to look for, by type: the checklists in [walk design](references/walk-design.md). Always include the gap between the written standard and the actual work, and what stops people from working to the standard.
-7. LPA segment (optional): 5–10 yes/no items (rule of thumb), each answered on evidence seen at the station. When the user gives control points, make each one an item, keeping its wording and interval, and name the evidence to look at; mark any item you add as a proposal. Otherwise draw them from the control plan (Produktionslenkungsplan): error-proofing verification, standard work followed, operator qualified, control-plan checks at the right frequency and sample, reaction plans followed when a check fails. Give it its own timed row on the route, not items spread over the stops: the LPA asks "is the standard followed?"; the walk also asks "is the standard adequate, and what is in the way?". Details in [layered audit](references/layered-audit.md).
+7. LPA segment (optional): 5–10 yes/no items (rule of thumb), each answered on evidence seen at the station. Turn each control point the user supplies into one item, keeping its wording and interval, and name the evidence to look at; mark any item you add as a proposal. Otherwise draw them from the control plan (Produktionslenkungsplan): error-proofing verification, standard work followed, operator qualified, control-plan checks at the right frequency and sample, reaction plans followed when a check fails. Give it its own timed row on the route, not items spread over the stops: the LPA asks "is the standard followed?"; the walk also asks "is the standard adequate, and what is in the way?". Details in [layered audit](references/layered-audit.md).
 8. Cadence: make the walk part of leader standard work, with a fixed slot. Vary shift and time of day now and then to see other conditions. Sources disagree on frequency (ranges in [walk design](references/walk-design.md)); a walk whose findings are closed beats a frequent walk without follow-up.
 
 ### B. Run and write up
@@ -71,12 +71,12 @@ Ask only for what is missing:
 1. Watch before you ask: stay at each stop for at least one full work cycle (rule of thumb).
 2. Ask, listen, and record facts as you go: where, what, how often, and the person's own explanation.
 3. Do not fix, order or redesign on the spot. Only an immediate safety risk or a risk to product quality is contained at once (stop, protect, segregate) and logged as contained. The one other exception is a No in the LPA segment, which the walker may correct at once within their own authority (step B6).
-4. No blame. A standard not followed is a question about the process: is the standard known, clear and possible to follow, are the means there (material, tools, PPE, time), was the person trained? Idle people are a waiting observation (Wartezeit) until the cause upstream or downstream is found. Warnings and disciplinary notes never go into a walk log; if conduct really is the issue, it goes to the line manager through the normal HR route, outside the walk.
-5. Recurring disturbances that people work around (missing parts, rework loops, manual restarts) are findings even when people deal with them themselves.
+4. No blame. A standard not followed or people standing idle is first a question about the process: is the standard known, clear and possible to follow, are the means there (material, tools, PPE, time), was the person trained, and is there a cause upstream or downstream (Wartezeit)? Conduct is handled outside the walk ([follow-up](references/follow-up.md)).
+5. A recurring disturbance handled locally is still a finding.
 6. LPA segment: answer each item Yes, No or "not reviewed". Correct a No at once if it is within your authority, and note the action and date. Pass other Nos to the responsible person and note who was told. A No stays a No in the record even when it was corrected during the audit.
 7. Reflect right after the walk with the area leader: what did we see, what did we learn, which findings matter most for the purpose.
 8. Fill in the observation log (`assets/observation-log.md`): number, where, what was seen, type, containment, next step, owner, due date, status, verified. Every row gets an owner (a role when no name is known) and a due date; mark dates you propose as proposals.
-9. Writing up a past walk: check that each safety or quality risk was really contained. If it was not, containment is the first action, due today.
+9. Writing up a past walk: check the notes against these rules before writing the report. Anything that should have been contained and was not becomes the first action, due today.
 
 ### C. Follow up
 
@@ -104,7 +104,7 @@ Check before answering:
 
 ## Output
 
-- Plan: `assets/walk-plan.md` filled in (purpose, type, route, timed segments, questions, what to look for), with `assets/lpa-checklist.md` when an LPA segment is included.
+- Plan: `assets/walk-plan.md` filled in (purpose, type, route, timed segments, questions, what to look for), with `assets/lpa-checklist.md` when an LPA segment is included. The plan states the walker rules: observe, no fixes or orders on the spot, except to contain safety or quality risk and LPA Nos within authority.
 - Run or write-up: `assets/observation-log.md` filled in, the contained risks first, then the top findings for the purpose, then who tells the team what and by when.
 - Follow-up: the log with status and verification, the overdue findings, and the metrics.
 - Write for the user in plain words; never cite this skill's step numbers, section names or file names.

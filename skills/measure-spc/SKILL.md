@@ -40,7 +40,7 @@ metadata:
 
 Ask for every missing input; never invent one.
 
-- Attribute charts need the number inspected per subgroup. Without it, ask for it and stop: give no limits, only the formula with n left open. Never assume a constant n. Switching to a c chart or an individuals chart on the raw counts is no way round the gap: with varying sample sizes, those limits mix process change with volume change.
+- Attribute charts need the number inspected per subgroup. Without it, ask for it and stop: give no limits, only the formula with n left open. Never assume a constant n.
 - Variable charts need time order and subgroup membership. Summary statistics without the subgroup size cannot be charted.
 - Fewer than 25 subgroups: compute trial limits, label them as trial, and say when to recompute (rule of thumb, Lawson).
 - No reaction plan or escalation path given: flag the gap, offer `assets/reaction-plan.md` with roles and time limits left blank as "set by local policy", and never name a role, a time limit or a tier on the user's behalf.

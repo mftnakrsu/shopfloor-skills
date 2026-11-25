@@ -85,6 +85,28 @@ class RunRulesTest(unittest.TestCase):
     def test_low_side_rule1(self):
         self.assertEqual(spc.run_rules([0, -3.5, 0], 0.0, 1.0), [{"rule": 1, "side": "low", "at": 2}])
 
+    def test_each_point_beyond_limit_is_own_signal(self):
+        signals = spc.run_rules([0, 3.4, 3.6, 0], 0.0, 1.0)
+        rule1 = [s for s in signals if s["rule"] == 1]
+        self.assertEqual(rule1, [{"rule": 1, "side": "high", "at": 2},
+                                 {"rule": 1, "side": "high", "at": 3}])
+
+
+class ExtraBranchTest(unittest.TestCase):
+    def test_p_chart_run_of_eight(self):
+        defectives = [3] + [6] * 9 + [1] * 6
+        r = spc.compute({"chart": "p", "defectives": defectives, "inspected": [150] * 16})
+        runs = [s for s in r["signals"] if s["rule"] == 4]
+        self.assertEqual(runs, [{"rule": 4, "side": "high", "at": 9}])
+
+    def test_imr_moving_range_beyond(self):
+        r = spc.compute({"chart": "imr", "values": [7.0, 7.1, 6.9, 7.0],
+                         "baseline": {"centre": 7.0, "spread": 0.1}})
+        self.assertEqual(r["mr_beyond_at_value"], [])
+        r = spc.compute({"chart": "imr", "values": [7.0, 7.1, 7.6, 7.0],
+                         "baseline": {"centre": 7.0, "spread": 0.1}})
+        self.assertEqual(r["mr_beyond_at_value"], [3, 4])
+
 
 if __name__ == "__main__":
     unittest.main()

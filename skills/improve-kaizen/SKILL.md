@@ -23,7 +23,7 @@ metadata:
 
 ## Conventions
 
-- Kaizen (KVP, kontinuierlicher Verbesserungsprozess) works from a standard and ends in a new one (Ohno, via LEI). SDCA (standardise, do, check, act) holds a standard; PDCA (plan, do, check, act) raises it (Imai).
+- Kaizen (KVP, kontinuierlicher Verbesserungsprozess) works from a standard and ends in a new one (Ohno, via LEI). SDCA (standardise, do, check, act) holds a standard; PDCA (plan, do, check, act) raises it (Imai, via secondary sources).
 - The four formats:
   - **Point fix** (Punkt-Kaizen): a quick local fix by one team at one station.
   - **Kaizen event** (Kaizen-Workshop, blitz): a cross-functional team changes one bounded area in a focused week, commonly five days (LEI).
@@ -96,7 +96,7 @@ Check before answering:
 
 - `assets/kaizen-charter.md` for an event or an A3: gap, scope, limits, team, plan, open-action list.
 - `assets/sustain-plan.md` for every result: new standard, its check, the 30/60/90 checkpoints and the closure criteria.
-- Every plan for an event, fix, kata or A3 states in the answer itself, not only in a template: the new standard it must produce, the check of that standard (who, how, how often), the 30/60/90 checkpoints, and the rule that every open action gets an owner and a due date.
+- Every plan for an event, fix, kata or A3 covers Validation items 5 to 7 in the answer itself, not only in a template.
 - For several topics, a table: topic, format, reason, owner, next step.
 - Write for the user in plain words; never cite this skill's step numbers or file names.
 

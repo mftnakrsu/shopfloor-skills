@@ -16,7 +16,7 @@ How to build and run the optional layered process audit (LPA) segment of a walk,
 
 - A short, scheduled check, done where the work is done, by several layers of management, each at its own frequency. The guideline most used in automotive is AIAG CQI-8 (2nd edition 2014, a paid document; summarised here from public secondary sources).
 - It checks process inputs and controls, not finished-product characteristics, and not paperwork for its own sake (EASE).
-- Questions are simple yes/no items a non-specialist can answer, and an audit takes about 10–15 minutes (EASE; Tervene).
+- Questions are simple yes/no items a non-specialist can answer, and an audit takes about 10 minutes (EASE) or 10–15 minutes (Tervene).
 - Leaders do their own audits. One supplier procedure accepts delegation only in extenuating circumstances (Nexteer).
 
 ## Layers and frequency
@@ -80,7 +80,7 @@ As of 2026-11-25: IATF 16949:2016 with its sanctioned interpretations. Summaries
 
 - AIAG: [CQI-8 Layered Process Audit guideline, 2nd ed. 2014](https://webstore.ansi.org/Standards/AIAG/AIAGCQI2014) (store listing; text not accessed)
 - EASE: [Core principles of the CQI-8 layered process audit guideline](https://www.ease.io/blog/core-principles-of-the-cqi-8-layered-process-audit-guideline/)
-- EASE: [3 things to know about GM IATF 16949 layered process audit requirements](https://www.ease.io/blog/3-things-to-know-about-gm-iatf-16949-layered-process-audit-requirements/)
+- EASE: [blog post on a customer-specific IATF 16949 layered process audit requirement](https://www.ease.io/blog/3-things-to-know-about-gm-iatf-16949-layered-process-audit-requirements/)
 - Tervene: [CQI-8 layered process audit guideline](https://tervene.com/blog/cqi-8-layered-process-audit-guideline/)
 - Nexteer: [Layered audit process, supplier procedure, rev. May 2023](https://www.nexteer.com/wp-content/uploads/layered_audit-May-2023.pdf)
 - GlobalSuite Solutions: [summary of IATF 16949 internal audit types](https://www.globalsuitesolutions.com/?p=123974) (secondary)

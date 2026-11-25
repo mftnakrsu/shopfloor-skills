@@ -38,7 +38,11 @@ def mean(values):
 
 
 def run_rules(points, centre, sigma):
-    """Western Electric rules 1-4. Returns signals as dicts with 1-based 'at' where each episode first fires."""
+    """Western Electric rules 1-4. Returns signals as dicts with 1-based 'at'.
+
+    Every point beyond a limit (rule 1) is its own signal; a lasting pattern (rules 2-4)
+    is reported once, where it first fires.
+    """
     if sigma <= 0:
         raise ValueError("sigma must be greater than zero")
     z = [round((p - centre) / sigma, 9) for p in points]
@@ -57,7 +61,7 @@ def run_rules(points, centre, sigma):
     signals, last = [], {}
     for rule, side, i in sorted(hits, key=lambda h: (h[2], h[0])):
         key = (rule, side)
-        if last.get(key) != i - 1:
+        if rule == 1 or last.get(key) != i - 1:
             signals.append({"rule": rule, "side": side, "at": i + 1})
         last[key] = i
     return signals

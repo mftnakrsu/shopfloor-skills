@@ -31,7 +31,7 @@ For each standard not followed, ask in this order before writing a cause (rule o
 4. Was the person trained and checked on it?
 5. What else got in the way?
 
-Only if all five are yes is it a question of conduct, and that goes to the line manager outside the walk, never into the walk log.
+Only if all five are yes is it a question of conduct, and that goes to the line manager through the normal HR route, outside the walk. Warnings and disciplinary notes never go into a walk log.
 
 ## From observation to finding
 

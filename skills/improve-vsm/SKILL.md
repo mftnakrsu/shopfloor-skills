@@ -7,8 +7,8 @@ description: >-
   value stream design must be drawn, reviewed or turned into an
   implementation plan; when the takt, inventory days or lead-time ladder of
   a whole value stream must be computed; or when the supermarkets,
-  pacemaker or FIFO lanes of a future-state map must be checked. Collects data-box fields, converts
-  inventory to days of demand, answers the future-state questions in order,
+  pacemaker or FIFO lanes of a future-state map must be checked. Collects
+  data-box fields, converts inventory to days of demand, answers the future-state questions in order,
   places kaizen bursts where a design needs a capability that does not yet
   exist, and plans loops with owners, targets and a 30/60/90-day review
   (Wertstromanalyse, Wertstromdesign, Wertstrom, Taktzeit, Schrittmacher,
@@ -26,7 +26,7 @@ metadata:
 - A value stream map (VSM, Wertstromanalyse) shows the material flow and the information flow of one product family from receiving to shipping on one page (LEI). The future-state map (Wertstromdesign) is the target design; the loop plan turns it into work.
 - Product family: products that pass through similar steps and common equipment near the end of the stream. One map per family.
 - Data-box fields use LEI's abbreviations: C/T cycle time (operator or machine time per unit before the work repeats), C/O changeover time, uptime %, %C/A (percent complete and accurate), available time per shift in seconds, plus operators, batch size and EPEI (every part every interval).
-- Takt time (Taktzeit) = available working time ÷ customer demand, over the same period. Available working time = shift time − planned breaks. In this skill unplanned downtime and changeovers are not subtracted from takt; they show up when effective C/T is compared with takt. State the convention every time, because some sources subtract planned downtime.
+- Takt time (Taktzeit) = available working time ÷ customer demand, over the same period. Available working time = shift time − planned breaks. Other planned downtime (meetings, planned maintenance): state yes or no. In this skill unplanned downtime and changeovers are not subtracted from takt; they show up when effective C/T is compared with takt. State the convention every time, because some sources subtract planned downtime.
 - The inventory ladder is the same rule as in `improve-tpt`: inventory days = units in stock ÷ daily customer demand. One flow unit (piece, set or box) throughout.
 
 ## Inputs
@@ -42,7 +42,7 @@ metadata:
 Ask for every missing input; never invent one. Copy the user's numbers exactly.
 
 - Without customer demand there is no takt, no pitch and no inventory days. Ask for demand (with its period) and the working time, in one short list, and stop. You may draw the process boxes and the information flow and give the formulas with the demand left open; never present a takt or a lead time in days from an assumed demand.
-- Missing C/O, uptime or part-number counts block only the checks that use them (effective C/T, EPEI, supermarket size). Map what is known, mark the gap on the map and ask.
+- Missing C/O, uptime or part-number counts block only the checks that use them (effective C/T, EPEI, supermarket (Supermarkt) size). Map what is known, mark the gap on the map and ask.
 - If the user gives an existing map, rebuild the ladder from its numbers before judging the design.
 
 ## Procedure
@@ -95,7 +95,7 @@ Check before answering:
 - `assets/vsm-study.md`, filled in: scope, customer box with takt and pitch, data boxes, inventory ladder, current-state problems, the eight answers, kaizen bursts, future ladder, loop plan and review dates.
 - A text sketch of each map is enough: information flow on top, process boxes with data boxes in the middle, the ladder at the bottom. Drawing by hand on the floor stays the real method.
 - Show every formula with the user's numbers and units.
-- Put open questions and assumptions before the plan, and end the answer with the loop plan (owner, target, start and end date per loop) and the 30/60/90-day review dates; nothing comes after the review dates. Data still missing becomes a dated task in the plan, not a closing list.
+- Put open questions and assumptions before the plan, and end the answer with the loop plan and the review dates. Data still missing becomes a dated task in the plan, not a closing list.
 - Write for the user in plain words; never cite this skill's step numbers or file names.
 
 ## Pitfalls

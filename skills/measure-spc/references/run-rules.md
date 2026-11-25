@@ -42,7 +42,7 @@ Use one named set and write it on the chart. Do not switch sets after looking at
 1. Spread chart first (R, S or MR). An out-of-control spread makes the location limits invalid.
 2. Location chart (X-bar or individuals): rule 1, then the zone rules, then runs and trends.
 3. For each signal, record the rule, the chart, the first subgroup where it fires, and the side.
-4. Count a lasting pattern once, from the subgroup where it first fires; points after it belong to the same signal until the cause is fixed.
+4. Count a lasting pattern once, from the subgroup where it first fires; points after it belong to the same signal until the cause is fixed. Each point beyond a limit is its own signal.
 
 ## Worked example (invented)
 

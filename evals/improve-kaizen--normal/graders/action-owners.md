@@ -1,4 +1,4 @@
 ---
 type: llm
 ---
-The response says open actions after the workshop need named owners and due dates.
+The workshop plan in the response names an owner and a due date for the follow-up actions of this event.

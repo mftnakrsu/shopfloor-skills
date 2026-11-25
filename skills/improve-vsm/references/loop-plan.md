@@ -44,7 +44,7 @@ A late loop is a management problem, not a reason to redraw the future state. Re
 | Loop | Bursts | Owner | Target | Start | End |
 |---|---|---|---|---|---|
 | Pacemaker | Pitch board, levelling box, finished-goods supermarket 2 days | Assembly supervisor | Finished goods from 5 to 2 days; pitch hits ≥ 95% of pitches (set by local policy) | week 2 | week 10 |
-| Moulding supermarket | C/O 50 → 20 min, kanban cards | Moulding team leader | EPEI 6 → 3 days; supermarket 3 days | week 8 | week 20 |
+| Moulding supermarket | C/O 50 → 20 min, kanban cards | Moulding team leader | EPEI 6 → 3 days; supermarket sized for EPEI 6 days until the C/O burst is done, then EPEI 3 days + replenishment + safety | week 8 | week 20 |
 | Supplier | Daily delivery | Logistics planner | Raw stock 8 → 3 days | week 16 | week 30 |
 
 Reviews at day 30, 60 and 90, then monthly. Future lead time = sum of the designed inventory days, stated as the target once all bursts are done.
