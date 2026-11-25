@@ -1,0 +1,47 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  tests:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+      - name: Unit tests and install smoke test
+        run: python -m unittest discover -s tests -v
+
+  checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Lint
+        run: python scripts/lint.py
+      - name: Validate the Claude Code plugin
+        run: |
+          npm install -g @anthropic-ai/claude-code@2.1.332
+          claude plugin validate . --strict
+          claude plugin validate . --profile directory
+      - name: Validate skills against the Agent Skills specification
+        run: |
+          pip install skills-ref==0.1.1
+          shopt -s nullglob
+          for dir in skills/*/; do agentskills validate "$dir"; done

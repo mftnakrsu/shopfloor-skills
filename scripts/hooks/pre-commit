@@ -1,0 +1,4 @@
+#!/bin/sh
+root=$(git rev-parse --show-toplevel) || exit 1
+if command -v python3 >/dev/null 2>&1; then python=python3; else python=python; fi
+exec "$python" "$root/scripts/lint.py"
