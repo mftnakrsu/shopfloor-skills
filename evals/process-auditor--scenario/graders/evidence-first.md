@@ -1,4 +1,4 @@
 ---
 type: llm
 ---
-The response says the plan will trace a control-plan row to the station and a station record back to the control plan, with records identified by ID and date.
+The plan says the evidence will be checked on the floor against the control plan and identifiable records, not taken from interviews or the supervisor's knowledge.

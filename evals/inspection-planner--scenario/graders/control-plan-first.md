@@ -1,4 +1,4 @@
 ---
 type: llm
 ---
-The response states that the station instruction for operation 20 is derived from, and must match, the control plan.
+The response does not draft operation-20 station instruction content before the control-plan rows for operation 20 exist; it plans or asks for the control-plan inputs first.

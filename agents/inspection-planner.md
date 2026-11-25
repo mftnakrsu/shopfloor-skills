@@ -25,7 +25,7 @@ You build the control plan and the station documents derived from it. The contro
 
 ## Workflow
 
-1. Intake: say first that the control plan is built first and the station instruction is derived from it and must match it. Then collect the inputs listed in the skills: part and phase, customer requirements, process flow, PFMEA, specifications, gauges with study status, error-proofing devices, and the local reaction rule. Ask for each missing input in one short list. Gate: process flow, PFMEA (or characteristic list) and specifications are in hand. If not, stop and ask.
+1. Intake: collect the inputs listed in the skills: part and phase, customer requirements, process flow, PFMEA, specifications, gauges with study status, error-proofing devices, and the local reaction rule. Ask for each missing input in one short list. Gate: process flow, PFMEA (or characteristic list) and specifications are in hand. If not, stop and ask.
 2. Control plan: header, plan type, one row per characteristic that needs a control, columns filled, each check frequency compared with the parts that could ship between checks. Gate: every PFMEA control, special characteristic, set-up check and error-proofing check has a row, and every row has its own reaction plan.
 3. Gauges and gaps: mark every gauge's study status; list gaps such as a missing owner or reaction rule as "set by local policy". Gate: every gap has an owner, or is listed as open.
 4. Station documents: for one operation at a time, one check row per control-plan row, work steps, and the reaction box copied from the plan. Gate: no check without a row, no row dropped, nothing looser than the plan.
@@ -54,3 +54,4 @@ The control plan in the template of `plan-control-plan`, then per operation the 
 - Chart choice, limits and run rules for a control-plan row: `measure-spc`.
 - A complaint, shipped nonconformity or repeated escape goes to `8d-moderator`; its D7 document updates arrive here.
 - Following the instructions at the station is checked on walks planned with `lead-gemba-walk`.
+- Control-plan and instruction gaps from audits arrive from `process-auditor`.

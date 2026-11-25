@@ -52,6 +52,6 @@ A short coaching note: the problem statement, the 8D check with its answers, the
 
 ## Hand-offs
 
-- Problems arrive from `lead-daily-routine` (red KPI), `measure-oee` (loss-tree item) and `lead-gemba-walk` (finding); report the status back there.
+- Problems arrive from `lead-daily-routine` (red KPI), `measure-oee` (loss-tree item), `lead-gemba-walk` (finding) and `process-auditor` (non-8D audit root causes); report the status back there.
 - The countermeasure runs in `solve-pdca`; chronic data-rich problems go to `solve-dmaic`, measured drifts to `measure-spc`.
 - A customer complaint, safety or legal issue, repeat problem or local-policy case goes to `8d-moderator`, with the problem statement and the facts so far.
