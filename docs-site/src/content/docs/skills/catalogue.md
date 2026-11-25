@@ -46,7 +46,7 @@ The design plans 20 skills in six stages. The prefix of a skill's name is its st
 
 | Skill | Status | What it does |
 |---|---|---|
-| `solve-8d` | <span class="status soon">coming soon</span> | Runs an 8D from D0 to D8: containment, occurrence and escape root causes, verification, and the PFMEA and control-plan updates |
+| [`solve-8d`](/skills/solve-8d/) | <span class="status available">available</span> | Runs an 8D from D0 to D8: containment, occurrence and escape root causes, verification, and the PFMEA and control-plan updates |
 | `solve-5why` | <span class="status planned">planned</span> | Builds 5-Why chains for occurrence, detection and system causes, with an evidence check on every link |
 | `solve-fishbone` | <span class="status planned">planned</span> | Turns a 6M brainstorm into cause hypotheses that can be tested |
 | `solve-is-is-not` | <span class="status planned">planned</span> | Scopes a problem with Is/Is-Not, distinctions and changes, then eliminates hypotheses |

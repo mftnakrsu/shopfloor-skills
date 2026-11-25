@@ -10,7 +10,7 @@ Two pairs split the work on purpose. `problem-solving-coach` handles everyday li
 | Agent | Status | What it does | Edits files |
 |---|---|---|---|
 | `skill-reviewer` | <span class="status available">available</span> | A tool for maintainers. Reviews a skill or agent against the project's writing rules and the Agent Skills specification, and reports fixes with file and line | No |
-| `8d-moderator` | <span class="status soon">coming soon</span> | Leads an 8D team from D0 to D8 for customer complaints, repeat defects and serious escalations, and closes the loop in the control plan and station instructions | Yes |
+| `8d-moderator` | <span class="status available">available</span> | Leads an 8D team from D0 to D8 for customer complaints, repeat defects and serious escalations, and closes the loop in the control plan and station instructions | Yes |
 | `problem-solving-coach` | <span class="status planned">planned</span> | Takes everyday line problems, such as red KPIs, OEE losses and gemba findings, picks the root-cause method, and hands over to `8d-moderator` when an 8D is needed | Yes |
 | `inspection-planner` | <span class="status planned">planned</span> | Builds the control plan, derives the station inspection and work instructions from it, and runs the consistency checks | Yes |
 | `pfmea-chain-checker` | <span class="status planned">planned</span> | Checks, station by station, that every PFMEA failure mode that needs a control has one in the control plan, with a reaction plan and a matching instruction. Reports gaps and never edits | No |

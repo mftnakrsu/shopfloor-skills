@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1550 850" width="1550" height="850" role="img" aria-labelledby="title desc">
   <title id="title">The shopfloor-skills hand-off loop</title>
-  <desc id="desc">Skills that see a problem hand it to skills that fix the cause, which hand the result to the skills that hold the gain in the control plan and station instructions. lead-daily-routine is available; solve-8d is coming soon; the other skills are planned.</desc>
+  <desc id="desc">Skills that see a problem hand it to skills that fix the cause, which hand the result to the skills that hold the gain in the control plan and station instructions. lead-daily-routine and solve-8d are available; the other skills are planned.</desc>
   <defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#6B7479"/></marker></defs>
   <rect width="1550" height="850" rx="16" fill="#F1F4F2"/>
   <text x="40" y="62" font-family="'Barlow Semi Condensed', 'Segoe UI', system-ui, sans-serif" font-size="24" font-weight="600" fill="#1F2428">See the problem</text>
@@ -59,13 +59,13 @@
   <rect x="550" y="196" width="350" height="56" rx="8" fill="#FFFFFF" stroke="#6B7479" stroke-width="1.5" stroke-dasharray="5 4"/>
   <text x="566" y="230" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="17" font-weight="400" fill="#1F2428">improve-tpm</text>
   <text x="886" y="230" text-anchor="end" font-family="'Barlow Semi Condensed', 'Segoe UI', system-ui, sans-serif" font-size="16" fill="#5B6368">planned</text>
-  <rect x="550" y="300" width="350" height="136" rx="8" fill="#FFFFFF" stroke="#6B7479" stroke-width="1.5"/>
+  <rect x="550" y="300" width="350" height="136" rx="8" fill="#FFFFFF" stroke="#2E8A55" stroke-width="2.5"/>
   <text x="566" y="348" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="17" font-weight="400" fill="#1F2428">solve-5why</text>
   <text x="886" y="348" text-anchor="end" font-family="'Barlow Semi Condensed', 'Segoe UI', system-ui, sans-serif" font-size="16" fill="#5B6368">planned</text>
   <text x="566" y="374" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="17" font-weight="400" fill="#1F2428">solve-fishbone</text>
   <text x="886" y="374" text-anchor="end" font-family="'Barlow Semi Condensed', 'Segoe UI', system-ui, sans-serif" font-size="16" fill="#5B6368">planned</text>
-  <text x="566" y="400" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="17" font-weight="400" fill="#1F2428">solve-8d</text>
-  <text x="886" y="400" text-anchor="end" font-family="'Barlow Semi Condensed', 'Segoe UI', system-ui, sans-serif" font-size="16" fill="#5B6368">coming soon</text>
+  <text x="566" y="400" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="17" font-weight="700" fill="#1F2428">solve-8d</text>
+  <text x="886" y="400" text-anchor="end" font-family="'Barlow Semi Condensed', 'Segoe UI', system-ui, sans-serif" font-size="16" fill="#2E8A55">available</text>
   <rect x="550" y="518" width="350" height="56" rx="8" fill="#FFFFFF" stroke="#6B7479" stroke-width="1.5" stroke-dasharray="5 4"/>
   <text x="566" y="552" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="17" font-weight="400" fill="#1F2428">improve-kaizen</text>
   <text x="886" y="552" text-anchor="end" font-family="'Barlow Semi Condensed', 'Segoe UI', system-ui, sans-serif" font-size="16" fill="#5B6368">planned</text>

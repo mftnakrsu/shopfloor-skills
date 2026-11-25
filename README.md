@@ -25,7 +25,7 @@ Agent Skills and subagents for people who run production lines: manufacturing an
 
 Each skill is a folder of plain markdown: a procedure with the inputs to ask for, the steps, the checks to run before answering, and a template for the result. Every number has a source or is marked as a rule of thumb.
 
-**Status:** in development. One skill is available today: `lead-daily-routine`. `solve-8d` and the `8d-moderator` agent are coming soon. The rest are planned and arrive in batches; see [CHANGELOG.md](CHANGELOG.md).
+**Status:** in development. Two skills are available today: `lead-daily-routine` and `solve-8d`, plus the `8d-moderator` agent. The rest are planned and arrive in batches; see [CHANGELOG.md](CHANGELOG.md).
 
 ## What's inside
 
@@ -37,10 +37,10 @@ The design plans 20 skills in six stages and 6 agents. The prefix of a skill's n
 | `measure-` | Seeing the losses | `measure-oee`, `measure-spc` (planned) |
 | `improve-` | Productivity and flow | `improve-tpt`, `improve-vsm`, `improve-kanban-pull`, `improve-line-balancing`, `improve-smed`, `improve-tpm`, `improve-kaizen` (planned) |
 | `plan-` | The documents that keep a line stable | `plan-control-plan`, `plan-workstation-instructions` (planned) |
-| `solve-` | Root cause and problem solving | `solve-8d` (coming soon); `solve-5why`, `solve-fishbone`, `solve-is-is-not`, `solve-pdca`, `solve-dmaic` (planned) |
+| `solve-` | Root cause and problem solving | [`solve-8d`](skills/solve-8d/SKILL.md) (available); `solve-5why`, `solve-fishbone`, `solve-is-is-not`, `solve-pdca`, `solve-dmaic` (planned) |
 | `audit-` | Checking the system | `audit-process` (planned) |
 
-**Agents:** [`skill-reviewer`](agents/skill-reviewer.md) (available, a tool for maintainers) reviews a new skill against the project's rules. `8d-moderator` is coming soon. `problem-solving-coach`, `inspection-planner`, `pfmea-chain-checker` and `process-auditor` are planned.
+**Agents:** [`skill-reviewer`](agents/skill-reviewer.md) (available, a tool for maintainers) reviews a new skill against the project's rules. [`8d-moderator`](agents/8d-moderator.md) (available) leads an 8D team from D0 to D8. `problem-solving-coach`, `inspection-planner`, `pfmea-chain-checker` and `process-auditor` are planned.
 
 The skills hand work to each other as one loop: see the problem, fix the cause, hold the gain in the control plan and station instructions. The [docs site](https://shopfloor-skills.mefby.com) has the full catalogue and the loop.
 

@@ -8,8 +8,8 @@ import argparse
 import os
 
 GRAPHITE, GREEN, CHALK, MUTE, LINE = "#1F2428", "#2E8A55", "#F1F4F2", "#5B6368", "#6B7479"
-AVAILABLE = {"lead-daily-routine"}
-SOON = {"solve-8d"}
+AVAILABLE = {"lead-daily-routine", "solve-8d"}
+SOON = set()
 FONT = "'Barlow Semi Condensed', 'Segoe UI', system-ui, sans-serif"
 MONO = "ui-monospace, SFMono-Regular, Menlo, Consolas, monospace"
 
@@ -136,8 +136,8 @@ def build():
         f'aria-labelledby="title desc">',
         '  <title id="title">The shopfloor-skills hand-off loop</title>',
         '  <desc id="desc">Skills that see a problem hand it to skills that fix the cause, which hand the result '
-        'to the skills that hold the gain in the control plan and station instructions. lead-daily-routine is '
-        'available; solve-8d is coming soon; the other skills are planned.</desc>',
+        'to the skills that hold the gain in the control plan and station instructions. lead-daily-routine and '
+        'solve-8d are available; the other skills are planned.</desc>',
         '  <defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" '
         f'orient="auto"><path d="M0 0L10 5L0 10Z" fill="{LINE}"/></marker></defs>',
         f'  <rect width="{W}" height="{H}" rx="16" fill="{CHALK}"/>',
