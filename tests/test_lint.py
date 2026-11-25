@@ -318,6 +318,11 @@ class TermTest(LintTestCase):
             self.repo.write("CHANGELOG.md", "Inspired by the examplecorp  production system.\n")
             self.assertError("contains public term 'examplecorp production system'")
 
+    def test_scratch_folders_are_skipped(self):
+        self.repo.write(".superpowers/sdd/x/notes.md", "Zeta Works 417\n")
+        self.repo.write(".claude/worktrees/w/README.md", "Zeta Works 417\n")
+        self.assertEqual(self.errors(private_terms=["zeta works 417"]), [])
+
     def test_private_terms_are_checked_everywhere_except_private(self):
         self.repo.write("docs/notes.md", "Visit Zeta Works 417 today.\n")
         self.repo.write("private/research.md", "Zeta Works 417\n")
