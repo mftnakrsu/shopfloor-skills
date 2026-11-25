@@ -1,0 +1,25 @@
+{
+  "name": "shopfloor-skills",
+  "version": "0.1.0",
+  "description": "Agent Skills and subagents for production lines: OEE, throughput time, line balancing, SMED, TPM, kanban, tier meetings, gemba walks, control plans, station instructions, SPC, 8D and process audits.",
+  "author": {
+    "name": "mftnakrsu"
+  },
+  "homepage": "https://github.com/mftnakrsu/shopfloor-skills",
+  "repository": "https://github.com/mftnakrsu/shopfloor-skills",
+  "license": "MIT",
+  "keywords": [
+    "manufacturing",
+    "lean",
+    "shopfloor",
+    "oee",
+    "smed",
+    "tpm",
+    "kanban",
+    "line-balancing",
+    "8d",
+    "control-plan",
+    "iatf-16949",
+    "agent-skills"
+  ]
+}
