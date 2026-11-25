@@ -1,0 +1,72 @@
+---
+title: Agent Skills for people who run production lines
+description: Agent Skills and subagents for production lines. Productivity and flow, daily shopfloor leadership, and the documents that keep a line stable.
+template: splash
+hero:
+  title: shopfloor-skills
+  tagline: Agent Skills and subagents for people who run production lines. They cover productivity and flow, daily shopfloor leadership, and the documents that keep a line stable.
+  image:
+    file: ../../assets/icon-tile-animated.svg
+  actions:
+    - text: Install
+      link: /start/install/
+      icon: right-arrow
+      variant: primary
+    - text: See the catalogue
+      link: /skills/catalogue/
+      variant: secondary
+    - text: View on GitHub
+      link: https://github.com/mftnakrsu/shopfloor-skills
+      icon: external
+      variant: minimal
+---
+
+import { Card, CardGrid, LinkCard } from '@astrojs/starlight/components';
+
+:::note[In development]
+The project is young. One skill, `lead-daily-routine`, is available today. `solve-8d` and the `8d-moderator` agent are coming soon. The other skills in the [catalogue](/skills/catalogue/) are planned, and arrive in batches.
+:::
+
+## What it is
+
+A skill is a folder of plain markdown that your coding agent reads when a task needs it. Each skill here holds one shopfloor method as a procedure: the inputs to ask for, the steps, the checks to run before answering, and a template for the result. Definitions, formulas and sources sit in reference files next to it.
+
+A subagent is a specialist that your agent can hand a whole job to, such as leading an 8D or reviewing a new skill.
+
+## Who it is for
+
+<CardGrid>
+  <Card title="Engineers" icon="setting">
+    Manufacturing and process engineers who balance lines, cut changeover time, and keep control plans and station instructions in step.
+  </Card>
+  <Card title="Shift and area leaders" icon="list-format">
+    Leaders who run tier meetings, keep a KPI board honest, and escalate the same day.
+  </Card>
+  <Card title="Improvement coaches" icon="star">
+    Continuous-improvement coaches who pick the right method for a problem and make sure the fix becomes the new standard.
+  </Card>
+</CardGrid>
+
+## How the skills are written
+
+- **Procedures, not textbooks.** Steps, thresholds and decision rules, with a worked example where there is a calculation.
+- **Every number has a source or a label.** A value is cited in a reference file, or marked "rule of thumb" or "set by local policy".
+- **Ask, don't invent.** When an input is missing, the skill asks for it or states its assumption.
+- **Standards are pointers.** A clause number plus a summary in our own words. Never the text of the standard.
+- **No names.** No employer, plant, customer, product or person names in any skill, agent or test case.
+
+## Install
+
+In Claude Code:
+
+```
+/plugin marketplace add mftnakrsu/shopfloor-skills
+/plugin install shopfloor-skills@shopfloor-skills
+```
+
+OpenCode, Qwen Code and Cursor use a small installer, and any tool that reads Agent Skills can take the skills with `npx skills`. See [Install](/start/install/) for every method.
+
+<CardGrid>
+  <LinkCard title="Use the skills" href="/start/use/" description="Ask in your own words; the agent picks the skill." />
+  <LinkCard title="How it works" href="/guides/how-it-works/" description="The hand-off loop that joins the skills." />
+</CardGrid>
